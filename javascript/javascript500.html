@@ -705,6 +705,48 @@
         </div>
     </div>
 
+    <hr>
+
+    <div id="sample20" class="sample">
+        <h2>21. 객체 : 비구조화 할당 <span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript",
+    }
+    const { a, b, c } = obj;
+
+    document.write(a);
+    document.write(b);
+    document.write(c);
+}
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample20" class="sample">
+        <h2>22. 객체 : 비구조화 할당 : 별도 이름 저장 <span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript",
+    }
+    const { a:name1, b:name2, c:name3 } = obj;
+
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
+    }
+</code></pre>
+        </div>
+    </div>
+
 
     <hr>
     <hr>

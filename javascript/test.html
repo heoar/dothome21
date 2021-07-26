@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 저장소</title>
+</head>
+<body>
+    <script>
+        //변수 : 데이터 저장소
+        //100, 200, 300, 변수에 저장을 출력을 해보세요!!!
+        {
+            var x = 100;
+            var y = 200;
+            var z = 300;
+
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+        }
+
+        //배열
+        //100, 200, 300, 변수에 저장을 출력을 해보세요!!!
+        {
+            const arr = [];
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = 300;
+
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br>");
+        }
+
+        //객체
+        //100, 200, 300, 변수에 저장을 출력을 해보세요!!!
+        {
+            const obj = {};
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = 300;
+
+            document.write(obj.a, "<br>");
+            document.write(obj.b, "<br>");
+            document.write(obj.c, "<br>");
+        }
+
+        //반복문
+        //for문을 이용해서 1-50까지 출력을 해보세요!!!
+        {
+            for( let i = 1; i<=50; i++){
+                document.write(i);
+            }
+            
+            document.write("<br>");
+        }
+
+
+        //반복문
+        //for문을 이용해서 50-1까지 출력을 해보세요!!!
+        {
+            for( let i = 50; i>=1; i--)
+                document.write(i);
+            
+            document.write("<br>");
+        }
+
+        //반복문
+        //for문을 이용해서 1-50까지 출력(짝수)을 해보세요!!!
+        {
+            for( let i = 1; i<=50; i++)
+                if( i % 2 == 0 ){
+                document.write(i);
+            }
+            
+            document.write("<br>");
+        }
+
+        //반복문
+        //for문을 이용해서 1-50까지 출력(홀수)을 해보세요!!!
+        {
+            for( let i = 1; i<=50; i++)
+                if( i % 2 == 1 ){
+                document.write(i);
+            }
+            
+            document.write("<br>");
+        }
+
+        //반복문
+        //for문을 이용해서 8의 배수 만들기
+        {
+            for(var i=8; i<=8; i++)
+            for(var j=1; j<=9; j++){
+            var sum = i * j;
+            document.write(i + " * " + j + " = " + sum, "<br>" );
+             }
+
+             document.write("<br>");
+        }
+
+        //반복문
+        //for문을 이용해서 5~8단 출력하기
+        {
+            for(var i=5; i<=8; i++)
+            for(var j=1; j<=9; j++){
+            var sum = i * j;
+            document.write(i + " * " + j + " = " + sum, "<br>" );
+             }
+
+             document.write("<br>");
+        }
+
+
+    </script>
+</body>
+</html>

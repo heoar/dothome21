@@ -112,6 +112,24 @@
             cursor: crosshair;
         }
 
+        .link li {
+           list-style: none;
+        }
+
+        .link li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #000;
+            cursor: crosshair;
+            display: inline-block;
+            margin-bottom: 10px
+        }
+
+        .link li a:hover {
+            background-color: #00DB72;
+        }
+
         @media (max-width: 1220px){
             #contents{
                 width: 98%;
@@ -122,21 +140,30 @@
             #contents{
                 width: 96%;
             }
+
+            #header {
+                padding: 6% 2% 2% 2% ;
+            }
+
             #header h1 {
                 font-size: 16px;
             }
             #header strong {
                 font-size: 14px;
+                bottom:  10%;
             }
             main h2 {
                 font-size: 30px;
+                padding: 22% 2% 2% 2%;
             }
             .refer {
                 padding: 10px;
+                margin-bottom: 100px;
             }
             .refer h3 {
                 margin-bottom: 10px;
                 font-size: 16px;
+                padding: 6px 10px;
             }
             .refer table th {
                 padding: 8px;
@@ -146,7 +173,7 @@
                 font-size: 14px;
             }
         }
-
+       
     </style>
 </head>
 <body>
@@ -158,6 +185,9 @@
 
     <main  id="contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
+        <ul class="link">
+            <li><a href="../javascript/javascript602-sample01.html">CSS 속성 첫 글자 검색하기</a></li>
+        </ul>
         <section class="refer">
             <h3>Alphabet</h3>
             <table>
@@ -402,7 +432,7 @@
                     </tr>
                     <tr>
                         <td>bottom</td>
-                        <td>위치 요소의 아래쪽 속성을 설정합니다.</td>
+                        <td>bottom 속성은 위치 요소의 아래쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>box-decoration-break</td>
@@ -666,7 +696,7 @@
                     </tr>
                     <tr>
                         <td>left</td>
-                        <td>위치 요소의 왼쪽 속성을 설정합니다.</td>
+                        <td>left 속성의 위치 요소의 왼쪽 속성을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>letter-spacing</td>

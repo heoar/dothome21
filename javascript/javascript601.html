@@ -1155,7 +1155,34 @@
                 </table>
             </div>
             <pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
 
+    const result1 = arrNum1.reduce(el => el);
+    document.querySelector(".sample13_R1").innerHTML = result1;
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+
+    const result2 = arrNum2.reduce((previous, current) => previous + current);
+    document.querySelector(".sample13_R2").innerHTML = result2;
+
+    const arrNum3 = [100, 200, 300, 400, 500];
+    let sum = 0;
+    for( let i=0; i&lt;arrNum3.length; i++){
+        sum = sum + arrNum3[i];
+    }
+    document.querySelector(".sample13_R3").innerHTML = sum;
+
+    const arrNum4 = [[100,200],[300,400]];
+
+    const result4 = arrNum4.reduce((p,c) => p.concat(c));
+    document.querySelector(".sample13_R4").innerHTML = result4;
+    console.log(result4);
+
+    const arrNum5 = ["javescript", "react", "vue"];
+
+    const result5 = arrNum5.reduceRight((p,c) => p+c);
+    document.querySelector(".sample13_R5").innerHTML = result5;
+    console.log(result4);
 }
 </code></pre>
         </div>

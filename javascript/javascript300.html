@@ -327,6 +327,10 @@
         document.write(str);
     }
     func("함수가 실행되었습니다");
+    function func1(str1, str2){
+        document.write(str1, str2);
+    }
+    func("함수가 실행되었습니다");
 }
 </code></pre>
         </div>
@@ -663,6 +667,11 @@
            function func(str){
                 document.write("*** 03. 매개변수 함수 ***<br>");
                 document.write(str);
+           }
+           func("함수가 실행되었습니다<br>");
+
+           function func1(str1, str2){
+                document.write(str1, str2);
            }
            func("함수가 실행되었습니다<br><br>");
         }

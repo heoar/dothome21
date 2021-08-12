@@ -86,10 +86,22 @@
             background-color: #00DB72;
             color: #fff;
         }
+        .refer h3 a {
+        text-decoration: none;
+        color: #fff;
+        }
+        .refer h4 {
+            margin-bottom: 5px;
+        }
+
+        .refer h3.active {
+            box-shadow: inset 0px -5px 0 0px #19b469;
+        }
         .refer table {
             width: 100%;
             border: 1px solid #aaa;
             border-collapse: collapse;
+            margin-bottom: 50px;
         }
         .refer table th {
             border: 1px solid #aaa;
@@ -107,9 +119,8 @@
         }
 
         .refer table tr:hover {
-            background-color: #00DB72;
-            color: #fff;
-            cursor: crosshair;
+            background-color: #e2e2e2;
+            cursor: pointer;
         }
 
         .link li {
@@ -128,6 +139,23 @@
 
         .link li a:hover {
             background-color: #00DB72;
+        }
+        .page {
+            text-align: right;
+        }
+
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+
+        .page li a a {
+            color: #222;
+            text-decoration: 
+        }
+
+        .page li a:hover {
+            color: #4fc3f7;
         }
 
         @media (max-width: 1220px){
@@ -185,11 +213,14 @@
 
     <main  id="contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
-        <ul class="link">
-            <li><a href="../javascript/javascript602-1.html">CSS 속성 첫 글자 검색하기</a></li>
-        </ul>
         <section class="refer">
-            <h3>Alphabet</h3>
+            <h3 class="active"><a href="index.html">Alphabet</a></h3>
+            <h3><a href="index2.html">Topics</a></h3>
+            <ul class="page">
+                <li><a href="../refer-html/index.html">HTML</a></li>
+                <li><a href="../refer-css/index.html">CSS</a></li>
+                <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+            </ul>
             <table>
                 <colgroup>
                     <col style="width: 30%">

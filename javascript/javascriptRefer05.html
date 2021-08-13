@@ -24,7 +24,6 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
-            word-break: break-all;
         }
 
         body {
@@ -34,7 +33,8 @@
 
         h1 {
             font-family: 'TmonMonsori';
-            padding: 20px 0;
+            padding-top: 40px;
+            padding-bottom: 20px;
         }
 
         h1 a {
@@ -76,39 +76,6 @@
             padding: 15px;
             border-bottom: 1px solid #E6E6E6;
             border-radius: 5px 5px 0 0;
-        }
-
-        .sample h2 .dot {
-            width: 10px;
-            height: 10px;
-            background: #989898;
-            display: block;
-            border-radius: 50%;
-            position: absolute;
-            right: 30px;
-            top: 20px;
-        }
-
-        .sample h2 .dot::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background: #989898;
-            border-radius: 50%;
-            position: absolute;
-            left: -15px;
-            top: 0;
-        }
-
-        .sample h2 .dot::after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background: #989898;
-            position: absolute;
-            border-radius: 50%;
-            right: -15px;
-            top: 0;
         }
 
         .sample .ex {
@@ -301,30 +268,30 @@
         }
 
         @media (max-width: 800px){
-        .menu li a {
-            font-size: 12px;
-            padding: 5px 20px;
+        body {
+            font-size: 13px;
         }
-        .list li {
-            line-height: 1.3;
-        }
-        .list a {
-            font-size: 12px;
+        h1 {
+            text-align: center;
         }
         .sample h2 {
-            padding: 12px 10px 10px 10px;
             font-size: 14px;
+            font-weight: none;
+            padding: 7px 5px 5px;
         }
         .sample h2 .dot {
-            display: none;
+            display: : none;
         }
-        .sample pre {
-            font-size: 14px;
+        .view {
+            padding: 5px;
+            overflow-x: scroll;
+            overflow: auto;
+        }
+        .view th {
+            font-weight: normal;
         }
         .view table td.result {
             color: #000;
-            transition: all 0.3s;
-            cursor: zoom-in;
         }
 }
     </style>
@@ -367,7 +334,7 @@
         <li><a href="#sample05">05. 문자열 메서드 : includes() : 문자열 포함 여부 : 반환(불린)</a></li>
         <li><a href="#sample05">05. 문자열 메서드 : startsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
         <li><a href="#sample05">05. 문자열 메서드 : endsWith() : 문자열 포함 여부 : 반환(불린)</a></li>
-        <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a><a class="sam" href="javascriptSample01.html">샘플</a></li>
+        <li><a href="#sample06">06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자)</a>
         <li><a href="#sample07">07. 문자열 메서드 : slice() substring() : 지정한 범위 내 문자를 추출 : 반환(문자열)</a></li>
         <li><a href="#sample07">07. 문자열 메서드 : substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</a></li>
         <li><a href="#sample08">08. 문자열 메서드 : replace() : 문자열 변경 : 반환(문자열)</a></li>

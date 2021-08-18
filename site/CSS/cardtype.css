@@ -47,14 +47,106 @@
 .card .card-title {
     display: block;
     font-size: 32px;
+    white-space: nowrap;    /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card .card-desc {
     display: block;
     font-size: 20px;
     font-weight: 300;
+    overflow: hidden;       /* 두줄 효과 */
+    display: -webkit-box;   /* 벤터 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .card .card-keyword {
     font-size: 16px;
     font-weight: 300;
     opacity: 0.5;
+}
+
+
+
+
+/* cardType02 */
+#cardType {}
+
+.cardType02 {
+    font-family: 'S-CoreDream';
+    padding: 100px 0;
+}
+.cardType02 h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 15px; 
+}
+.cardType02 p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+.card-wrap2 {
+    display: flex;
+    justify-content: space-between;
+}
+.card-wrap2 > div {
+    width: 387px;
+}
+
+.card2 {
+    width: 285px;
+    height: 360px;
+    border: 1px solid #E8E8E8;
+    margin: 10px 0px 0 20px;
+    padding: 15px 13px 0px;
+    background-color: #fff;
+}
+.card2 .card-img {}
+.card2 .card-title {
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card2 .card-desc {
+    font-family: 'NEXON Lv1 Gothic';
+    font-weight: 500;
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;       
+    display: -webkit-box;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.card2 .card-keyword {
+    font-family: 'NEXON Lv1 Gothic';
+    background: #000;
+    text-align: center;
+    padding: 1px 20px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card2 .card-keyword2 {
+    font-family: 'NEXON Lv1 Gothic';
+    background: #000;
+    text-align: center;
+    margin-left: 5px;
+    padding: 1px 20px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
 }

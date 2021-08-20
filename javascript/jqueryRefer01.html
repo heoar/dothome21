@@ -89,7 +89,7 @@
             top: 20px;
         }
 
-        .sample h2 .dot::before {
+        .sample h2 .dot:before {
             content: '';
             width: 10px;
             height: 10px;
@@ -100,7 +100,7 @@
             top: 0;
         }
 
-        .sample h2 .dot::after {
+        .sample h2 .dot:after {
             content: '';
             width: 10px;
             height: 10px;
@@ -225,7 +225,7 @@
             list-style: none;
         }
 
-        .page li a a {
+        .page li a {
             color: #222;
             text-decoration: 
         }
@@ -266,7 +266,7 @@
             margin-bottom: 4px;
             font-size: 16px;
         }
-        .table table tr:nth-child(even) {
+        .table table tr:nth-child {
             background-color: #f2f6fd;
         }
         .table table th {
@@ -552,7 +552,7 @@
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     $(".reset1").click(function(){
-        $(".view1 li").removeClass("blue");
+        $(".view1 *").removeClass("blue");
     });
     $(".btn1-1").click(function(){
         $(".view1 .class").addClass("blue");
@@ -578,7 +578,7 @@
 
     <script>
          $(".reset1").click(function(){
-            $(".view1 li").removeClass("blue");
+            $(".view1 *").removeClass("blue");
         });
         $(".btn1-1").click(function(){
             $(".view1 .class").addClass("blue");

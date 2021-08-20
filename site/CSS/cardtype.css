@@ -235,12 +235,14 @@ body {
 }
 
 .cardType03 .card-wrap .card .title {
+    font-weight: 400;
     font-size: 26px;
     display: block;
 }
 
 .cardType03 .card-wrap .card .dec {
     font-size: 16px;
+    font-family: NanumSquare;
     font-weight: 100;
     color: #555;
     display: block;
@@ -249,6 +251,8 @@ body {
 .cardType03 .card-wrap .card .card-box .w {
     padding: 20px 0 0 0;
     font-family: NanumSquare;
+    font-weight: bold;
     font-size: 14px;
     color: #555;
+    text-decoration-line: underline;
 }

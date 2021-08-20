@@ -82,59 +82,71 @@ body {
 
 /* cardType02 */
 
-.cardType {
-    margin: 100px 0;
-    background-color: #fff;
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);
-}
 .cardType02 {
     font-family: 'S-CoreDream';
-    padding: 150px 0;
-}
-.cardType02 h2 {
-    text-align: center;
-    font-weight: 800;
-    font-size: 50px;
-    margin-bottom: 7px; 
-}
-.cardType02 p {
-    text-align: center;
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 1.28;
-    margin-bottom: 40px;
+    padding: 60px 0;
 }
 
+.cardType02 h2 {
+    margin: 101px 0 0 0;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+}
+
+.cardType02 p {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 100;
+}
 .cardType02 .card-wrap {
     display: flex;
 }
-.cardType02 .card-wrap .card{
+
+.cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
-    margin: 40px 20px 0 0;
+    margin: 40px 10px 101px;
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
 }
 
-.cardType02 .card-wrap .card .card-title {
-    display: block;
+.cardType02 .card-wrap .title {
     font-size: 24px;
-}
-
-.cardType02 .card-wrap .card .card-desc {
-    font-family: 'NEXON Lv1 Gothic';
-    font-weight: 500;
+    font-weight: 800;
+    text-align: left;
     display: block;
 }
 
-.cardType02 .card-wrap .card .card-word span {
-   margin: 6px 202px 0 1px;
-   padding: 4px 16px 3px;
-   border-radius: 20px;
-   background-color: #000;
-   display: inline-block;
-   color: #fff;
-   font-size: 10px;
-   text-transform: uppercase;
+
+.cardType02 .card-wrap .card .dec {
+    font-size: 14px;
+    font-weight: 100;
+    text-align: left;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.cardType02 .card-wrap .card .bt {
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 100;
+    width: 53px;
+    height: 21px;
+    margin: 6px 4px 0 0;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+}
+
+.cardType02 .card-wrap .card .bt2 {
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 100;
+    width: 53px;
+    height: 21px;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
 }

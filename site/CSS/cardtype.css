@@ -150,3 +150,105 @@ body {
     padding: 4px 16px 3px;
     border-radius: 20px;
 }
+
+/* cardType03 */
+
+.cardType03 {
+    font-family: 'S-CoreDream';
+    padding: 100px 0 100px;
+}
+
+.cardType03 h2 {
+    font-size: 50px;
+    padding: 0 0 12px 0;
+}
+
+.cardType03 p {
+    font-size: 18px;
+    font-weight: 100;
+    text-align: left;
+    padding: 0 0 22px 0;
+}
+
+.cardType03 .red {
+    margin: 0 10px 0 1000px;
+    color: red;
+    float: left;
+}
+
+.cardType03 .bk {
+  
+}
+
+
+
+.cardType03 .card-wrap .card .card-box {
+    margin: 0 0 30px 0;
+    padding: 5px 0 10px 0;
+    border-radius: 5px;
+    border: solid 0px;
+    
+}
+
+.cardType03 .card-wrap .card .card-img {
+    margin: 0 20px 0 0;
+    width: 285px;
+    height: 185px;
+    float: left;
+}
+
+.cardType03 .card-wrap .card .bt1 {
+    background: #ff5151;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0px 10px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+.cardType03 .card-wrap .card .bt2 {
+    background: #5465ff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0px 10px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+.cardType03 .card-wrap .card .bt3 {
+    background: #ff5151;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0px 10px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+.cardType03 .card-wrap .card .bt4 {
+    background: #11c865;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0px 10px 0px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.cardType03 .card-wrap .card .title {
+    font-size: 26px;
+    display: block;
+}
+
+.cardType03 .card-wrap .card .dec {
+    font-size: 16px;
+    font-weight: 100;
+    color: #555;
+    display: block;
+}
+
+.cardType03 .card-wrap .card .card-box .w {
+    padding: 20px 0 0 0;
+    font-family: NanumSquare;
+    font-size: 14px;
+    color: #555;
+}

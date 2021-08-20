@@ -8,38 +8,26 @@
 </head>
 <body>
     <script>
+        function func(){
+            document.write("함수")
+        }
+        func();
 
-       const num = [1,2,3,4,5]
+        const func2 = function(){
+            document.write("함수");
+        }
+        func2();
 
-       document.write(num[0]);
-       document.write(num[1]);
-       document.write(num[2]);
-       document.write(num[3]);
-       document.write(num[4]);
-       //for
-       for( let i=0; i<num.length; i++ ){
-           document.write(num[i]);
-       }
-       //forEach
-       num.forEach(function(el) {
-           document.write(el);
-       });
+        function func3(str){
+            document.write(str);
+        }
+        func3("함수")
 
-       num.forEach((el) => {
-           document.write(el);
-       })
-
-       num.forEach(el => document.write(el));
-       //for in
-       for( let i in num){
-           document.write(el)
-       }
-
-       //for of
-       for( let el of num ){
-           document.write(el)
-       }
-       
+        function func4(){
+            const str = "함수"
+            return str;
+        }
+            document.write(func4());
        
     </script>
 </body>

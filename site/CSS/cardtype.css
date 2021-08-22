@@ -154,104 +154,86 @@ body {
 /* cardType03 */
 
 .cardType03 {
-    font-family: 'S-CoreDream';
-    padding: 100px 0 100px;
+    padding: 100px 0;
+    font-family: 'NanumSquare';
+    position: relative;
 }
 
 .cardType03 h2 {
     font-size: 50px;
-    padding: 0 0 12px 0;
+    font-weight: 800;
 }
 
 .cardType03 p {
     font-size: 18px;
-    font-weight: 100;
-    text-align: left;
-    padding: 0 0 22px 0;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
 }
 
+.cardType03 .popular {
+    position: absolute;
+    right: 0; top: 180px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+}
 
-.cardType03 .red {
-    margin: 0 10px 0 1000px;
+.cardType03 .popular a.red {
     color: red;
-    float: left;
 }
 
-
-
-
-
-.cardType03 .card-wrap .card .card-box {
-    margin: 0 0 30px 0;
-    padding: 5px 0 10px 0;
-    border-radius: 5px;
-    border: solid 0px;
-    
+.cardType03 .card-wrap .card {
+    margin-bottom: 28px;
 }
 
 .cardType03 .card-wrap .card .card-img {
-    margin: 0 20px 0 0;
     width: 285px;
     height: 185px;
-    float: left;
+    position: absolute;
 }
 
-.cardType03 .card-wrap .card .bt1 {
-    background: #ff5151;
-    color: #fff;
+.cardType03 .card-wrap .card .card-bt {
     font-size: 14px;
-    font-weight: 100;
-    padding: 0px 10px 0px;
+    font-weight: 800;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
     border-radius: 20px;
-    text-align: center;
+    margin-bottom: 10px;
+    display: inline-block;
 }
-.cardType03 .card-wrap .card .bt2 {
-    background: #5465ff;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 100;
-    padding: 0px 10px 0px;
-    border-radius: 20px;
-    text-align: center;
+.cardType03 .card-wrap .card .card-bt.red {
+    background-color: #ff4646;
 }
-.cardType03 .card-wrap .card .bt3 {
-    background: #ff5151;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 100;
-    padding: 0px 10px 0px;
-    border-radius: 20px;
-    text-align: center;
+.cardType03 .card-wrap .card .card-bt.blue {
+    background-color: #5465ff;
 }
-.cardType03 .card-wrap .card .bt4 {
-    background: #11c865;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 100;
-    padding: 0px 10px 0px;
-    border-radius: 20px;
-    text-align: center;
+.cardType03 .card-wrap .card .card-bt.green {
+    background-color: #11c865;
 }
 
-.cardType03 .card-wrap .card .title {
-    font-weight: 400;
+
+.cardType03 .card-wrap .card .card-title {
     font-size: 26px;
-    display: block;
-}
-
-.cardType03 .card-wrap .card .dec {
-    font-size: 16px;
-    font-family: NanumSquare;
-    font-weight: 100;
-    color: #555;
-    display: block;
-}
-
-.cardType03 .card-wrap .card .card-box .w {
-    padding: 20px 0 0 0;
-    font-family: NanumSquare;
     font-weight: bold;
-    font-size: 14px;
+    display: block;
+}
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+
+.cardType03 .card-wrap .card .card-p {
+    font-size: 16px;
+    line-height: 1.53;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.cardType03 .card-wrap .card .card-w {
+    display: block;
     color: #555;
-    text-decoration-line: underline;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 20px;
 }

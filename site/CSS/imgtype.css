@@ -87,3 +87,97 @@
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
 }
+
+
+/* imgType02 */
+
+#imgtype {
+    margin: 150px 0 602px 0;
+}
+
+
+.imgtype02 {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+}
+.imgtype02 h2 {
+    margin-bottom: 50px;
+}
+
+.imgtype02 .h2-1 {
+    font-family: 'Crimson Pro';
+    font-weight: normal;
+    font-size: 50px;
+    float: left;    
+}
+
+.imgtype02 .h2-2 {
+    font-weight: normal;
+    font-size: 52px;
+}
+
+.imgtype02 .card-wrap .card .tlite {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+}
+
+.imgtype02 .card-wrap .card .card-bt {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    background: #fff;
+    width: 110px;
+    height: 30px;
+    margin: 40px 138px 0 139px;
+    padding: 6px 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
+
+.imgtype02 .card-wrap .card .img03 {
+    margin: 0;
+    width: 387px;
+    height: 387px;
+    position: absolute;
+}
+.imgtype02 .card-wrap .card .img04 {
+    margin: 0 0 0 407px;
+    width: 387px;
+    height: 387px;
+    position: absolute;
+}
+.imgtype02 .card-wrap .card .img05 {
+    margin: 0 0 0 814px;
+    width: 387px;
+    height: 387px;
+    position: absolute;
+}
+
+
+.imgtype02 .card-wrap .card .txt-box01 {
+    margin: 169px 0 0 0;
+    width: 387px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+.imgtype02 .card-wrap .card .txt-box02 {
+    margin: 169px 0 0 407px;
+    width: 387px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+.imgtype02 .card-wrap .card .txt-box03 {
+    margin: 169px 0 0 814px;
+    width: 387px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}

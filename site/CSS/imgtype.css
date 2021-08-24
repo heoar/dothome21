@@ -2,7 +2,7 @@
 /* imgType01 */
 
 #imgtype {
-    margin: 150px 0 602px 0;
+
 }
 
 
@@ -11,6 +11,7 @@
     font-weight: 500;
     font-style: normal;
     text-align: left;
+    margin: 150px 0 602px 0;
 }
 
 
@@ -92,7 +93,7 @@
 /* imgType02 */
 
 #imgtype {
-    margin: 150px 0 602px 0;
+
 }
 
 
@@ -100,6 +101,7 @@
     font-family: 'GmarketSans';
     font-weight: 500;
     font-style: normal;
+    margin: 150px 0 602px 0;
 }
 .imgtype02 h2 {
     margin-bottom: 50px;
@@ -180,4 +182,113 @@
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
+}
+
+/* imgType03 */
+
+.imgtype03 {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    margin: 150px 0 802px 0;
+    color: #fff;
+}
+.imgtype03 h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.imgtype03 img {
+    position: relative;
+}
+
+.imgtype03 .img01 {
+    width: 590px;
+    height: 590px;
+    float: left;
+}
+
+.imgtype03 .img02, .img03, .img04 {
+    width: 285px;
+    height: 285px;
+    float: left;
+    margin: 0 0 20px 20px;
+}
+
+.imgtype03 .tlite01 {
+    padding: 442px 30px 0 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 24px;
+    position: absolute;
+    z-index: 10000;
+}
+.imgtype03 .tlite02 {
+    padding: 234px 30px 0 655px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 24px;
+    position: absolute;
+    z-index: 10000;
+}
+.imgtype03 .tlite03 {
+    padding: 534px 30px 0 655px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 24px;
+    position: absolute;
+    z-index: 10000;
+}
+.imgtype03 .tlite04 {
+    padding: 234px 30px 0 985px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 24px;
+    position: absolute;
+    z-index: 10000;
+}
+
+.imgtype03 .tlite05 {
+    padding: 534px 30px 0 975px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 24px;
+    position: absolute;
+    z-index: 10000;
+}
+
+.imgtype03 .card .card-p {
+    padding: 487px 30px 0 30px;
+    font-size: 14px;
+    position: absolute;
+    z-index: 10000;
+}
+
+.imgtype03 .card-bt {
+    padding: 545px 30px 0 30px;
+    display: block;
+    text-decoration: underline;
+    position: absolute;
+    z-index: 10000;
 }

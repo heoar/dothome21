@@ -12,6 +12,7 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -643,7 +644,7 @@
 </style>
 
 <div id="sample01" class="sample">
-    <h2>06. 원 크기의 width() / innerWidth() / outerWidth() & height() / innerHeight() / outerHeight()</h2>
+    <h2>06. 원 크기의 X/Y축 값</h2>
     <div class="view view1">
         <div class="view ex6">
            <span class="circle circle6"></span>
@@ -701,7 +702,84 @@
 <!-- //sample06-->
 
 
+<!-- 7번 css -->
+<style>
+    .ex7 {
+        min-height: 300px;
+        position: relative;
+    }
+    .ex7 .circle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        display: block;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: solid 5px #8fd3f4;
+        border-radius: 50%;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    }
+</style>
 
+<div id="sample07" class="sample">
+    <h2>07. offset() / position()</h2>
+    <div class="view view1">
+        <div class="view ex7">
+           <span class="circle circle7"></span>
+           <div class="text text7">
+               <p class="text7-1">offset().left = <span>0</span></p>
+               <p class="text7-2">offset().top = <span>0</span></p>
+               <p class="text7-3">position().left = <span>0</span></p>
+               <p class="text7-4">position().top = <span>0</span></p>
+               <p class="text7-5">position().top = <span>0</span></p>
+           </div>
+
+        </div>
+    </div>
+    <div class="btn">
+        <a href="#c" class="btn7-1">원을 드래그 하세요.</a>
+    <div class="code">
+        <pre class="line-numbers"><code class="language-js">{
+    $( ".circle7" ).draggable({
+        start: function() {
+            $(".text7-5").text("드래그가 시작되었습니다.")
+        },
+        drag: function(){
+            $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px" );
+            $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px" );
+            $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px" );
+            $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px" );
+        },
+        stop: function() {
+            $(".text7-5").text("드래그가 끝났습니다.")
+        }
+    });   
+}
+</code></pre>
+    </div>
+</div>
+
+<script>
+    $( ".circle7" ).draggable({
+        start: function() {
+            $(".text7-5").text("드래그가 시작되었습니다.")
+        },
+        drag: function(){
+            $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px" );
+            $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px" );
+            $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px" );
+            $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px" );
+        },
+        stop: function() {
+            $(".text7-5").text("드래그가 끝났습니다.")
+        }
+    });
+</script>
+<!-- //sample07-->
 
 
 

@@ -24,7 +24,9 @@ table,
 td,
 textarea,
 th,
-ul {
+ul,
+figure,
+figcaption {
     margin: 0;
     padding: 0
 }

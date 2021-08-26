@@ -83,16 +83,19 @@
         </div>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-
-    }
-    </code></pre>
-        </div>
+    document.querySelector(".btn1-1").addEventListener("click", function(){
+        alert("알림창");
+    })
+}
+</code></pre>
     </div>
+</div>
     
     <script>
-        document.querySelector("btn1-1").addEventListener("click", function(){
+        document.querySelector(".btn1-1").addEventListener("click", function(){
             alert("알림창");
-        });
+        })
+
     </script>
     <!-- //sample01 -->
 
@@ -120,10 +123,10 @@
         } else {
             document.querySelector(".text2").innerHTML = "오늘 몸이 안 좋아요!!"
         };
-    }
-    </code></pre>
-        </div>
+}
+</code></pre>
     </div>
+</div>
     
     <script>
         const btn = document.querySelector(".btn2-1");
@@ -164,11 +167,15 @@
         </div>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
- 
-    }
-    </code></pre>
-        </div>
+    document.querySelector(".btn3-1").addEventListener("click", function(){
+        const text = prompt("오늘 공부할 준비가 되었나요?");
+
+        document.querySelector(".text3").innerHTML = text;
+    })
+}
+</code></pre>
     </div>
+</div>
     
     <script>
       document.querySelector(".btn3-1").addEventListener("click", function(){
@@ -259,10 +266,11 @@
         const screenY = window.screenY;
             document.querySelector(".text4-8").innerHTML = "보고있는 브라우저의 좌측 위치값(screenY)은" + screenY + "px 입니다."
     });
-   }
-   </code></pre>
-       </div>
-   </div>
+}
+</code></pre>
+    </div>
+</div>
+
    <script>
        const innerW = window.innerWidth;
        const innerH = window.innerHeight;

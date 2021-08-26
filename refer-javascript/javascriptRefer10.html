@@ -161,9 +161,10 @@
             el.classList.remove("active");
         })
     })
+}
 </code></pre>
-        </div>
-    </div>
+</div>
+</div>
 
     <script>
         document.querySelector(".btn1-1").addEventListener("click", function(){
@@ -215,7 +216,7 @@
     });
 }
 </code></pre>
-    </div>
+</div>
 </div>
 
 <script>
@@ -271,7 +272,7 @@
     });
 }
 </code></pre>
-    </div>
+</div>
 </div>
 
 <script>
@@ -332,42 +333,42 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
-const CW = document.querySelector(".circle4").clientWidth;
-const CH = document.querySelector(".circle4").clientHeight;
-const ow = document.querySelector(".circle4").offsetWidth;
-const oh = document.querySelector(".circle4").offsetHeight;
-const rect = document.querySelector(".circle4").getBoundingClientRect();
-//const rect = document.querySelector(".circle4").getClientRect();
+    const CW = document.querySelector(".circle4").clientWidth;
+    const CH = document.querySelector(".circle4").clientHeight;
+    const ow = document.querySelector(".circle4").offsetWidth;
+    const oh = document.querySelector(".circle4").offsetHeight;
+    const rect = document.querySelector(".circle4").getBoundingClientRect();
+    //const rect = document.querySelector(".circle4").getClientRect();
 
-document.querySelector(".btn4-1").addEventListener("click", function(){
-    document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + CW + "px입니다."
-});
+    document.querySelector(".btn4-1").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + CW + "px입니다."
+    });
 
-document.querySelector(".btn4-2").addEventListener("click", function(){
-    document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + CH + "px입니다."
-});
+    document.querySelector(".btn4-2").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + CH + "px입니다."
+    });
 
-document.querySelector(".btn4-3").addEventListener("click", function(){
-    document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + ow + "px입니다."
-});
+    document.querySelector(".btn4-3").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + ow + "px입니다."
+    });
 
-document.querySelector(".btn4-4").addEventListener("click", function(){
-    document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + oh + "px입니다."
-});
+    document.querySelector(".btn4-4").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + oh + "px입니다."
+    });
 
-document.querySelector(".btn4-5").addEventListener("click", function(){
-    document.querySelector(".text4").innerHTML = `
-        이 원의 x값은 ${parseInt(rect.x)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.y)}px 입니다.
+    document.querySelector(".btn4-5").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = `
+            이 원의 x값은 ${parseInt(rect.x)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.y)}px 입니다.
 
-        이 원의 x값은 ${parseInt(rect.top)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.left)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.bottom)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.right)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.width)}px 입니다.
-        이 원의 x값은 ${parseInt(rect.height)}px 입니다.
-        `;
-});
+            이 원의 x값은 ${parseInt(rect.top)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.left)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.bottom)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.right)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.width)}px 입니다.
+            이 원의 x값은 ${parseInt(rect.height)}px 입니다.
+            `;
+    });
 }
 </code></pre>
     </div>

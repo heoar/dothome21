@@ -13,7 +13,33 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
 
+    .btn2 {
+    padding: 10px 0 0 0;
+    border-top: 0;
+    }
+    .btn2 a {
+        padding: 7px 25px;
+        display: inline-block;
+        border-radius: 6px;
+        margin: 0;
+        color: #222;
+        background: #dadada;
+        transition: all 0.2s;
+    }
+    /*.ex01 > div {
+        opacity: 0;
+    }
+    */
+    .ex01 > div.value {
+        opacity: 1;
+        color: #fff;
+        background: #272822;
+        padding: 20px;
+    }
+
+</style>
 <body>
     <h1>Javascript 레퍼런스</h1>
     <nav class="menu">
@@ -85,7 +111,20 @@
 </code></pre>
         </div>
     </div>
-
+    <div class="btn2">
+        <a href="#c" class="btn-t">결과값</a>
+    </div>
+    <div class="ex01">
+    <div></div>
+    </div>
+    <script>
+        document.querySelector(".btn-t").addEventListener("click",() => {
+            document.querySelectorAll(".ex01 > div").forEach((el) => {
+                    el.classList.toggle("value")
+                    document.querySelector(".value").innerHTML = "100 200 javascript";
+                });
+        })
+    </script>
 
     <hr>
 

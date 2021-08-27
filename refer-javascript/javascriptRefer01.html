@@ -28,16 +28,20 @@
         background: #dadada;
         transition: all 0.2s;
     }
-    /*.ex01 > div {
-        opacity: 0;
+
+    .ex01 {
+        display: none;
     }
-    */
-    .ex01 > div.value {
-        opacity: 1;
-        color: #fff;
-        background: #272822;
+    .ex01.show {
+        display: block;
+    }
+
+    .ex01.show {
+        background: #000;
         padding: 20px;
+        color: #fff;
     }
+
 
 </style>
 <body>
@@ -115,13 +119,12 @@
         <a href="#c" class="btn-t">결과값</a>
     </div>
     <div class="ex01">
-    <div></div>
+            <code>100 200 javascript</code>
     </div>
     <script>
         document.querySelector(".btn-t").addEventListener("click",() => {
-            document.querySelectorAll(".ex01 > div").forEach((el) => {
-                    el.classList.toggle("value")
-                    document.querySelector(".value").innerHTML = "100 200 javascript";
+            document.querySelectorAll(".ex01").forEach((el) => {
+                    el.classList.toggle("show")
                 });
         })
     </script>

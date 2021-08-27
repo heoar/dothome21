@@ -1,0 +1,41 @@
+body {
+    background: #f3f3f3;
+}
+
+#cardTaye {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    font-family: 'GmarketSans';
+}
+
+.cardTaye01 .card-warp {
+    overflow: hidden;
+}
+.cardTaye01 h2 {
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+.cardTaye01 .card-warp .card {
+    float: left;
+    position: relative;
+}
+.cardTaye01 .card-warp .card:first-child {
+    margin-right: 20px;
+}
+
+.cardTaye01 .card-warp .card .card-imge {
+    width: 590px;
+    height: 400px;
+}
+
+.cardTaye01 .txt-box {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.cardTaye01 .txt-box .card-title {}
+.cardTaye01 .txt-box .card-txt {
+
+}
+.cardTaye01 .txt-box .card-bt {}

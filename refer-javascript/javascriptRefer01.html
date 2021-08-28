@@ -730,6 +730,8 @@
         <div class="value62"></div>
         <div class="value63"></div>
         <div class="value64"></div>
+        <div class="value65"></div>
+        <div class="value66"></div>
     </div>
     <script>
         document.querySelector(".btn-t17").addEventListener("click",() => {
@@ -770,21 +772,17 @@
     <div class="btn2">
         <a href="#c" class="btn-t18">결과값</a>
     </div>
-    <div class="ex01">
-            <code>
-                x : 100 : Number<br>
-                y : 100 : String<br><br>
-
-                x : 100 : String<br>
-                y : 100 : Number<br><br>
-
-                x : 100 : Number<br>
-                y : 100 : string
-            </code>
+    <div id="exbox" class="ex18">
+        <div class="value67"></div>
+        <div class="value68"></div>
+        <div class="value69"></div>
+        <div class="value70"></div>
+        <div class="value71"></div>
+        <div class="value72"></div>
     </div>
     <script>
         document.querySelector(".btn-t18").addEventListener("click",() => {
-            document.querySelectorAll(".ex01").forEach((el) => {
+            document.querySelectorAll(".ex18").forEach((el) => {
                     el.classList.toggle("show")
                 });
         })
@@ -823,22 +821,20 @@
     <div class="btn2">
         <a href="#c" class="btn-t19">결과값</a>
     </div>
-    <div class="ex01">
-            <code>
-                number<br>
-                string<br>
-                function<br>
-                object<br>
-                object<br>
-                boolean<br>
-                undefined<br>
-                undefined<br>
-                symbol<br>
-            </code>
+    <div id="exbox" class="ex19">
+        <div class="value73"></div>
+        <div class="value74"></div>
+        <div class="value75"></div>
+        <div class="value76"></div>
+        <div class="value77"></div>
+        <div class="value78"></div>
+        <div class="value79"></div>
+        <div class="value80"></div>
+        <div class="value81"></div>
     </div>
     <script>
         document.querySelector(".btn-t19").addEventListener("click",() => {
-            document.querySelectorAll(".ex01").forEach((el) => {
+            document.querySelectorAll(".ex19").forEach((el) => {
                     el.classList.toggle("show")
                 });
         })
@@ -1033,13 +1029,6 @@
                 c: "javascript"
             }
 
-            document.write("*** 14. 객체 ***<br>");
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.b[0], "<br>");
-            document.write(obj.b[1], "<br>");
-            document.write(obj.c, "<br><br>");
-
             document.querySelector(".value41").innerHTML = obj.a;
             document.querySelector(".value42").innerHTML = obj.b;
             document.querySelector(".value43").innerHTML = obj.b[0];
@@ -1079,31 +1068,19 @@
                 document.write( this.c + "가 실행되었습니다.<br>");
                 }
             }
-            document.write("*** 16. 객체 ***<br>");
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.b[0], "<br>");
-            document.write(obj.b[1], "<br>");
-            document.write(obj.c, "<br>");
-            obj.d();
-            obj.e();
-            obj.f();
 
             document.querySelector(".value49").innerHTML = obj.a;
             document.querySelector(".value50").innerHTML = obj.b;
             document.querySelector(".value51").innerHTML = obj.b[0];
             document.querySelector(".value52").innerHTML = obj.b[1];
-            document.querySelector(".value53").innerHTML = obj.d();
-            document.querySelector(".value54").innerHTML = obj.c();
-            document.querySelector(".value55").innerHTML = obj.e();
-            document.querySelector(".value56").innerHTML = obj.f();
+            document.querySelector(".value53").innerHTML = obj.c;
+            document.querySelector(".value54").innerHTML = "자바스크립트가 실행되었습니다.";
+            document.querySelector(".value55").innerHTML = obj.c + "가 실행되었습니다.";
+            document.querySelector(".value56").innerHTML = obj.c + "가 실행되었습니다.";
         }
-
-        document.write("<br>")
 
         //sample17
         {
-          document.write("*** 17. 변수의 종류 ***<br>");
 
           let x = 100;      //변수 설정 : 전역 변수
           let y = 200;
@@ -1118,48 +1095,49 @@
             a = 400;            //전역 변수 : 변수 값이 300 -> 400변경
             y = 500;            //지역 변수 : 변수 값이 200 -> 500 변경
 
-              document.querySelector(".value57").innerHTML = x;
-              document.querySelector(".value58").innerHTML = y;
-              document.querySelector(".value59").innerHTML = z;
-              document.querySelector(".value60").innerHTML = a;
+              document.querySelector(".value57").innerHTML = "함수 안";
+              document.querySelector(".value58").innerHTML = x;
+              document.querySelector(".value59").innerHTML = y;
+              document.querySelector(".value60").innerHTML = z;
+              document.querySelector(".value61").innerHTML = a;
           }
           func();
 
-              document.querySelector(".value61").innerHTML = x;
-              document.querySelector(".value62").innerHTML = y;
-              document.querySelector(".value63").innerHTML = z;
-              document.querySelector(".value63").innerHTML = a;
+              document.querySelector(".value62").innerHTML = "<br>함수 밖";
+              document.querySelector(".value63").innerHTML = x;
+              document.querySelector(".value64").innerHTML = y;
+              document.querySelector(".value65").innerHTML = z;
+              document.querySelector(".value66").innerHTML = a;
+              
         }
 
         //sample18
         {
-            document.write("*** 18. 변수의 변환 ***<br>");
 
             let x = 100;
             let y = "100";
 
-            document.write("x : " + x + " : " + typeof(x),"<br>");
-            document.write("y : " + y + " : " + typeof(y),"<br><br>");
+            document.querySelector(".value67").innerHTML = "x : " + x + " : " + typeof(x);
+            document.querySelector(".value68").innerHTML = "y : " + y + " : " + typeof(y);
 
             x = "" + x; //숫자를 문자열로 형 변환
-            document.write("x : " + x + " : " + typeof(x),"<br>");
+            document.querySelector(".value69").innerHTML = "x : " + x + " : " + typeof(x);
 
             y = Number(y);  //내장 객체를 이용한 형 변환
-            document.write("y : " + y + " : " + typeof(y), "<br><br>");
+            document.querySelector(".value70").innerHTML = "y : " + y + " : " + typeof(y);
 
             x = Number(x);
-            document.write("x : " + x + " : " + typeof(x),"<br>");
+            document.querySelector(".value71").innerHTML = "x : " + x + " : " + typeof(x);
 
             y = String(y);
-            document.write("y : " + y + " : " + typeof(y), "<br><br>");
+            document.querySelector(".value72").innerHTML = "y : " + y + " : " + typeof(y);
         }
 
          //sample19 변수의 유형(데이터 타입)
          //변수 : 숫자(number), 문자(string), 함수(function), 배열(obj)
          //       객체(object), 불린(boolean), 특수값(null, undefinde), 심볼(symbol)
          {
-            document.write("*** 19. 변수의 유형 ***<br>");
-            
+   
             let num1 = 100;
             let str = "javascript"
             let func = function(){};
@@ -1170,15 +1148,15 @@
             let und = undefined     //값이 정의 되어 있지 않을 때
             let sym = Symbol();
 
-            document.write(typeof(num1), "<br>");
-            document.write(typeof(str), "<br>");
-            document.write(typeof(func), "<br>");
-            document.write(typeof(arr), "<br>");
-            document.write(typeof(obj), "<br>");
-            document.write(typeof(boo), "<br>");
-            document.write(typeof(nul), "<br>");
-            document.write(typeof(und), "<br>");
-            document.write(typeof(sym), "<br>");
+            document.querySelector(".value73").innerHTML = typeof(num1);
+            document.querySelector(".value74").innerHTML = typeof(str);
+            document.querySelector(".value75").innerHTML = typeof(func);
+            document.querySelector(".value76").innerHTML = typeof(arr);
+            document.querySelector(".value77").innerHTML = typeof(obj);
+            document.querySelector(".value78").innerHTML = typeof(boo);
+            document.querySelector(".value79").innerHTML = typeof(nul);
+            document.querySelector(".value80").innerHTML = typeof(und);
+            document.querySelector(".value81").innerHTML = typeof(sym);
          }
 
 

@@ -449,6 +449,35 @@ ol {
     color: #fff;
 }
 
+/* click btn */
+
+.btn2 {
+    padding: 10px 0 0 0;
+    border-top: 0;
+    }
+.btn2 a {
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 6px;
+    margin: 0;
+    color: #222;
+    background: #dadada;
+    transition: all 0.2s;
+}
+
+#exbox {
+    display: none;
+}
+#exbox.show {
+    display: block;
+}
+
+#exbox {
+    background-color: #272822;
+    color: #fff;
+    padding: 20px;
+}
+
 
 
 @media (max-width: 800px){

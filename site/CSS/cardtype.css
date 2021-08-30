@@ -238,3 +238,69 @@ body {
     text-decoration: underline;
     margin-top: 20px;
 }
+
+/* cardType04 */
+#cardType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+.cardType04 {
+    font-family: 'NanumSquare';
+    padding: 60px 0;
+}
+
+.cardType04 h2 {
+    padding-bottom: 10px;
+    font-weight: 800;
+    font-size: 42px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+.cardType04 p {
+    padding-bottom: 85px;
+    font-family: Dotum;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.cardType04 .card-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.cardType04 .card-wrap .card {
+    width: 380px;
+    height: 590px;
+    border: solid 0.5px #c4c4c4;
+    float: left;
+}
+.cardType04 .card-wrap .card:nth-child(1) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.cardType04 .card-wrap .card:nth-child(2) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.cardType04 .card img {
+    width: 380px;
+    height: 367px;
+}
+.cardType04 .card .txt-box {
+    position: absolute;
+}
+.cardType04 .card .txt-box .tilte {}
+.cardType04 .card .txt-box .new {}
+.cardType04 .card .txt-box .bt1 {}
+.cardType04 .card .txt-box .bt {}

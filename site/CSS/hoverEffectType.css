@@ -110,10 +110,10 @@ body {
 
 
 .imageType01 .image .image-btn.red {
-    background-color: #9A481D;
+    background-color: #000;
 }
 .imageType01 .image .image-btn.yellow {
-    background-color: #B59140;
+    background-color: #000;
 }
 
 
@@ -122,11 +122,19 @@ body {
     font-family: 'GmarketSans';
     padding: 100px 0;
 }
-.imageType02 h2{
+.imageType02 .h2-1 {
+    font-family: 'Crimson Pro';
+    font-weight: normal;
     font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 36px;
+    float: left;    
 }
+
+.imageType02 .h2-2 {
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 52px;
+}
+
 .imageType02 .image-wrap {
     display: flex;
     justify-content: space-between
@@ -178,7 +186,6 @@ body {
     color: #fff;
     padding: 5px 24px;
     background: #000;
-    border-radius: 40px;
     font-weight: 300;
     margin-top: 5px;
     display: inline-block;

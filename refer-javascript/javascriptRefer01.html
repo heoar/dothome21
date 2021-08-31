@@ -92,11 +92,18 @@
             <div class="value3"></div>
         </div>
         <script>
-            document.querySelector(".btn-t").addEventListener("click",() => {
-                document.querySelectorAll(".ex01").forEach((el) => {
-                        el.classList.toggle("show")
-                    });
-            })
+            // document.querySelector(".btn-t").addEventListener("click",() => {
+            //     document.querySelectorAll(".ex01").forEach((el) => {
+            //             el.classList.toggle("show")
+            //         });
+            // });
+            
+            const jbtn1_1 = document.querySelector(".btn-t");
+
+            jbtn1_1.addEventListener("click", function(){
+                document.querySelector(".ex01").classList.toggle("show");
+            });
+
         </script>
     
     <hr>
@@ -133,6 +140,7 @@
                     el.classList.toggle("show")
                 });
         })
+        
     </script>
 
 
@@ -821,6 +829,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+        
          //sample1
         //01. 변수 : 데이터 저장소
         {
@@ -828,9 +837,13 @@
             var y = 200; //변수 y에 숫자 200을 저장
             var z = "javascript"; //변수 z에 문자 javascript 저장
 
-            document.querySelector(".value1").innerHTML = x;
-            document.querySelector(".value2").innerHTML = y;
-            document.querySelector(".value3").innerHTML = z;
+            // document.querySelector(".value1").innerHTML = x;
+            // document.querySelector(".value2").innerHTML = y;
+            // document.querySelector(".value3").innerHTML = z;
+
+            const jreset1 = document.querySelector(".value1").innerHTML = x;
+            const jreset2 = document.querySelector(".value2").innerHTML = y;
+            const jreset3 = document.querySelector(".value3").innerHTML = z;
         }
 
         //sample2

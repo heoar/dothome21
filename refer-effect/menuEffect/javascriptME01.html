@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Effect</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="bg bg1">
@@ -29,6 +29,35 @@
     <div class="info bottom">
         <button>소스 보기</button>
     </div>
+    <div id="example" class="ex">
+        <div class="example-bg">
+            <div class="example-cont">
+                <h2>소스보기 만들기</h2>
+                <p>
+                제이쿼리<br>
+                $(".bottom button").click(function(){
+                    $("#example").removeClass().addClass("show");
+                });
+            
+                $(".example-cont button").click(function(){
+                    $("#example").addClass("hide");
+                });
+                </p>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
     <!-- //info -->
+    <script>
+
+        $(".bottom button").click(function(){
+            $("#example").removeClass().addClass("show");
+        });
+    
+        $(".example-cont button").click(function(){
+            $("#example").addClass("hide");
+        });
+    
+    </script>
 </body>
 </html>

@@ -315,12 +315,9 @@ nav li a:hover {
     background-image: linear-gradient(to bottom, #001735 50%, #8200c9);
   }
   nav {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    bottom: 5px;
+    width: 400px;
+    padding-left: 60px;
+    bottom: 10px;
     top: auto;
   }
   nav li {
@@ -330,16 +327,17 @@ nav li a:hover {
   nav li a {
     color: #fff;
     text-decoration: none;
-    width: 53px;
-    height: 25px;
-    line-height: 25px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
     border: 1px solid #fff;
     background: #fff;
     color: #6c4a70;
     display: inline-block;
-    border-radius: 10px;
-    font-size: 12px;
-    margin: 3px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    margin: 4px;
     font-family: "NEXONLv1";
     -webkit-box-shadow: inset 0 0 0 #fff;
             box-shadow: inset 0 0 0 #fff;

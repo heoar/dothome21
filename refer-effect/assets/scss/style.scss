@@ -289,6 +289,7 @@ nav {
 
     //ex-bg
     .example-bg {
+        background: rgba(0, 0, 0, 0.5);
         height: 100vh;
         display: flex;
         align-items: center;
@@ -461,7 +462,7 @@ nav {
                 display: inline-block;
             }
         &.active a {
-            border-top: 2px solid #667eea;
+            border-bottom: 2px solid #667eea;
             color: #4a5568;
         }
         

@@ -15,7 +15,7 @@ Vtite.forEach((element, index)=>{
         Vtite.forEach( el => {
             el.classList.remove("active");
         });
-        element.classList.add("actve");
+        element.classList.add("active");
 
         Vcont.forEach( el =>{
             el.style.display="none";

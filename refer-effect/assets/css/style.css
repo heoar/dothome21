@@ -317,6 +317,7 @@ nav li a:hover {
 }
 
 #example .example-bg {
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,7 +586,7 @@ nav li a:hover {
 }
 
 .code-view .view-title li.active a {
-  border-top: 2px solid #667eea;
+  border-bottom: 2px solid #667eea;
   color: #4a5568;
 }
 

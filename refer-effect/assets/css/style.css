@@ -578,6 +578,19 @@ nav li a:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #001735), to(#8200c9));
     background-image: linear-gradient(to bottom, #001735 50%, #8200c9);
   }
+  #contents .example-bg {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   nav {
     width: 400px;
     padding-left: 60px;
@@ -606,17 +619,8 @@ nav li a:hover {
     -webkit-box-shadow: inset 0 0 0 #fff;
             box-shadow: inset 0 0 0 #fff;
   }
-  #tab-menu {
-    width: 80%;
-  }
   .info.right {
     display: none;
-  }
-  .info.bottom {
-    top: auto;
-    left: auto;
-    bottom: 0;
-    right: 0;
   }
   .info h1 {
     font-weight: 500;
@@ -632,5 +636,37 @@ nav li a:hover {
     font-weight: 100;
     font-style: 14px;
     margin-top: 20px;
+  }
+  .info button {
+    font-size: 15px;
+    background: #fff;
+    padding: 5px 20px;
+    color: #000;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 0 0 #fff inset;
+            box-shadow: 0 0 0 #fff inset;
+  }
+  .code-view {
+    width: 80vw;
+    height: 100vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .code-view .view-title {
+    border-bottom: 1px solid  #f2f2f2;
+    padding: 0 11px;
+  }
+  .code-view .view-title li {
+    display: inline;
+    list-style: none;
+  }
+  .code-view .view-title li a {
+    text-decoration: none;
+    color: #ccc;
+    padding: 5px 5px 8px;
+    margin: 0 5px;
+    display: inline-block;
   }
 }

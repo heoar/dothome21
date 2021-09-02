@@ -21,7 +21,6 @@
             color: #fff;
             overflow: hidden;
         }
-        .tab-btn {}
         .tab-btn ul {
             display: flex;
         }
@@ -55,6 +54,16 @@
         }
         .tab-cont > div p {
             margin-bottom: 5px;
+        }
+
+        @media (max-width: 800px) {
+            #tab-menu {
+                min-width: 90%;
+            }
+            .tab-btn li a {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
 
     </style>

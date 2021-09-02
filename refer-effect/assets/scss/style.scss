@@ -358,63 +358,6 @@ nav {
 	100% {transform: scaley(0)}
 }
 
-
-
-
-
-//모바일 반응형
-@media (max-width: 800px) {
-    //h1
-    #contents {
-        h1 {
-           @include  position-Center;
-           font-size: 20vw;
-           line-height: 20vw;
-           text-align: center;
-           word-spacing: normal;
-           font-family: $font-Six, sans-serif;
-           font-weight: normal;
-           text-transform: uppercase;
-           letter-spacing: 1vw;
-           -webkit-text-fill-color: transparent;
-           -webkit-background-clip: text;
-           background-image: linear-gradient(to bottom, #001735 50%, #8200c9);
-        }
-    }
-
-    //nav
-    nav {
-        width: 400px;
-        padding-left: 60px;
-        bottom: 10px;
-        top: auto;
-    
-        li {
-            list-style: none;
-            display: inline;
-    
-            a{
-                color: #fff;
-                text-decoration: none;
-                width: 100px;
-                height: 30px;
-                line-height: 30px;
-                border: 1px solid #fff;
-                background: #fff;
-                color: #6c4a70;
-                display: inline-block;
-                border-radius: 30px;
-                font-size: 16px;
-                text-align: center;
-                margin: 4px;
-                font-family: $font-NEXIN1;
-                box-shadow: inset 0 0 0 #fff;
-                }
-            }
-            
-        }
-}
-
 //code-view
 .code-view {
     width: 60vw;
@@ -483,6 +426,92 @@ nav {
         }
         > div:nth-child(1) {
             display: block;
+        }
+    }
+}
+
+//모바일 반응형
+@media (max-width: 800px) {
+    //h1
+    #contents {
+        h1 {
+           @include  position-Center;
+           font-size: 20vw;
+           line-height: 20vw;
+           text-align: center;
+           word-spacing: normal;
+           font-family: $font-Six, sans-serif;
+           font-weight: normal;
+           text-transform: uppercase;
+           letter-spacing: 1vw;
+           -webkit-text-fill-color: transparent;
+           -webkit-background-clip: text;
+           background-image: linear-gradient(to bottom, #001735 50%, #8200c9);
+        }
+    }
+
+    //nav
+    nav {
+        width: 400px;
+        padding-left: 60px;
+        bottom: 10px;
+        top: auto;
+    
+        li {
+            list-style: none;
+            display: inline;
+    
+            a{
+                color: #fff;
+                text-decoration: none;
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid #fff;
+                background: #fff;
+                color: #6c4a70;
+                display: inline-block;
+                border-radius: 30px;
+                font-size: 16px;
+                text-align: center;
+                margin: 4px;
+                font-family: $font-NEXIN1;
+                box-shadow: inset 0 0 0 #fff;
+                }
+            }
+            
+        }
+
+    //메뉴
+    #tab-menu {
+        width: 80%;
+    }
+
+    //인포
+    .info {
+        &.right {
+            display: none;
+        }
+        &.bottom {
+            top: auto;
+            left: auto;
+            bottom: 0;
+            right: 0;
+        }
+        h1 {
+            font-weight: 500;
+            font-size: 25px;
+            display: inline-block;
+            div {
+                float: left;
+                color: #ffc400;
+                padding-right: 10px;
+            }
+        }
+        p {
+            font-weight: 100;
+            font-style: 14px;
+            margin-top: 20px;
         }
     }
 }

@@ -226,16 +226,19 @@ nav li a:hover {
   color: #fff;
   font-family: "NEXONLv1";
   padding: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .info.right {
-  position: absolute;
+  left: auto;
   right: 0px;
-  top: 0px;
 }
 
 .info.bottom {
-  position: absolute;
+  top: auto;
+  left: auto;
   bottom: 0;
   right: 0;
 }
@@ -244,6 +247,12 @@ nav li a:hover {
   font-weight: 700;
   font-size: 30px;
   display: inline-block;
+}
+
+.info h1 div {
+  float: left;
+  color: #ffc400;
+  padding-right: 10px;
 }
 
 .info p {
@@ -320,13 +329,6 @@ nav li a:hover {
           justify-content: center;
 }
 
-#example .example-bg .example-cont {
-  background: #fff;
-  padding: 3vw;
-  max-width: 50vw;
-  border-radius: 5px;
-}
-
 #example .example-bg .example-cont h2 {
   font-weight: 400;
   font-size: 30px;
@@ -347,6 +349,7 @@ nav li a:hover {
   color: #fff;
   border-radius: 50px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #example.show {
@@ -525,4 +528,80 @@ nav li a:hover {
     -webkit-box-shadow: inset 0 0 0 #fff;
             box-shadow: inset 0 0 0 #fff;
   }
+}
+
+.code-view {
+  width: 60vw;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.code-view .view-heder {
+  border-bottom: 1px solid  #f2f2f2;
+}
+
+.code-view .view-heder .dot {
+  padding: 13px 10px 10px 15px;
+}
+
+.code-view .view-heder .dot span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.code-view .view-heder .dot span:nth-child(1) {
+  background-color: #f56565;
+}
+
+.code-view .view-heder .dot span:nth-child(2) {
+  background-color: #f6e05e;
+}
+
+.code-view .view-heder .dot span:nth-child(3) {
+  background-color: #48bb78;
+}
+
+.code-view .view-title {
+  border-bottom: 1px solid  #f2f2f2;
+  padding: 0 11px;
+}
+
+.code-view .view-title li {
+  display: inline;
+  list-style: none;
+}
+
+.code-view .view-title li a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 10px 10px 12px;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.code-view .view-title li.active a {
+  border-top: 2px solid #667eea;
+  color: #4a5568;
+}
+
+.code-view .view-cont h2 {
+  padding: 20px 20px 0;
+}
+
+.code-view .view-cont {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.code-view .view-cont > div {
+  display: none;
+}
+
+.code-view .view-cont > div:nth-child(1) {
+  display: block;
 }

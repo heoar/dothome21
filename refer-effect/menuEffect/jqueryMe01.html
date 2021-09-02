@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Effect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.min.css">
     <style>
@@ -58,7 +59,7 @@
 
     </style>
 </head>
-<body class="bg bg1">
+<body class="bg bg8">
 
     <!-- contents -->
     <main>
@@ -100,20 +101,20 @@
 
     <!-- info -->
     <div class="info">
-        <h1><div>javascript</div>Menu Effect01</h1>
+        <h1><div>jquery</div>Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li><a href="jqueryMe01.html">1</a></li>
+            <li class="active"><a href="jqueryMe01.html">1</a></li>
             <li><a href="jqueryMe02.html">2</a></li>
             <li><a href="jqueryMe03.html">3</a></li>
             <li><a href="jqueryMe04.html">4</a></li>
@@ -236,24 +237,19 @@
 </code></pre>
                             </div>
                             <div>
-                                <h2>javascript code</h2>
-<pre><code class="language-javascript">const Vtite = document.querySelectorAll(".view-title ul li");
-const Vcont = document.querySelectorAll(".view-cont > div");
+                                <h2>jquery code</h2>
+<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
+    const tabCtn = $(".tab-cont > div");
 
-Vtite.forEach((element, index)=>{
-    element.addEventListener("click", function(){
-        Vtite.forEach( el => {
-            el.classList.remove("active");
-        });
-        element.classList.add("actve");
+    tabBtn.click(function(){
+        let target = $(this);
+        tabBtn.removeClass("active");
+        target.addClass("active");
 
-        Vcont.forEach( el =>{
-            el.style.display="none";
-        });
-        Vcont[index].style.display = "block";
+        let index = target.index();
+        tabCtn.css("display","none");
+        tabCtn.eq(index).css("display","block");
     });
-});
-
 </code></pre>
                             </div>
                         </div>
@@ -267,27 +263,29 @@ Vtite.forEach((element, index)=>{
 
 
     <!-- script -->
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        const tabBtn = document.querySelectorAll(".tab-btn ul li");
-        const tabCtn = document.querySelectorAll(".tab-cont > div");
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당
+        const tabCtn = $(".tab-cont > div");    //5개의 컨텐츠를 변수에 할당
+        
+        //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+        //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+        //3. 버튼 인덱스 설정
+        //4. 1번째 버튼은 1번째 컨텐츠 연결
+        //5. 모든 컨텐츠를 안보이게 설정
+        //6. 클릭한 버튼에 해당 컨텐츠만 보이게 설정
 
-        tabBtn.forEach((element, index)=>{
-            element.addEventListener("click", function(){
-                
-                tabBtn.forEach( el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
+        tabBtn.click(function(){
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
 
-                tabCtn.forEach( el => {
-                    el.style.display = "none";
-                });
-                tabCtn[index].style.display = "block";
-            });
+            let index = target.index();
+            tabCtn.css("display","none");
+            tabCtn.eq(index).css("display","block");
         });
-
     </script>
 </body>
 </html>

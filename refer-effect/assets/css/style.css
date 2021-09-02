@@ -620,7 +620,9 @@ nav li a:hover {
             box-shadow: inset 0 0 0 #fff;
   }
   .info.right {
-    display: none;
+    top: 110px;
+    left: 0px;
+    right: auto;
   }
   .info h1 {
     font-weight: 500;
@@ -638,6 +640,7 @@ nav li a:hover {
     margin-top: 20px;
   }
   .info button {
+    margin-bottom: 20px;
     font-size: 15px;
     background: #fff;
     padding: 5px 20px;

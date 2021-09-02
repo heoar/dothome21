@@ -494,12 +494,15 @@ nav {
     //인포
     .info {
         &.right {
-            display: none;
+            top: 110px;
+            left: 0px;
+            right: auto;
         }
         h1 {
             font-weight: 500;
             font-size: 25px;
             display: inline-block;
+            
             div {
                 float: left;
                 color: #ffc400;
@@ -512,6 +515,7 @@ nav {
             margin-top: 20px;
         }
         button {
+            margin-bottom: 20px;
             font-size: 15px;
             background: #fff;
             padding: 5px 20px;

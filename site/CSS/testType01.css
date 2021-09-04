@@ -1,0 +1,553 @@
+body {
+    background: url(../img/naver-bg.png) repeat-x 50% 0/3380px 1652px;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/* testTaye01 */
+
+.testType {
+
+}
+
+.testType01 {
+    font-family: 'NanumSquare';
+    color: #fff;
+}
+
+.testType01 #menu {
+    position: fixed;
+    width: 100%;
+    left: auto;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    margin-bottom: 50px;
+    padding: 15px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.testType01 #menu img {
+    padding: 20px 0;
+    width: 30px;
+    float: left;
+    cursor: pointer;
+}
+
+.testType01 #menu h1 {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    float: left;
+    cursor: pointer;
+}
+
+.testType01 #menu > div {
+    font-weight: 600;
+    display: inline-block;
+    padding: 20px 25px;
+    font-size: 18px;
+}
+.testType01 #menu > div:hover {
+    color: #19cf60;
+}
+.testType01 #menu > div:last-child:hover {
+    color: #fff;
+}
+
+.testType01 #menu > div:nth-child(3) {
+    padding-left: 150px;
+}
+.testType01 #menu > div:nth-child(7) {
+    padding-right: 250px;
+}
+
+.testType01 #menu > div:last-child {
+    font-size: 14px;
+    border: solid 1px rgba(255, 255, 255, 0.507);
+    border-radius: 50px;
+    padding: 8px 20px;
+}
+
+.testwrap{
+    max-width: 1000px;
+    width: 100%;
+    margin: 250px auto 0 auto;
+    position: relative;
+}
+
+.testwrap .test span {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    display: block;
+    font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 50px;
+}
+.testwrap .test h2 {
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.testwrap .test p {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 200px;
+}
+.swiper-wrapper .swiper-slide .swiper-inner img {
+    margin-left: 2px;
+    width: 18px; height: 12px;
+}
+
+
+
+/* 슬라이드 */
+.swiper {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-wrapper .swiper-slide {
+    border-radius: 15px;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(1) {
+    background-image: url(../img/naver-img06.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(2) {
+    background-image: url(../img/naver-img01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(3) {
+    background-image: url(../img/naver-img02.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(4) {
+    background-image: url(../img/naver-img03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(5) {
+    background-image: url(../img/naver-img04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(6) {
+    background-image: url(../img/naver-img05.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide:nth-child(7) {
+    background-image: url(../img/naver-img06.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(8) {
+    background-image: url(../img/naver-img01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+/* //슬라이드 이미지 */
+
+/* 내용 */
+.swiper-slide .swiper-inner {
+    padding: 60px;
+    color: #fff;
+}
+
+.swiper-slide .swiper-inner em {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+.swiper-slide .swiper-inner h3 {
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.swiper-slide .swiper-inner .slide-bt {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* 버튼 */
+.swiper .swiper-pagination {
+    padding: 50px;
+    margin-left: 50px;
+    left: 50%;
+    bottom: 35px;
+    transform: translate(-46%);
+}
+
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 7px; height: 7px;
+    background-color: #fff;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.testwrap .swiper-button-prev {
+    margin-top: 280px;
+    margin-left: -25px;
+    position: absolute;
+    top: 50%;
+}
+.testwrap .swiper-button-prev button {
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    width: 64px; height: 64px;
+    background: #111;
+    z-index: -1;
+    cursor: pointer;
+}
+.testwrap .swiper-button-prev button img{
+    width: 10px;
+    display: flex;
+    margin-left: 25px;
+}
+.testwrap .swiper-button-next button img {
+    width: 10px;
+    display: flex;
+    margin-left: 28px;
+}
+
+.testwrap .swiper-button-next {
+    margin-top: 280px;
+    margin-right: -25px;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+}
+.testwrap .swiper-button-next button {
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    width: 64px; height: 64px;
+    background: #111;
+    z-index: -1;
+    cursor: pointer;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+/* 중간 박스 */
+
+.testType01 {
+    background: linear-gradient(to top, #232323 80%, rgba(0, 0, 0, 0));
+}
+.testType01 .test-text01 {
+    max-width: 1000px;
+    width: 100%;
+    margin: 150px auto;
+    overflow: hidden;
+    
+}
+
+.testType01 .text-card .text-box01 {
+    z-index: -2;
+}
+.testType01 .text-tite {
+    padding: 50px;
+    position: absolute;
+}
+
+.testType01 .text-tite em {
+    font-size: 18px;
+    color: #ffffff99;
+}
+.testType01 .text-tite h3 {
+    margin-top: 10px;
+    font-size: 34px;
+    line-height: 50px;
+    padding-bottom: 20px;
+}
+.testType01 .text-tite span {
+    font-size: 16px;
+}
+.testType01 .test-text01 .slide-bt {
+    color: #6d8bff;
+}
+
+.testType01 .bt {
+    width: 18px; height: 12px;
+    color: #6d8bff;
+}
+
+
+.testType01 .test-text01 h2 {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 70px;
+    color: #6d8bff;
+}
+.test-text01 .imge01 {
+    float: left;
+    padding-top: 280px;
+    width: 469px; height: 569px;
+}
+.test-text01 .imge02 {
+    float: left;
+    width: 469px; height: 294px;
+    margin-left: 20px;
+    margin-top: 276px;
+}
+.test-text01 .imge03 {
+    float: left;
+    width: 469px; height: 294px;
+    margin-top: 276px;
+}
+
+.test-text01 .text-imge img {
+    transform: scale(1);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.test-text01 .text-imge:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.test-text02 .text-imge img {
+    transform: scale(1);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.test-text02 .text-imge:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+.test-text01 .text-box01 {
+    overflow: hidden;
+    margin-right: 30px;
+    margin-left: 515px;
+    border-radius: 15px;
+    width: 485px;
+    height: 570px;
+    float: left;
+    background: #2B2D30;
+}
+.test-text01 .text-box02 {
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 271px;
+    width: 485px;
+    height: 870px;
+    float: left;
+    background: #2B2D30;
+    position: absolute;
+}
+.test-text01 .text-box03 {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 515px;
+    border-radius: 15px;
+    width: 485px;
+    height: 541px;
+    float: left;
+    background: #2B2D30;
+}
+
+
+/* 최하단 */
+.testType01 .test-text02 {
+    width: 100%;
+    
+    overflow: hidden;
+    background: #1c1c1c;
+    display: grid;
+    place-items: center;
+}
+
+.test-text02 .text-card {
+    width: 1000px;
+}
+
+.testType01 .test-text02 h2 {
+    margin-top: 150px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 70px;
+    color: #5cf0c6;
+}
+.testType01 .test-text02 .slide-bt {
+    color: #5cf0c6;
+}
+.testType01 .text-box04 .slide-bt {
+    color: #fff;
+}
+
+.test-text02 .imge04 {
+    float: left;
+    width: 469px; height: 205px;
+    margin-left: 20px;
+    margin-top: 260px;
+}
+.test-text02 .imge05 {
+    float: left;
+    width: 469px; height: 265px;
+    margin-left: 20px;
+    margin-top: 200px;
+}
+.test-text02 .imge06 {
+    float: left;
+    width: 589px;
+    margin-top: 80px;
+    margin-left: 410px;
+}
+
+.test-text02 .text-box04 {
+    overflow: hidden;
+    margin-right: 30px;
+    width: 485px;
+    height: 466px;
+    border-radius: 15px;
+    float: left;
+    background: #2B2D30;
+    background-image: url(../img/naver-bg02.png);
+    background-size: cover;
+}
+.test-text02 .text-box05 {
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 485px;
+    height: 466px;
+    border-radius: 15px;
+    float: left;
+    background: #5470F8;
+}
+.test-text02 .text-box06 {
+    margin-bottom: 150px;
+    overflow: hidden;
+    width: 1000px;
+    height: 328px;
+    border-radius: 15px;
+    float: left;
+    background: #6452C7;
+    background-image: url(../img/naver-bg03.png);
+    background-size: cover;
+}
+
+/* 최하단 footer 버튼*/
+
+.footer {
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    background-image: url(../img/naver-bg04.png);
+    background-size: cover;
+}
+.footer h1 {
+    margin-bottom: 60px;
+    font-size: 34px;
+}
+
+.footer span {
+    width: 340px;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 30px 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+.footer span em{
+    font-weight: bold;
+}
+.footer .bt01 {
+    color: #000;
+    background: #fff;
+}
+.footer .bt02 {
+    background: #4b65f7;
+}
+
+.TOP {
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+    background: #000;
+    color: #555555;
+}
+
+.TOP em {
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #4949497c;
+    cursor: pointer;
+}
+.TOP img {
+    width: 13px;
+    opacity: 0.3;
+    transform: rotate(-90deg);
+}
+.TOP button {
+    margin: 30px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #323232;
+    color: #868686;
+    font-size: 13px;
+    cursor: pointer;
+}
+.TOP p {
+    font-weight: 800;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.TOP span {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 18px;
+    color: #323232;
+    cursor: pointer;
+}

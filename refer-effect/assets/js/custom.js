@@ -78,7 +78,18 @@ Vtite.forEach((element, index)=>{
 
 
 //소스보기 틀&버튼(01)
-document.querySelector(".bottom button").addEventListener("click",function(){
+function modal(){
+    document.querySelector(".bottom button").addEventListener("click",function(){
+        document.querySelector("#example").classList.add("show");
+        document.querySelector("#example").classList.remove("hide");
+    });
+    
+    document.querySelector(".example-cont button").addEventListener("click",function(){
+        document.querySelector("#example").classList.add("hide");
+    });
+}
+
+document.querySelector(".source button").addEventListener("click",function(){
     document.querySelector("#example").classList.add("show");
     document.querySelector("#example").classList.remove("hide");
 });

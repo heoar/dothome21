@@ -1,0 +1,331 @@
+body {
+    background: rgb(212, 212, 212);
+    font-family: 'NanumSquare';
+}
+
+/* testTaye02 */
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+}
+.testType {
+    background: rgd(240, 250, 247);
+}
+
+#menu img {
+    padding: 20px 0;
+    width: 30px;
+    float: left;
+    cursor: pointer;
+}
+
+#menu h1 {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    float: left;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+#menu > div {
+    font-size: 18px;
+    color: #00000099;
+    padding: 15px;
+}
+#menu > div:last-child {
+    color: #000;
+    padding: 10px 20px;
+    margin-left: 50px;
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 20px;
+}
+
+#menu > div:hover {
+    color: #19cf60;
+    font-weight: 800;
+}
+
+#menu > div:last-child:hover {
+    color: #000;
+    font-weight: normal;
+}
+
+.testType01 .testwrap {}
+.testType01 .testwrap .main-card {}
+.testType01 .main-card .main-top {
+    color: #fff;
+    padding: 100px 0 100px;
+    text-align: center;
+    background-image: url(../img/naverin-img01.jpg);
+    background-size: cover;
+}
+.testType01 .main-card .main-top span {
+    display: inline-block;
+    border-bottom: 4px solid hsla(0,0%,100%,.2);
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.testType01 .main-card .main-top h1 {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 700;
+}
+.testType01 .main-card .main-top p {
+    margin-top: 18px;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.testType01 .main-card .card {
+    width: 100%;
+    padding: 110px 0;
+    background: rgb(240,250,247);
+}
+.testType01 .main-card .card .card-txt {
+    margin: 0 auto;
+    width: 1000px;
+    background: rgb(240,250,247);
+}
+.testType01 .main-card .card .card-txt .card-tite {
+    float: left;
+    margin-right: 40px;
+}
+.testType01 .main-card h2{
+    font-size: 42px;
+    line-height: 53px;
+}
+.testType01 .main-card .card-txt p{
+    margin-top: 17px;
+    color: #26262E80;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.testType01 .main-card button{
+    font-size: 20px;
+    width: 322px;
+    height: 62px;
+    border-radius: 31px;
+    box-shadow: 0 10px 30px 0 rgb(40 211 111 / 30%);
+    background: #0CD796;
+    margin: 40px 0px 0px;
+    border-style: none;
+    color: #fff;
+}
+
+.testType01 .main-card .card img {
+    border-radius: 20px;
+    width: 500px;
+    height: 315px;
+}
+
+.testType01 .main-card .card-box {
+    text-align: left;
+    width: 900px;
+    background: #fff;
+    margin: 30px auto;
+    padding: 45px 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgb(113 171 174 / 5%);
+}
+.testType01 .main-card .card-box > div {
+    padding-bottom: 10px;
+}
+
+.testType01 .main-card .card-box h3 {
+    float: left;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #12CA8F;
+}
+
+.testType01 .main-card .card-box p {
+    overflow: hidden;
+    font-size: 18px;
+    color: #222222;
+}
+
+.testType01 .main-card div:nth-child(4) button {
+    margin-right: 15px;
+    width: 222px;
+    height: 62px;
+}
+
+.testType01 .main-card div:nth-child(4) button:last-child {
+    background: #4BB2F7;
+    width: 222px;
+    height: 62px;
+}
+
+/* 두번째꺼 */
+.testType01 .main-card .card02 {
+    width: 100%;
+    padding: 110px 0;
+    background: #fff;
+}
+.testType01 .main-card .card02 .card-txt {
+    margin: 0 auto;
+    width: 1000px;
+}
+.testType01 .main-card .card02 .card-txt .card-tite {
+    float: left;
+    margin-bottom: 50px;
+}
+.testType01 .main-card .card02 h2{
+    font-size: 42px;
+    line-height: 53px;
+}
+.testType01 .main-card .card02 .card-txt p{
+    margin-top: 17px;
+    color: #26262E80;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.testType01 .main-card .card02 button{
+    font-size: 20px;
+    width: 322px;
+    height: 62px;
+    border-radius: 31px;
+    box-shadow: 0 10px 30px 0 rgb(40 211 111 / 30%);
+    background: #0CD796;
+    margin: 40px 0px 0px;
+    border-style: none;
+    color: #fff;
+}
+
+.testType01 .main-card .card02 .txt-img {
+    float: left;
+    display: block;
+    border-radius: 20px;
+    width: 500px;
+    height: 315px;
+    margin-right: 50px;
+}
+
+.testType01 .main-card .card02 .card-box {
+    overflow: hidden;
+    text-align: left;
+    width: 900px;
+    background: #fff;
+    margin: 30px auto;
+    padding: 45px 50px;
+    border: 1px solid #e6f2ec;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px 0 rgb(113 171 142 / 5%);
+}
+.testType01 .main-card .card-box > div {
+    padding-bottom: 10px;
+}
+
+.testType01 .main-card .card-box h3 {
+    float: left;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #12CA8F;
+}
+
+.testType01 .main-card .card-box p {
+    overflow: hidden;
+    font-size: 18px;
+    color: #222222;
+}
+
+.testType01 .main-card div:nth-child(4) button {
+    margin-right: 15px;
+    width: 222px;
+    height: 62px;
+}
+
+.testType01 .main-card div:nth-child(4) button:last-child {
+    background: #4BB2F7;
+    width: 222px;
+    height: 62px;
+}
+
+/* 최하단 footer 버튼*/
+
+.footer {
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    background-image: url(../img/naver-bg04.png);
+    background-size: cover;
+}
+.footer h1 {
+    margin-bottom: 60px;
+    font-size: 34px;
+}
+
+.footer span {
+    width: 340px;
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 30px 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+.footer span em{
+    font-weight: bold;
+}
+.footer .bt01 {
+    color: #000;
+    background: #fff;
+}
+.footer .bt02 {
+    background: #4b65f7;
+}
+
+.TOP {
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+    background: #000;
+    color: #555555;
+}
+
+.TOP em {
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #4949497c;
+    cursor: pointer;
+}
+.TOP img {
+    width: 13px;
+    opacity: 0.3;
+    transform: rotate(-90deg);
+}
+.TOP button {
+    margin: 30px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #323232;
+    color: #868686;
+    font-size: 13px;
+    cursor: pointer;
+}
+.TOP p {
+    font-weight: 800;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.TOP span {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 18px;
+    color: #323232;
+    cursor: pointer;
+}

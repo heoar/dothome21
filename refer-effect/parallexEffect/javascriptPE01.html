@@ -149,8 +149,28 @@
     <!-- //main -->
 ​
     <!-- footer -->
-    <footer class="paraFooter">
-​
+    <footer id="paraFooter">
+        <h1>Parallax <em>Scrolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li class="active"><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul> 
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE0102.html">2</a></li>
+                <li><a href="jqueryPE0103.html">3</a></li>
+                <li><a href="jqueryPE0104.html">4</a></li>
+                <li><a href="jqueryPE0101.html">5</a></li>
+            </ul>
+        </div>
     </footer>
     <!-- //footer -->
 ​
@@ -493,6 +513,7 @@ window.addEventListener("scroll", function(){
         });
         window.addEventListener("scroll", function(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            
             if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
                 document.querySelectorAll(".paraNav ul li").forEach( el => {
                     el.classList.remove("active")

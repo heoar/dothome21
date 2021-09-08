@@ -905,3 +905,64 @@ nav li a:hover {
   padding: 0px 25px;
   cursor: pointer;
 }
+
+.paraFooter {
+  padding: 200px 0;
+}
+
+.paraFooter h1 {
+  font-size: 8vw;
+  line-height: 1.2;
+  padding: 10vw 8vw 0 8vw;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
+}
+
+.paraFooter em {
+  display: block;
+  font-family: 'Lato';
+  font-weight: 100;
+  padding-left: 18vw;
+}
+
+.footerInfo {
+  padding: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  padding: 15px 20px;
+  margin-bottom: 2px;
+}
+
+.footerInfo h2 {
+  padding: 20px;
+}
+
+.footerInfo li {
+  display: inline;
+  list-style: none;
+}
+
+.footerInfo li a {
+  color: #fff;
+  border: 1px dashed #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footerInfo li:active a {
+  background: #fff;
+  color: #000;
+}

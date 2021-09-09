@@ -125,7 +125,13 @@ $gradient6: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
         background: rgba(0, 0, 0, 0.9);
         z-index: -1;
     }
+    &.rad {
+        &::before{
+            background: rgba(105, 68, 26, 0.8);
+        }
+    }
 }
+
 
 .bg1 {
     background-image: url(../img/bg01@x2.jpg);
@@ -225,6 +231,11 @@ nav {
             left: auto;
             right: 0px;
         }
+        &.left {
+            top: auto;
+            left: 0;
+            bottom: 0;
+        }
         &.bottom {
             top: auto;
             left: auto;
@@ -240,6 +251,11 @@ nav {
                 color: #ffc400;
                 padding-right: 10px;
             }
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
         }
         p {
             font-weight: 100;
@@ -283,6 +299,19 @@ nav {
             box-shadow: 0 -50px 0 #fff inset;
             color: #000;
             cursor: pointer;
+            }
+        }
+        &.list {
+            z-index: 1000;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            li {
+                display: block;
             }
         }
     }

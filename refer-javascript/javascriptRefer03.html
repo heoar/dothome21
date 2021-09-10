@@ -1269,15 +1269,17 @@
         //sample18
         //18. 콜백함수 : 반복문
         {
-            function func(){
-                document.querySelector(".value23").innerHTML = "함수가 실행되었습니다.";
-            }
-            function callback(str){
-                for( let i=1; i<=5; i++ ){
-                str();
-                }
-            }
-            callback(func);
+
+            document.querySelector(".value23").innerHTML = "함수가 실행되었습니다.<br>함수가 실행되었습니다.<br>함수가 실행되었습니다.<br>함수가 실행되었습니다.<br>함수가 실행되었습니다."
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            // }
+            // function callback(str){
+            //     for( let i=1; i<=5; i++ ){
+            //     str();
+            //     }
+            // }
+            // callback(func);
         }
 
         document.write("<br>");
@@ -1288,7 +1290,7 @@
         //비동기(비순차적) : 동시에 일어나지 않는 것
         {
             //01
-            document.querySelector(".value23").innerHTML = '19번 console.log'
+            document.querySelector(".value24").innerHTML = '19번 console.log'
 
             function funA(){
                 console.log("funA가 실행되었습니다.");

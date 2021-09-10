@@ -1,0 +1,249 @@
+
+/* test03 */
+
+/* menu */
+.menu {
+    font-family: 'NanumSquare';
+    height: 85px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu .clova-lg {
+    font-family: 'GmarketSans';
+    font-weight: 800;
+    font-size: 12px;
+}
+.menu .clova-lg em {
+    font-size: 25px;
+    margin-left: 5px;
+    padding-right: 85px;
+}
+.menu > div {
+    padding: 35px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.menu > div:nth-child(6) {
+    padding-right: 100px;
+}
+
+.menu button {
+    font-size: 12px;
+    background: #fff;
+    border-style: none;
+    border: 1px solid #888;
+    padding: 6px 12px;
+    margin-left: 8px;
+    border-radius: 3px;
+}
+
+/* testwrap */
+.testType03 .testwrap .top-img {
+    width: 100%;
+    height: 390px;
+}
+
+.testType03 .top-img .img01 {
+    background-image: url(../img/clova_banner_01.png);
+    animation: change_banner 10s ease-in-out 0s infinite;
+    height: 390px;
+}
+.testType03 .top-img .img02 {
+    background-image: url(../img/clova_banner_02.png);
+    animation: change_banner 10s ease-in-out 5s infinite;
+    height: 390px;
+}
+@keyframes change_banner{
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    20% {
+        opacity: 1;
+        pointer-events: initial;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.testType .top-img .banner{
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+
+.testwrap .card-img {
+    width: 1400px;
+    margin: 150px auto;
+    overflow: hidden;
+}
+.testwrap .card-img h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.testwrap .card-img p {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 80px;
+    font-size: 16px;
+}
+
+.testwrap .card-img .card-box {
+    width: 374px;
+
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 10px;
+    float: left;
+    margin: 15px;
+}
+.testwrap .card-img .card-box:nth-child(3) {
+    margin-left: 100px;
+}
+
+.testwrap .card-img .card-box:nth-child(6) {
+    margin-left: 100px;
+}
+
+.testwrap .card-img .card-box:nth-child(9) {
+    margin-left: 100px;
+}
+
+.testwrap .card-img .card-box img {
+    display: inline-block;
+    border-radius: 10px 10px 0 0;
+    width: 374px;
+}
+
+.testwrap .card-img .card-box .card-txt {
+    margin: 30px;
+    text-align-last: left;
+    overflow: hidden;
+}
+.testwrap .card-img .card-box .card-txt h3 {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.testwrap .card-img .card-box .card-txt h3.new {
+    font-size: 25px;
+    float: left;
+    margin-right: 10px;
+}
+.testwrap .card-img .card-box .card-txt span{
+    display: inline-block;
+    background-color: #fa615b;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.testwrap .card-img .card-box .card-txt span.lg{
+    display: inline-block;
+    background-color: #c20034;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+.testwrap .card-img .card-box .card-txt p.new{
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.testwrap .card-img .card-box .card-txt p{
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.testwrap .card-img .card-box .card-txt .bt{
+    border: 1px solid #e3e3e3;
+    background: #fff;
+    color: #000;
+    padding: 8px 15px;
+    margin-right: 10px;
+    float: left;
+}
+.testwrap .card-img .card-box .card-txt .bt-gn {
+    background: #05d686;
+    color: #fff;
+    padding: 8px 15px;
+    margin-right: 10px;
+    float: left;
+}
+
+.testwrap .bottom-img {
+    text-align: center;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e5e5e5;
+    padding: 50px;
+}
+
+.testwrap .bottom-img h3 {
+    font-size: 30px;
+}
+.testwrap .bottom-img p {
+    font-size: 18px;
+    color: rgba(0,0,0,.5);
+    margin: 15px;
+}
+
+.testwrap .bottom-img button {
+    border-style: none;
+    border-radius: 30px;
+    background-color: #2284f5;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+}
+
+.footer {
+    background: #191919;
+    color: #666;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 30px;
+}
+.footer .footer-txt{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.footer .footrer-lg {
+    font-size: 20px;
+    text-align-last: left;
+    margin-bottom: 10px;
+}
+.footer .footrer-lg em {
+    font-size: 30px;
+
+}
+.footer > div p {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 127px;
+}

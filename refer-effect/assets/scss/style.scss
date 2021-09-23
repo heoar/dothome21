@@ -130,6 +130,11 @@ $gradient6: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
             background: rgba(105, 68, 26, 0.8);
         }
     }
+    &.brown {
+        &::before {
+            background-color: rgba(44, 32, 8, 0.780);
+        }
+    }
 }
 
 

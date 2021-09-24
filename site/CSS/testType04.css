@@ -1,0 +1,320 @@
+body {
+    width: 100%;
+    font-family: 'NanumSquare';
+}
+
+
+/* main */
+.menubar {
+    background: #fff;
+    margin: 0 auto;
+    height: 90px;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+.menubar .lg {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo_whale.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 60px;
+    margin-top: 23px;
+}
+
+.menubar .menu {
+    background: #fff;
+    display: inline-block;
+    display: flex;
+    line-height: 90px;
+    position: absolute;
+    position: fixed;
+}
+.menubar .menu > div:hover {
+    color: #05d6b4;
+    cursor: pointer;
+}
+
+
+.menubar .menu-bt {
+    position: absolute;
+    font-size: 18px;
+    color: #15C5AA;
+    border: 1px solid #15C5AA;
+    border-radius: 5px;
+    right: 4%;
+    top: 20px;
+    width: 125px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menubar .menu-bt:hover {
+    background-color: #15C5AA;
+    color: #fff;
+    transition: all .3s;
+}
+
+.menu > div {
+    margin-right: 80px;
+    text-align: center;
+    color: #2d1d1d;
+    font-weight: 800;
+}
+
+/* nav */
+
+.manu-three {
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+.manu-three .three {
+    display: inline-block;
+    font-size: 18px;
+    color: #838383;
+    width: 32%;
+    max-width: 330px;
+    height: 70px;
+}
+.manu-three .three:nth-child(2) .three-bar {
+    background-image: url(../img/top_check.png);
+}
+
+.manu-three .three:nth-child(3) .three-bar {
+    background-image: url(../img/top_check.png);
+}
+
+.manu-three .three .three-bar {
+    display: inline-block;
+    padding: 20px 30px;
+    background-repeat: no-repeat;
+    background-position: bottom 24px left;
+    background-size: 20px auto;
+    cursor: pointer;
+}
+
+
+
+.manu-three .three:nth-child(2) {
+    border-right: 1px solid #838383;
+    border-left: 1px solid #838383;
+}
+
+.manu-three .three > div.current {
+    display: inline-block;
+    color: #05D6B4;
+    background-image: url(../img/top_check.png);
+    background-repeat: no-repeat;
+    background-position: top 30px left;
+    background-size: 20px auto;
+}
+
+/* 상단 배너 */
+.banner.top1 {
+    background-image: url(/site/img/top_tasking_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+}
+
+.banner .banner-img {
+    max-width: 1280px;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+}
+
+.banner .banner-tite {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.banner .banner-tite h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.2em;
+}
+
+.banner .banner-tite p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2em;
+    padding: 30px 0 50px;
+}
+
+.banner-tite > div {
+    font-size: 30px;
+    background: #05d6b4;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+}
+.banner-tite > div::after {
+    background-image: url(/site/img/icon_btn_arrow.png);
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background-size: 100%;
+    margin-left: 18px;
+    margin-top: 23px;
+    vertical-align: top;
+}
+
+/* 이미지 카드 */
+
+.cardType {
+    background: #ecedf1;
+}
+
+.card {
+    display: table;
+    height: 670px;
+}
+
+
+.card-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 55%;
+}
+.card-img img {
+
+}
+
+
+
+.whaleon {
+    display: table-cell;
+    vertical-align: middle;
+}
+.card .whaleon:nth-child(2) {
+    padding-left: 5%;
+}
+
+
+.whaleon h2 {
+    font-size: 50px;
+    position: relative;
+    padding-left: 80px;
+}
+.whaleon h2:before {
+    position: absolute;
+    top: 0; left: 0;
+    display: inline-block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-size: 100%;
+    background: url(/site/img/icon_why_tab1_05.png);
+    background-position: center;
+}
+
+.card .whaleon.sb h2:before {
+    background: url(/site/img/icon_why_tab1_01.png);
+}
+
+.card .whaleon.qk h2:before {
+    background: url(/site/img/icon_why_tab1_02.png);
+}
+
+.card .whaleon.tap h2:before {
+    background: url(/site/img/icon_why_tab1_03.png);
+}
+
+.card .whaleon.pt h2:before {
+    background: url(/site/img/icon_why_tab1_04.png);
+}
+
+.whaleon p {
+    font-size: 26px;
+    padding: 30px 0 50px;
+}
+
+.whaleon .whaleon-sp {
+
+}
+.whaleon .whaleon-sp li {
+    font-size: 18px;
+    color: #2D68D2;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.whaleon .whaleon-sp li:before {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(/site/img/icon_function_detailgo.png);
+}
+
+.devivetype {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.devivetype > span {
+    display: inline-block;
+}
+
+.devivetype .device_pc {
+    background-image: url(../img/icon_pc.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 20px;
+    width: 118px;
+    height: 76px;
+}
+
+.devivetype .device_pc:nth-child(2) {
+    margin-right: 10px;
+}
+
+.devivetype .device_m {
+    background-image: url(../img/icon_m.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 20px;
+    width: 118px;
+    height: 76px;
+
+}
+
+.devivetype .device_txt {
+    position: absolute;
+    line-height: 1em;
+    font-size: 16px;
+    color: #919191;
+    display: inline-block;
+}
+
+.devivetype .device_txt:nth-child(2) {
+    margin-right: 10px;
+}

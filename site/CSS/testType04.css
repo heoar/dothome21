@@ -585,7 +585,6 @@ footer ul li {
         display: table;
     }
     .banner.top1 {
-        background-image: url(/site/img/top_tasking_bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 70%;

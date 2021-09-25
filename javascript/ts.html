@@ -8,79 +8,18 @@
 </head>
 <body>
 <script>
-  //const num = [100, 200, 300, 400, 500];
-
-  //for문
-  //for( i=0; i<num.length; i++){
-  //  document.write(num[i]);
-  //}
-
-  //document.write("<br>")
-
-  //forEach문
-  //num.forEach(function(el){
-  //  document.write(el);
-  //});
-
-  //document.write("<br>")
-
-  //forEach문
- //num.forEach(function(el, index, array){
-  //  document.write(el, "<br>");
-  //  document.write(index, "<br>");
-  //  document.write(array, "<br>");
-  //});
-
- // document.write("<br><br>")
-
-  //300빼고
-  //const sp = num.splice(2,1)
-  //document.write(num);
-
-  //document.write("<br><br>")
-
-  //map
-  //num.map((el, index, array)=>{
-  //  document.write(el);
-  //})
-
-
-
-//{
-//const obj = [
-//  {a:100},
-//  {a:200},
-//  {a:300},
-//]
-
-//document.write(obj[0].a);
-//document.write(obj[1].a);
-//document.write(obj[2].a);
-
-//document.write("<br>")
-
-//map
-//obj.map(el=>{
-//  document.write(el.a);
-//});
-
-//document.write("<br>")
-
-//한줄
-//obj.map(el=>document.write(el.a));
-
-//}
-
-document.write("<br>")
-
-function func(num, name, jop){
-    document.write(num + ". 내이름은" + name + "이며 직업은" + jop + "입니다.");
+  function func(){
+    let i = 0, sum =0;
+    while( 1 ){
+      i++;
+      if(i > 10)break;
+      if(i%5==0) continue;
+      sum+=i;
+      document.write(i);
+    }
+    document.write(sum);
   }
-func("1","웹쓰","웹 퍼블리셔");
-
-//const info = new func("1","웹쓰","웹 퍼블리셔")
-
-//1. 내 이름은 웹쓰이며 직업은 웹 퍼블리셔입니다.
+  func();
 
 
 

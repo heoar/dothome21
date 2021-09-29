@@ -8,18 +8,17 @@
 </head>
 <body>
 <script>
-  function func(){
-    let i = 0, sum =0;
-    while( 1 ){
-      i++;
-      if(i > 10)break;
-      if(i%5==0) continue;
-      sum+=i;
-      document.write(i);
+function solution(s){
+  let answer = "";
+
+  for(let i=0; i<s.length; i++){
+    if( s.indexOf(s[i] ==3){
+      answer =s[i];
     }
-    document.write(sum);
   }
-  func();
+  document.write(answer);
+}
+solution("webstoryboy");
 
 
 

@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
-​
+
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.min.css">
-​
+
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
         .paraNav {
-            top: -200px;
+            top: 20px;
             transition: top 0.4s ease;
         }
 
-        .paraNav.show {
-            top: 20px;
+        .paraNav.hide {
+            top: -200px;
         }
 
         .paraNav li a {
@@ -27,15 +27,17 @@
         .paraNav li.active a {
             width: auto;
             border-radius: 30px;
-            padding: 5px 20px;
+            width: 30px; height: 30px;
         }
+
+        
     </style>
 </head>
 <body class="parallax">
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect03 - javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 숨김 메뉴</p>
+        <h1><a href="index.html">Parallax Effect06 - javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 나타나기</p>
     </header>
     <!-- //header -->
     <!-- main -->
@@ -44,15 +46,15 @@
 
         <div class="paraNav">
             <ul>
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </div>
         <!-- //nav -->
@@ -68,7 +70,7 @@
                 <p class="desc">언제나 현재에 집중할 수 있다면 행복할 것이다.</p>
             </section>
             <!-- //section1 -->
-​
+
             <section id="section2" class="content-item">
                 <span class="num">02</span>
                 <h2 class="title">Section2</h2>
@@ -78,7 +80,7 @@
                 <p class="desc">많이 읽어라. 그러나 많은 책을 읽지는 마라.</p>
             </section>
             <!-- //section2 -->
-​
+
             <section id="section3" class="content-item">
                 <span class="num">03</span>
                 <h2 class="title">Section3</h2>
@@ -88,7 +90,7 @@
                 <p class="desc">능력은 그 수요를 결코 충족시킬 수 없을 것이다.</p>
             </section>
             <!-- //section3 -->
-​
+
             <section id="section4" class="content-item">
                 <span class="num">04</span>
                 <h2 class="title">Section4</h2>
@@ -98,7 +100,7 @@
                 <p class="desc">스스로를 존경하면 다른 사람도 당신을 존경할 것이다.</p>
             </section>
             <!-- //section4 -->
-​
+
             <section id="section5" class="content-item">
                 <span class="num">05</span>
                 <h2 class="title">Section5</h2>
@@ -108,7 +110,7 @@
                 <p class="desc">기회 없는 능력은 쓸모가 없다.</p>
             </section>
             <!-- //section5 -->
-​
+
             <section id="section6" class="content-item">
                 <span class="num">06</span>
                 <h2 class="title">Section6</h2>
@@ -118,7 +120,7 @@
                 <p class="desc">우리가 이룬 것만큼, 이루지 못한 것도 자랑스럽습니다.</p>
             </section>
             <!-- //section6 -->
-​
+
             <section id="section7" class="content-item">
                 <span class="num">07</span>
                 <h2 class="title">Section7</h2>
@@ -128,7 +130,7 @@
                 <p class="desc">자신감은 위대한 과업의 첫째 요건이다.</p>
             </section>
             <!-- //section7 -->
-​
+
             <section id="section8" class="content-item">
                 <span class="num">08</span>
                 <h2 class="title">Section8</h2>
@@ -138,7 +140,7 @@
                 <p class="desc">누구나 재능은 있다. 드문 것은 그 재능이 이끄는 암흑 속으로 따라 들어갈 용기다.</p>
             </section>
             <!-- //section8 -->
-​
+
             <section id="section9" class="content-item">
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
@@ -152,7 +154,7 @@
         <!-- //contents -->
     </main>
     <!-- //main -->
-​
+
     <!-- footer -->
     <footer id="paraFooter">
         <h1>Parallax <em>Scrolling</em></h1>
@@ -161,10 +163,10 @@
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
-                <li class="active"><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
             </ul>
@@ -184,7 +186,7 @@
         </div>
     </footer>
     <!-- //footer -->
-​
+
     <!-- source -->
     <div class="source">
         <button>소스 보기</button>
@@ -480,44 +482,78 @@ $(window).scroll(function(){
 
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-       document.querySelectorAll(".paraDot ul li a").forEach((element) => {
-            element.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(element.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
+       
+        const scrollMenu = function(){
+            document.querySelectorAll(".paraDot ul li a").forEach((element) => {
+                element.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    document.querySelector(element.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    })
                 })
-            })
-        })
+            });
+        }
+        scrollMenu();
 
-        window.addEventListener("scroll", function(){
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffest;
+        const scrollProgress = function(){
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset
 
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
 
-            //숨김메뉴
-            if( scrollTop > 10 ){
-                document.querySelector(".paraNav").classList.add("show");
-            } else {
-                document.querySelector(".paraNav").classList.remove("show");
-            }
+            // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+            // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+            // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+            // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+            // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+            // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+            // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+            // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+            // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
 
-            //버튼용
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                if( scrollTop >= item.offsetTop -2 ){
+            // for( i=1; i<=9; i++){
+            //     let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+            //     document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
+            // }
+
+            document.querySelectorAll(".content-item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+                item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+
+            });
+
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item,index) => {
+                if( scrollTop >= item.offsetTop -2){
                     document.querySelectorAll(".paraNav ul li").forEach(li => {
                         li.classList.remove("active");
-                    })
+                    });
                     document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
-            })
-        });
+            });
 
 
+
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        }
+
+
+        window.addEventListener("scroll", scrollProgress);
+        
     </script>
 </body>
 </html>

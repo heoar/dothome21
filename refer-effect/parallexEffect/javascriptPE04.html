@@ -162,8 +162,11 @@
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
                 <li><a href="javascriptPE03.html">3</a></li>
-                <li><a href="javascriptPE04.html">4</a></li>
+                <li class="active"><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
+                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE07.html">7</a></li>
+                <li><a href="javascriptPE08.html">8</a></li>
             </ul>
         </div>
         <div class="footerInfo">
@@ -171,9 +174,12 @@
             <ul> 
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE0102.html">2</a></li>
-                <li class="active"><a href="jqueryPE0103.html">3</a></li>
+                <li><a href="jqueryPE0103.html">3</a></li>
                 <li><a href="jqueryPE0104.html">4</a></li>
-                <li><a href="jqueryPE0101.html">5</a></li>
+                <li><a href="jqueryPE0105.html">5</a></li>
+                <li><a href="jqueryPE0106.html">6</a></li>
+                <li><a href="jqueryPE0107.html">7</a></li>
+                <li><a href="jqueryPE0108.html">8</a></li>
             </ul>
         </div>
     </footer>
@@ -479,7 +485,7 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        document.querySelectorAll(".paraNav ul li a").forEach((element) => {
+        document.querySelectorAll(".paraDot ul li a").forEach((element) => {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
                 document.querySelector(element.getAttribute("href")).scrollIntoView({

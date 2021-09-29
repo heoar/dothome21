@@ -842,20 +842,23 @@ nav li a:hover {
   padding-bottom: 56%;
   background: #000;
   position: relative;
+  overflow: hidden;
 }
 
 .paraCont .content-item .img-Wrap .img {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: -10%;
+  top: -10%;
+  width: 120%;
+  height: 120%;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: saturate(0%);
           filter: saturate(0%);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
 }
 
 .paraCont .content-item .img-Wrap .img:hover {
@@ -941,11 +944,11 @@ nav li a:hover {
   cursor: pointer;
 }
 
-.paraFooter {
+#paraFooter {
   padding: 200px 0;
 }
 
-.paraFooter h1 {
+#paraFooter h1 {
   font-size: 8vw;
   line-height: 1.2;
   padding: 10vw 8vw 0 8vw;
@@ -953,7 +956,7 @@ nav li a:hover {
   margin-bottom: 3vw;
 }
 
-.paraFooter em {
+#paraFooter em {
   display: block;
   font-family: 'Lato';
   font-weight: 100;
@@ -981,14 +984,13 @@ nav li a:hover {
   padding: 20px;
 }
 
-.footerInfo li {
+.footerInfo ul li {
   display: inline;
   list-style: none;
 }
 
-.footerInfo li a {
+.footerInfo ul li a {
   color: #fff;
-  border: 1px dashed #fff;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -997,7 +999,7 @@ nav li a:hover {
   list-style: none;
 }
 
-.footerInfo li:active a {
+.footerInfo ul li:active a {
   background: #fff;
   color: #000;
 }

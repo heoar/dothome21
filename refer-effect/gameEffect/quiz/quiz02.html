@@ -786,11 +786,11 @@
     //     })
     // })
 
-    questionAnswerConfirm.forEach((el,idx)=>{
+    questionAnswerConfirm.forEach((el,i)=>{
         el.addEventListener("click",function(){
             this.style.display = "none";
             this.nextElementSibling.style.display = "block";
-            document.querySelectorAll('.card')[idx].classList.add('good');
+            document.querySelectorAll('.card')[i].classList.add('good');
         })
     })
 

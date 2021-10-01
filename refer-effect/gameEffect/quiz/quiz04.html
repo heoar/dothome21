@@ -770,8 +770,8 @@
         //데이터 안의 정답 => 두개를 비교해서 정답/오답 가리기
         quizInfo.forEach((currentQuestion, questioinNumber) => {
             const selectContainer = questionAnswerSelects[questioinNumber];
-                const selectChecked = `input[name=select${questioinNumber}]:checked`;
-                const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
+            const selectChecked = `input[name=select${questioinNumber}]:checked`;
+            const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
 
             if(selectResult == currentQuestion.quizAnswer){
                 //alert("정답입니다.");

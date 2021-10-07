@@ -1,0 +1,292 @@
+/* HEADER */
+#header {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+#header .menu ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#header .menu ul li a {
+    display: block;
+    width: 90px;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .member ul li {
+    display: inline-block;
+}
+
+#header .member ul li a {
+    display: block;
+    width: 90px;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .member ul li:last-child a { 
+    background-color: #9FC3AF;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+/* 로그인 페이지 */
+#login_main {
+   text-align: center;
+   background: #ececec;
+   background-image: url(../img/login_bg@2x.jpg);
+   background-size: cover;
+   background-position: center;
+}
+#login_main .lg_form {
+    display: inline-block;
+    margin: 100px auto;
+    width: 600px;
+    height: 560px;
+    border-radius: 5px;
+    background: #fff;
+    opacity: .9;
+    text-align: center;
+}
+
+#login_main .lg_form .lg_box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#login_main .lg_form .lg_box h2 {
+     font-size: 28px;
+     margin: 50px;
+     font-weight: 800;
+}
+
+#login_main .lg_form .lg_box form div {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 26px;
+}
+#login_main .lg_form .lg_box form input {
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    border-bottom: 1px solid #414141;
+}
+#login_main .lg_form .lg_box button {
+    margin-top: 50px;
+    font-size: 24px;
+    padding: 15px 165px;
+    border-radius: 5px;
+    border-style: none;
+    background: #414141;
+    color: #fff;
+    cursor: pointer;
+}
+#login_main .lg_form .lg_box .info {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 회원가입 */
+#join_main {
+    text-align: center;
+    background: #f1f0eb;
+    background-size: cover;
+    background-position: center;
+}
+
+#join_main .jo_form .jo_box {
+    width: 510px;
+    margin: 0 auto;
+}
+
+ #join_main .jo_form h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+ #join_main .jo_form {
+     display: inline-block;
+     margin: 100px auto;
+     width: 600px;
+     border-radius: 5px;
+     background: #fff;
+     text-align: left;
+}
+
+#join_main .jo_form .join-info {
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+#join_main .jo_form .join-privacy {
+    margin: 0 auto;
+    width: 100%;
+}
+ 
+#join_main .jo_form .join-privacy ul {
+    padding: 20px;
+    border: 1px solid #E3E3E3;
+    font-size: 12px;
+}
+#join_main .jo_form .join-privacy .join_check {
+    width: 96%;
+    margin: 0 auto;
+    display: block;
+    padding: 9px;
+    border: 1px solid #E3E3E3;
+    background: #F4F4F4;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+#join_main .jo_form .join-privacy .join_check input {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    vertical-align:-3px;
+}
+
+#join_main .jo_form .jo_box h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+
+#join_main .jo_form .jo_box form div {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+#join_main .jo_form .jo_box form label {
+    margin-right: 200px;
+}
+#join_main .jo_form .jo_box form input {
+    width: 350px;
+    border-style: none;
+    border-bottom: 1px solid #414141;
+    padding: 10px;
+}
+#join_main .jo_form .jo_box form input.wp {
+    width: 500px;
+}
+#join_main .jo_form .jo_box .btn_submit {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 15px 195px;
+    border-radius: 5px;
+    border-style: none;
+    background: #414141;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+#join_main .jo_form .jo_box .btn_submit a {
+    color: #fff;
+}
+
+#join_main .jo_form .jo_box .btn_sb {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border-style: none;
+    background: #9FC3AF;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 회원가입 완료 페이지 */
+#joinCk_main {
+    text-align: center;
+    background: #F1F0EB;
+    background-size: cover;
+    background-position: center;
+}
+#joinCk_main .joCk_form {
+    display: inline-block;
+    margin: 100px auto;
+    width: 1200px;
+    padding: 60px 0;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+}
+
+#joinCk_main .joCk_form .joCk_box {
+    margin: 0 auto;
+}
+
+#joinCk_main .joCk_form .joCk_box h2 {
+    color: #9FC3AF;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+#joinCk_main .joCk_form .joCk_box h2 em {
+    font-weight: 600;
+}
+#joinCk_main .joCk_form .joCk_box p {
+    font-size: 24px;
+    color: #414141;
+    margin-bottom: 80px;
+}
+#joinCk_main .joCk_form .joCk_box img {
+    width: 600px;
+    margin-bottom: 50px;
+}
+#joinCk_main .joCk_form button {
+    padding: 12px 240px;
+    border-radius: 5px;
+    font-size: 28px;
+    display: inline-block;
+    text-align: center;
+    background: #9FC3AF;
+    border-style: none;
+    cursor: pointer;
+}
+#joinCk_main .joCk_form button a {
+    color: #fff;
+}
+
+
+
+/* FOOTER */
+#footer {
+    background-color: #414141;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+#footer p {
+    display: inline-block;
+    line-height: 100%;
+}
+#footer p:first-child {
+    padding-right: 20px;
+}
+#footer p:last-child {
+    border-left: 1px solid #fff;
+    padding-left: 20px;
+}
+
+#footer p a {
+    color: #fff;
+}
+/* //FOOTER */

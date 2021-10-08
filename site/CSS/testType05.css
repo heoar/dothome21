@@ -1,0 +1,87 @@
+/* container */
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: 'S-CoreDream';
+    font-weight: 800;
+}
+
+/* 메뉴 */
+.menu {
+    height: 100px;
+}
+.menu .m_logo {
+    float: left;
+    background: #cfc5e6;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+}
+.menu .m_txt {
+    background: #af9fd6;
+    height: 100px;
+    line-height: 100px;
+}
+/* 중앙영역 */
+.main {
+
+}
+.main .main_box .main_img {
+    background: #9078c8;
+    height: 400px;
+    line-height: 400px;
+}
+.main .main_box .main_bord {
+    float: left;
+    background: #785bbc;
+    width: 400px;
+    height: 250px;
+    line-height: 250px;
+}
+.main .main_box .main_gall {
+    float: left;
+    background: #6041b1;
+    width: 400px;
+    height: 250px;
+    line-height: 250px;
+}
+.main .main_box .main_pop {
+    float: left;
+    background: #573baa;
+    width: 400px;
+    height: 250px;
+    line-height: 250px;
+}
+
+/* footer */
+.text_footer {
+    height: 100px;
+}
+.text_footer .f_logo {
+    float: left;
+    background: #573baa;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+}
+.text_footer .f_copy {
+    float: left;
+    background: #4c34a2;
+    width: 600px;
+    height: 100px;
+    line-height: 100px;
+}
+.text_footer .f_sns {
+    float: left;
+    background: #402e9a;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+}

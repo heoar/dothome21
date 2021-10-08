@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream';
+}
+
+ul,li,a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+
+.container_box {
+    width: 960px;
+    height: 100vw;
+    margin: 50px auto;
+    margin-bottom: 0;
+}
+
+/* 메뉴 영역 */
+.menu {
+    min-height: 100px;
+    background: #fff;
+}
+.menu .menu_lg img {
+    width: 100px;
+    float: left;
+}
+.menu .menu_tep {
+    font-size: 18px;
+}
+.menu .menu_tep ul {
+    float: right;
+}
+.menu .menu_tep ul li {
+    float: left;
+    padding: 30px;
+    line-height: 50px;
+}
+.menu .menu_tep ul li:last-child {
+    padding-right: 0px;
+}
+
+/* 메인 영역 */
+.main {}
+.main_br {
+    height: 500px;
+    background-image: url(../img/mein_br.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+.main_bord {
+    width: 400px;
+    padding: 27px;
+    border: 2px solid #eee;
+    background: #fff;
+    float: left;
+}
+.main_bord .bord_tite {
+    overflow: hidden;
+}
+.main_bord .bord_tite h3 {
+    width: 35%;
+    font-size: 20px;
+    float: left;
+    margin-bottom: 20px;
+}
+.main_bord .bord_tite .tite_w {
+    line-height: 20px;
+    border-right: 2px solid #000;
+}
+.main_bord .bord_tite .tite_n {
+    margin-left: 16px;
+    line-height: 20px;
+    color: #9b9b9b;
+}
+.main_bord .bord_tite span {
+    font-size: 15px;
+    line-height: 20px;
+    float: right;
+    margin-bottom: 20px;
+    color: #9b9b9b;
+}
+.main_bord .bord_tite img {
+    width: 13px;
+    height: 13px;
+}
+
+.main_bord .bord_txt {
+    font-size: 14px;
+    font-weight: 100;
+}
+.main_bord .bord_txt ul {
+    
+}
+.main_bord .bord_txt ul li {
+    margin-bottom: 10px;
+}
+.main_bord .bord_txt ul span {
+    float: right;
+    color: #888;
+}
+
+/* 팝배너 */
+.main_pop {
+    float: right;
+}
+.main_pop img {
+    width: 480px;
+}
+
+/* 갤러리 */
+.gell_box {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: inline-block;
+}
+.gell_box h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.gell_box .gell_img {
+    float: left;
+}
+.gell_box .gell_img:nth-child(5) img {
+    margin-right: 0;
+}
+.gell_box .gell_img img {
+    width: 225px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+.gell_box .gell_img p {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* 풋터 */
+footer {
+    height: 100px;
+    border-top: 1px solid #7b7b7b;
+}
+footer .f_txt p {
+    font-size: 12px;
+    font-weight: 100;
+    margin: 30px auto;
+    color: #6b6b6b;
+}
+footer .f_com p {
+    font-size: 12px;
+    font-weight: 100;
+    color: #7b7b7b;
+}

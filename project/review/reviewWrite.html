@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,33 +12,52 @@
     <link href="../assets/css/common.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <header id="header">
         <div class="container">
             <nav class="menu">
                 <ul>
+                    <li><a href="../pages/index.html">홈으로</a></li>
                     <li><a href="#">문제풀기</a></li>
                     <li><a href="#">기출문제</a></li>
-                    <li><a href="review/review.html">시험후기</a></li>
-                    <li><a href="notice/qna.html">Q&A</a></li>
-                    <li><a href="notice/notice.html">공지사항</a></li>
+                    <li><a href="../review/review.html">시험후기</a></li>
+                    <li><a href="../notice/qna.html">Q&A</a></li>
+                    <li><a href="../notice/notice.html">공지사항</a></li>
                 </ul>
             </nav>
             <div class="member">
                 <ul>
-                    <li><a href="login/login.html">로그인</a></li>
-                    <li><a href="login/join.html">회원가입</a></li>
+                    <li><a href="../login/login.html">로그인</a></li>
+                    <li><a href="../login/join.html">회원가입</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <!-- //header -->
 
-    <main>
+    <main id="boardWriteMain">
         <div class="container">
-            <h1>글쓰기</h1>
+            <h1 class="boardWriteTitle">글쓰기</h1>
+            <div class="boardWriteContent">
+                <form action="#" name="boardWrite" method="post">
+                    <fieldset>
+                        <legend class="ir_so">시험후기 게시판 글쓰기 영역입니다.</legend>
+                        <div>
+                            <label for="boardTitle">제목</label>
+                            <input type="text" id="boardTitle" name="boardTitle" class="title-text"
+                                placeholder="제목을 입력해주세요!" required autofocus />
+                        </div>
+                        <div>
+                            <label for="boardContent">내용</label>
+                            <textarea name="boardContent" id="boardContent" class="title-text" rows="13"
+                                placeholder="내용을 작성해주세요!" required></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="board-btn" value="작성완료">작성완료</button>
+                </form>
+            </div>
         </div>
-
     </main>
     <!-- //main -->
 
@@ -49,4 +69,5 @@
     </footer>
     <!-- //footer -->
 </body>
+
 </html>

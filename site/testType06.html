@@ -26,8 +26,8 @@
             <div class="main">
                 <div class="main_br"></div>
                 <div class="main_bord">
-                    <div class="bord_tite">
-                        <h3 class="tite_w">롯데월드 소식</h3>
+                    <div id="bord" class="bord_tite">
+                        <h3 class="tite_w show">롯데월드 소식</h3>
                         <h3 class="tite_n">뉴스ㆍ공지</h3>
                         <span>더보기
                         <img src="img/ps.jpg" alt="더보기">
@@ -80,11 +80,11 @@
         </div>
     </section>
     <script>
-        document.querySelectorAll("bord_tite tite_n").forEach((e)=>{
-            e.addEventListener("click",()=>{
-                this.classList.toggle = "show";
-            })
-        })
+        // document.querySelectorAll("bord_tite .tite_w").forEach((e)=>{
+        //     e.addEventListener("click",()=>{
+        //         this.classList.remove("show");
+        //     })
+        // })
     </script>
 </body>
 </html>

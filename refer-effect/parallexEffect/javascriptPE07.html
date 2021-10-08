@@ -521,7 +521,7 @@ $(window).scroll(function(){
         // let split = text.split('').join("</span><span>");
         //     split = "<span>" + split + "</span>";
         // document.querySelector("#section1 .desc").innerHTML = split;
-        //alert(split)
+        // alert(split)
 
         //여러 글씨 쪼개기(다중)
         document.querySelectorAll(".split").forEach(el => {
@@ -536,22 +536,19 @@ $(window).scroll(function(){
         window.addEventListener("scroll",() => {
             scrollTop = window.pageOffset || document.documentElement.scrollTop || window.scrollY;
 
-            if( scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight ){
-                document.querySelectorAll("#section1 .split span").forEach((elem, index) => {
-                    setTimeout(()=>{
-                        elem.classList.add("show");
-                    }, 50 * index)
-                })
-            }
+            // if( scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight ){
+            //     document.querySelectorAll("#section1 .split span").forEach((elem, index) => {
+            //         setTimeout(()=>{
+            //             elem.classList.add("show");
+            //         }, 50 * index)
+            //     })
+            // }
             
-
-
         //for문
         let count = document.querySelectorAll(".content-item").length;
 
             for (let i = 1; i <= count; i++) {
                 if (scrollTop >= document.getElementById("section" + i).offsetTop) {
-                    document.getElementById("section" + i).classList.add("test");
                     document.querySelectorAll("#section" + i + " .split span").forEach((elem, index) => {
                         setTimeout(() => {
                             elem.classList.add("show");

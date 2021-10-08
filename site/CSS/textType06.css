@@ -50,12 +50,15 @@ ul,li,a {
     background-position: center;
     margin-bottom: 20px;
 }
+
+/* 공지 사항 */
 .main_bord {
     width: 400px;
     padding: 27px;
     border: 2px solid #eee;
     background: #fff;
     float: left;
+    cursor: pointer;
 }
 .main_bord .bord_tite {
     overflow: hidden;
@@ -69,10 +72,17 @@ ul,li,a {
 .main_bord .bord_tite .tite_w {
     line-height: 20px;
     border-right: 2px solid #000;
+    color: #9b9b9b;
+}
+.main_bord .bord_tite .tite_w.show {
+    color: #000;
 }
 .main_bord .bord_tite .tite_n {
     margin-left: 16px;
     line-height: 20px;
+    color: #9b9b9b;
+}
+.main_bord .bord_tite .tite_n.show {
     color: #9b9b9b;
 }
 .main_bord .bord_tite span {

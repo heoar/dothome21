@@ -65,7 +65,6 @@
     <main>
       <div class="cursor"></div>
       <div class="cursor-follower"></div>
-
       <article class="mouseCont">
         <p><em>Nothing is permanent</em>in this wicked world - not even our troubles</p>
         <h2>이 사악한 세상에서 <em>영원한 것은 없다.</em> 우리가 겪는 어려움조차도</h2>
@@ -143,104 +142,122 @@
                         </div>
                         <div class="view-cont">
                             <div>
-<pre><code class="language-html">&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;노래1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;걱정말아요 그대&lt;/h2&gt;
-                &lt;p&gt;그대여 너무 걱정하지 말아요 우리 함께 노래합시다 그대 아픈 기억들 모두 그대여 그대 가슴에 깊이 묻어 버리고 지나간 것은 지나간 대로 그런 의미가 있죠 떠난 이에게 노래 하세요 후회없이 사랑했노라 말해요&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;다행이다&lt;/h2&gt;
-                &lt;p&gt;그대를 만나고 그대의 머릿결을 만질 수가 있어서 그대를 만나고 그대와 마주보며 숨을 쉴 수 있어서 그대를 안고서 힘이 들면 눈물 흘릴 수가 있어서 다행이다 그대라는 아름다운 세상이 여기 있어줘서&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;찔레꽃&lt;/h2&gt;
-                &lt;p&gt;하얀 꽃 찔레꽃 순박한 꽃 찔레꽃 별 처럼 슬픈 찔레꽃 달처럼 서러운 찔레꽃 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 목노아 울었지 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 밤새워 울었지&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;홍연&lt;/h2&gt;
-                &lt;p&gt;세상에 처음 날 때 인연인 사람들은 손과 손에 붉은 실이 이어진 채 온다 했죠 당신이 어디 있든 내가 찾을 수 있게 손과 손에 붉은 실이 이어진 채 왔다 했죠 눈물진 나의 뺨을 쓰담아 주면서도 다른 손은 칼을 거두지 않네 또 다시 사라져&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;바람이 불어와도&lt;/h2&gt;
-                &lt;p&gt;내 앞에 다가오는 저 빛은 뭘까 피하려 해보지만 이내 날 감싸네 어느새 익숙해져 마치 피부처럼 내 속에 가득히 안기네&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
+<pre><code class="language-html">&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;multiply&lt;/li&gt;
+        &lt;li&gt;screen&lt;/li&gt;
+        &lt;li&gt;overlay&lt;/li&gt;
+        &lt;li&gt;darken&lt;/li&gt;
+        &lt;li&gt;lighten&lt;/li&gt;
+        &lt;li&gt;color-dodge&lt;/li&gt;
+        &lt;li&gt;color-burn&lt;/li&gt;
+        &lt;li&gt;hard-light&lt;/li&gt;
+        &lt;li&gt;soft-light&lt;/li&gt;
+        &lt;li class="active"&gt;difference&lt;/li&gt;
+        &lt;li&gt;exclusion&lt;/li&gt;
+        &lt;li&gt;hue&lt;/li&gt;
+        &lt;li&gt;saturation&lt;/li&gt;
+        &lt;li&gt;color&lt;/li&gt;
+        &lt;li&gt;luminosity&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-css">#tab-menu {
-    min-width: 600px;
-    background: #000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 5px;
-    font-family: 'NEXONLv2';
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: #fff;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
+    font-family: 'NEXONLv1';
+    cursor: none;
     }
-    .tab-btn ul {
-        display: flex;
+    .mouseCont p {
+        font-size: 2.5vw;
+        line-height: 2.3;
+        font-weight: 300;
     }
-    .tab-btn li {
-        width: 20%;
-        list-style: none;
-        text-align: center;
+    .mouseCont h2 {
+        font-size: 3vw;
+        font-weight: normal;
     }
-    .tab-btn li a {
-        color: #fff;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
+    .mouseCont em {
+        font-weight: 500;
+        border-bottom: 0.2vw solid darkblue;
+        font-style: normal;
+        color: darkblue;
     }
-    .tab-btn li.active a {
-        border-bottom: 3px solid #ffc400;
+    .cursor {
+        position: absolute;
+        left: 0; top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        z-index: 9999;
+        background-color: rgb(255,255,255,1);
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s, opacity 0.2s;
+        mix-blend-mode: difference;
     }
-    .tab-cont {
-        background: #fff;
-        padding: 20px;
-        color: #000;
+    .cursor.active {
+        transform: scale(20);
     }
-    .tab-cont > div {
-        display: none;
-    }
-    .tab-cont > div:first-child{
-        display: block;
-    }
-    .tab-cont > div > h2{
-        margin-bottom: 10px;
-    }
-    .tab-cont > div p {
-        margin-bottom: 5px;
+    .info.left.list li.active{
+        text-decoration: underline;
+        color: rgb(82, 215, 255);
     }
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
-    const tabCtn = $(".tab-cont > div");
+<pre><code class="language-javascript">const w = document.querySelector(".cursor").clientWidth;
+    const h = document.querySelector(".cursor").clientHeight;
 
-    tabBtn.click(function(){
-        let target = $(this);
-        tabBtn.removeClass("active");
-        target.addClass("active");
+    //움직임 효과
+    document.addEventListener("mousemove", e =>{
+        gsap.to(".cursor",{duration: .5, left: e.pageX - w, top: e.pageY -h});
+    });
 
-        let index = target.index();
-        tabCtn.css("display","none");
-        tabCtn.eq(index).css("display","block");
+    //오버 효과
+    document.querySelectorAll(".mouseCont em").forEach( em => {
+        em.addEventListener("mouseenter", () => {
+            document.querySelector(".cursor").classList.add("active");
+        });
+        em.addEventListener("mouseleave", () => {
+        document.querySelector(".cursor").classList.remove("active");
+        });
+    });
+
+
+    //출력용
+    // const info = document.querySelectorAll(".info.left.list li");
+
+    // info.forEach((element, index)=>{
+    //     element.addEventListener("click", function(){
+            
+    //         info.forEach( el => {
+    //             el.classList.remove("active");
+    //         });
+    //         element.classList.add("active");
+    //     });
+    // });
+
+    //출력용
+    document.querySelectorAll(".info.left.list li").forEach(info => {
+        info.addEventListener("click", function(){
+
+            document.querySelectorAll(".info.left.list li").forEach(li => {
+                li.classList.remove("active");
+                this.classList.add("active");
+            });
+
+            let text = info.textContent || info.innerText;
+            document.querySelector(".cursor").style.mixBlendMode = text;
+        });
     });
 </code></pre>
                             </div>
@@ -265,20 +282,20 @@
         const w = document.querySelector(".cursor").clientWidth;
         const h = document.querySelector(".cursor").clientHeight;
 
-      //움직임 효과
-      document.addEventListener("mousemove", e =>{
-          gsap.to(".cursor",{duration: .5, left: e.pageX - w, top: e.pageY -h});
-      });
+        //움직임 효과
+        document.addEventListener("mousemove", e =>{
+            gsap.to(".cursor",{duration: .5, left: e.pageX - w, top: e.pageY -h});
+        });
 
-      //오버 효과
-      document.querySelectorAll(".mouseCont em").forEach( em => {
-          em.addEventListener("mouseenter", () => {
-              document.querySelector(".cursor").classList.add("active");
-          });
-          em.addEventListener("mouseleave", () => {
+        //오버 효과
+        document.querySelectorAll(".mouseCont em").forEach( em => {
+            em.addEventListener("mouseenter", () => {
+                document.querySelector(".cursor").classList.add("active");
+            });
+            em.addEventListener("mouseleave", () => {
             document.querySelector(".cursor").classList.remove("active");
-          });
-      });
+            });
+        });
 
 
         //출력용

@@ -135,36 +135,23 @@
                         <div class="view-cont">
                             <div>
 <pre><code class="language-html">&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;노래1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img slider_img1"&gt;
+            &lt;div class="slider-inner slider-inner1"&gt;
+                &lt;div class="slider slider1" data-name="이미지1"&gt;&lt;img src="../assets/img/bg04.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지2"&gt;&lt;img src="../assets/img/bg06.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지3"&gt;&lt;img src="../assets/img/bg08.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지4"&gt;&lt;img src="../assets/img/bg09.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider1" data-name="이미지5"&gt;&lt;img src="../assets/img/bg010.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;걱정말아요 그대&lt;/h2&gt;
-                &lt;p&gt;그대여 너무 걱정하지 말아요 우리 함께 노래합시다 그대 아픈 기억들 모두 그대여 그대 가슴에 깊이 묻어 버리고 지나간 것은 지나간 대로 그런 의미가 있죠 떠난 이에게 노래 하세요 후회없이 사랑했노라 말해요&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;다행이다&lt;/h2&gt;
-                &lt;p&gt;그대를 만나고 그대의 머릿결을 만질 수가 있어서 그대를 만나고 그대와 마주보며 숨을 쉴 수 있어서 그대를 안고서 힘이 들면 눈물 흘릴 수가 있어서 다행이다 그대라는 아름다운 세상이 여기 있어줘서&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;찔레꽃&lt;/h2&gt;
-                &lt;p&gt;하얀 꽃 찔레꽃 순박한 꽃 찔레꽃 별 처럼 슬픈 찔레꽃 달처럼 서러운 찔레꽃 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 목노아 울었지 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 밤새워 울었지&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;홍연&lt;/h2&gt;
-                &lt;p&gt;세상에 처음 날 때 인연인 사람들은 손과 손에 붉은 실이 이어진 채 온다 했죠 당신이 어디 있든 내가 찾을 수 있게 손과 손에 붉은 실이 이어진 채 왔다 했죠 눈물진 나의 뺨을 쓰담아 주면서도 다른 손은 칼을 거두지 않네 또 다시 사라져&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;바람이 불어와도&lt;/h2&gt;
-                &lt;p&gt;내 앞에 다가오는 저 빛은 뭘까 피하려 해보지만 이내 날 감싸네 어느새 익숙해져 마치 피부처럼 내 속에 가득히 안기네&lt;/p&gt;
+        &lt;div class="slider-img slider_img2"&gt;
+            &lt;div class="slider-inner slider-inner2"&gt;
+                &lt;div class="slider slider2" data-name="이미지1"&gt;&lt;img src="../assets/img/bg04.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지2"&gt;&lt;img src="../assets/img/bg06.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지3"&gt;&lt;img src="../assets/img/bg08.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지4"&gt;&lt;img src="../assets/img/bg09.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider slider2" data-name="이미지5"&gt;&lt;img src="../assets/img/bg010.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -172,67 +159,100 @@
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-css">#tab-menu {
-    min-width: 600px;
-    background: #000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 5px;
-    font-family: 'NEXONLv2';
-    color: #fff;
-    overflow: hidden;
-    }
-    .tab-btn ul {
+<pre><code class="language-css">/* slider */
+    .slider-wrap {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
-    .tab-btn li {
-        width: 20%;
-        list-style: none;
-        text-align: center;
+    .slider-img img {
+        width: 100%;
     }
-    .tab-btn li a {
+    .slider-img {
+        width: 600px;
+        height: 360px;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+    .slider-inner {
+        position: relative;
+        width: 600px;
+        height: 2160px;
+        overflow: hidden;
+    }
+
+    .slider {
+        float: left;
+        width: 600px;
+        height: 360px;
+        position: relative;
+    }
+    
+    .slider::before {
+        position: absolute;
+        left: 5px; top: 5px;
+        background: rgba(0,0,0,0.4);
         color: #fff;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
+        padding: 5px 10px 6px;
     }
-    .tab-btn li.active a {
-        border-bottom: 3px solid #ffc400;
-    }
-    .tab-cont {
-        background: #fff;
-        padding: 20px;
-        color: #000;
-    }
-    .tab-cont > div {
-        display: none;
-    }
-    .tab-cont > div:first-child{
-        display: block;
-    }
-    .tab-cont > div > h2{
-        margin-bottom: 10px;
-    }
-    .tab-cont > div p {
-        margin-bottom: 5px;
-    }
+    
+    .slider:nth-child(1){z-index: 5;}
+    .slider:nth-child(2){z-index: 4;}
+    .slider:nth-child(3){z-index: 3;}
+    .slider:nth-child(4){z-index: 2;}
+    .slider:nth-child(5){z-index: 1;}
+    .slider::before {content: attr(data-name);}
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
-    const tabCtn = $(".tab-cont > div");
+<pre><code class="language-javascript">//sample1
+    const sliderImg1 = document.querySelector(".slider-img1");
+    const sliderInner1 = document.querySelector(".slider-inner1");
+    const slider1 = document.querySelector(".slider1");
 
-    tabBtn.click(function(){
-        let target = $(this);
-        tabBtn.removeClass("active");
-        target.addClass("active");
+    let currentIndex1 = 0;
+    let sliderHeight1 = slider1.offsetHeight;
 
-        let index = target.index();
-        tabCtn.css("display","none");
-        tabCtn.eq(index).css("display","block");
-    });
+    sliderInner1.transition = "all 0.3s"
+    sliderInner1.style.top = "0px";
+
+    setInterval(() => {
+        currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+
+        let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+
+        sliderInner1.transition = "all 0.3s"
+        sliderInner1.style.top = sliderPosition;
+    },3000)
+    
+
+    //sample2
+    const sliderImg2 = document.querySelector(".slider-img2");
+    const sliderInner2 = document.querySelector(".slider-inner2");
+    const slider2 = document.querySelector(".slider2");
+
+    let currentIndex2 = 0;
+    let sliderHeight2 = slider2.offsetHeight;
+    let sliderCount = document.querySelectorAll(".slider2").length;
+
+    let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+    sliderInner2.appendChild(sliderClone)
+
+    setInterval(()=>{
+        currentIndex2++;
+        sliderInner2.style.transition = "all 0.3s";
+        sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 + "px)";
+
+        if( currentIndex2 == sliderCount ){
+            setTimeout(()=>{
+                sliderInner2.style.transition = "0s";
+                sliderInner2.style.transform = "translateY(0)";
+            },300);
+            currentIndex2 = 0;
+        }
+    },2000);
 </code></pre>
                             </div>
                         </div>

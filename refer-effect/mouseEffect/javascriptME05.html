@@ -139,104 +139,103 @@
                         <div class="view-cont">
                             <div>
 <pre><code class="language-html">&lt;main&gt;
-    &lt;div id="tab-menu"&gt;
-        &lt;div class="tab-btn"&gt;
-            &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;노래1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;노래5&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class="tab-cont"&gt;
-            &lt;div&gt;
-                &lt;h2&gt;걱정말아요 그대&lt;/h2&gt;
-                &lt;p&gt;그대여 너무 걱정하지 말아요 우리 함께 노래합시다 그대 아픈 기억들 모두 그대여 그대 가슴에 깊이 묻어 버리고 지나간 것은 지나간 대로 그런 의미가 있죠 떠난 이에게 노래 하세요 후회없이 사랑했노라 말해요&lt;/p&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="moveWrap"&gt;
+        &lt;article class="moveImage"&gt;
+            &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg07.jpg" alt="이미지"&gt;&lt;/div&gt;
+            &lt;div class="mText"&gt;
+                &lt;p&gt;Put yourself on view. This brings your talents to light.&lt;/p&gt;
+                &lt;p&gt;자신을 내 보여라. 그러면 재능이 드러날 것이다.&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;다행이다&lt;/h2&gt;
-                &lt;p&gt;그대를 만나고 그대의 머릿결을 만질 수가 있어서 그대를 만나고 그대와 마주보며 숨을 쉴 수 있어서 그대를 안고서 힘이 들면 눈물 흘릴 수가 있어서 다행이다 그대라는 아름다운 세상이 여기 있어줘서&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;찔레꽃&lt;/h2&gt;
-                &lt;p&gt;하얀 꽃 찔레꽃 순박한 꽃 찔레꽃 별 처럼 슬픈 찔레꽃 달처럼 서러운 찔레꽃 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 목노아 울었지 찔레꽃 향기는 너무 슬퍼요 그래서 울었지 밤새워 울었지&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;홍연&lt;/h2&gt;
-                &lt;p&gt;세상에 처음 날 때 인연인 사람들은 손과 손에 붉은 실이 이어진 채 온다 했죠 당신이 어디 있든 내가 찾을 수 있게 손과 손에 붉은 실이 이어진 채 왔다 했죠 눈물진 나의 뺨을 쓰담아 주면서도 다른 손은 칼을 거두지 않네 또 다시 사라져&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-                &lt;h2&gt;바람이 불어와도&lt;/h2&gt;
-                &lt;p&gt;내 앞에 다가오는 저 빛은 뭘까 피하려 해보지만 이내 날 감싸네 어느새 익숙해져 마치 피부처럼 내 속에 가득히 안기네&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;/article&gt;
     &lt;/div&gt;
 &lt;/main&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-css">#tab-menu {
-    min-width: 600px;
-    background: #000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 5px;
-    font-family: 'NEXONLv2';
-    color: #fff;
-    overflow: hidden;
+<pre><code class="language-css">.moveWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100vh;
     }
-    .tab-btn ul {
-        display: flex;
+    .moveImage {
+        position: relative;
     }
-    .tab-btn li {
-        width: 20%;
-        list-style: none;
+    .moveImage .mImg {
+        width: 50vw;
+        height: 60vh;
+        overflow: hidden;
+        position: relative;
+        transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    }
+    .moveImage:hover .mImg {
+        transform: scale(1.025);
+    }
+    .moveImage .mImg img {
+        width: 100%;
+        position: absolute;
+        left: -5%; top: -5%;
+        width: 110%;
+        height: 110%;
+        object-fit: cover;
+        transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    }
+    .moveImage .mText {
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-    }
-    .tab-btn li a {
+        font-size: 1.3vw;
+        white-space: nowrap;
         color: #fff;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
+        background: rgba(0,0,0,0.4);
+        padding: 1vw;
+        line-height: 1.6;
+        font-family: "NEXONLv1";
     }
-    .tab-btn li.active a {
-        border-bottom: 3px solid #ffc400;
-    }
-    .tab-cont {
+
+    .cursor {
+        position: absolute;
+        width: 20px; height: 20px;
         background: #fff;
-        padding: 20px;
-        color: #000;
-    }
-    .tab-cont > div {
-        display: none;
-    }
-    .tab-cont > div:first-child{
-        display: block;
-    }
-    .tab-cont > div > h2{
-        margin-bottom: 10px;
-    }
-    .tab-cont > div p {
-        margin-bottom: 5px;
+        border-radius: 50%;
+        z-index: 1000;
+        user-select: none;
+        pointer-events: none;
     }
 </code></pre>
                             </div>
                             <div>
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
-    const tabCtn = $(".tab-cont > div");
+<pre><code class="language-javascript"> document.querySelector(".moveImage").addEventListener("mousemove",function(e){
+    //커서
+    gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10})
+    
+    let pageX = 0,
+        pageY = 0;
 
-    tabBtn.click(function(){
-        let target = $(this);
-        tabBtn.removeClass("active");
-        target.addClass("active");
+    pageX = e.pageX;
+    pageY = e.pageY;
 
-        let index = target.index();
-        tabCtn.css("display","none");
-        tabCtn.eq(index).css("display","block");
-    });
+    centerX = window.innerWidth/2 - pageX;
+    centerY = window.innerHeight/2 - pageY;
+
+    const move = document.querySelector(".mImg img");
+        move.style.transform = "translate(" + centerX/20 + "px," + centerY/20 + "px)";
+
+
+    document.querySelector(".pageX").textContent = parseInt(centerX);
+    document.querySelector(".pageY").textContent = parseInt(centerY);
+})
+document.addEventListener("mousemove", mouseMove);
 </code></pre>
                             </div>
                         </div>

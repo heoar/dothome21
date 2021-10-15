@@ -51,16 +51,18 @@
 
 }
 .main_box .br_mn .slider_img .slider {
-    overflow: hidden;
+    position: relative;
 }
 .main_box .br_mn .slider_img .slider img {
     width: 1000px;
     float: left;
+    position: absolute;
 }
 
 
 .cookit_main .br_sb {
     overflow: hidden;
+    padding-top: 420px;
     margin-bottom: 50px;
 }
 .cookit_main .br_sb .sb_img {

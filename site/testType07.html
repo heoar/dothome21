@@ -109,9 +109,25 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
+    <script src="js/highlight.min.js"></script>
     <script>
+        const sliderBox = $(".img_box");
+        const sliderImg = $(".slider_img");
+        const slider = $(".slider");
+
+       let currentIndex = 0;
+       let sliderCount = slider.length;
+
+       setInterval(function(){
+
+        let nextIndex = (currentIndex + 1) % sliderCount;
+
+        slider.eq(currentIndex).fadeOut()
+        slider.eq(nextIndex).fadeIn()
+
+        currentIndex = nextIndex;
+        
+       }, 2000);
        
     </script>
 </body>

@@ -1,0 +1,228 @@
+/* COOKIT 테스트 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'S-CoreDream';
+}
+
+/* 헤더영역 */
+.header_box {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header_box .header_lg {
+    padding: 15px 0;
+    float: left;
+    cursor: pointer;
+}
+.header_box .header_lg img {
+    width: 130px;
+}
+.header_box ul {
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+.header_box ul li {
+    list-style: none;
+    float: left;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.header_box ul li:last-child {
+    padding-right: 0;
+}
+
+/* 메인 영역 */
+.cookit_main {
+    width: 100%;
+}
+.cookit_main .container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.main_box .br_mn {}
+.main_box .br_mn .img_box {
+    margin-bottom: 30px;
+}
+.main_box .br_mn .slider_img {
+
+}
+.main_box .br_mn .slider_img .slider {
+    overflow: hidden;
+}
+.main_box .br_mn .slider_img .slider img {
+    width: 1000px;
+    float: left;
+}
+
+
+.cookit_main .br_sb {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.cookit_main .br_sb .sb_img {
+    width: 435px;
+    background-color: #f2f2f2;
+    float: left;
+    padding: 25px;
+}
+.cookit_main .br_sb .sb_img:first-child {
+    background-image: url(../img/cookit_lmg02.jpg);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+}
+.cookit_main .br_sb .sb_img:last-child {
+    float: right;
+    background-image: url(../img/cookit_lmg03.jpg);
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+}
+.cookit_main .br_sb .sb_img h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.cookit_main .br_sb .sb_img p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.cookit_main .br_sb .sb_img .bs_img {
+    width: 18px;
+    margin-right: 10px;
+    float: left;
+}
+
+.cookit_main .br_sb .sb_img div {
+    font-size: 18px;
+}
+.cookit_main .br_sb .sb_img div img {
+
+}
+.cookit_main .br_sb .sb_img .tm_box span {
+    font-size: 14px;
+    color: #616161;
+}
+.cookit_main .br_sb .sb_img .tm_img {
+    width: 20px;
+    margin-right: 10px;
+    padding-top: 3px;
+    float: left;
+}
+
+
+/* 베스트 메뉴 탭 */
+.main_best {
+    
+}
+.main_best .best_tep {
+    width: 1000px;
+    display: inline-block;
+    overflow: hidden;
+}
+.main_best h3 {
+    float: left;
+    color: #9f9f9f;
+    font-size: 30px;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+.main_best h3:first-child {
+    border-right: 3px solid #000;
+    padding-left: 0px;
+}
+.main_best h3.show {
+    color: #000;
+}
+.main_best .best_br {
+    margin-bottom: 100px;
+}
+.main_best .best_br .bast_box {
+    overflow: hidden;
+}
+.main_best .best_br .bast_box .box_img {
+    float: left;
+}
+.main_best .best_br .bast_box .box_img:first-child {
+    margin-right: 35px;
+}
+.main_best .best_br .bast_box .box_img:last-child {
+    float: right;
+}
+.main_best .best_br .bast_box .box_img img {
+    width: 310px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.main_best .best_br .bast_box .box_img h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.main_best .best_br .bast_box .box_img p {
+    font-size: 16px;
+    color: #616161;
+}
+.main_best .best_br .bast_box .box_img .box_txt {
+    background-image: url(../img/cookit_lmg07.jpg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+}
+.main_best .best_br .bast_box .box_img p strong {
+    font-size: 20px;
+    color: #000;
+}
+
+/* 풋터 */
+.footer_box {
+    background: #202020;
+    overflow: hidden;
+    padding: 30px;
+}
+.box_bg {
+    width: 1000px;
+    margin: 0 auto;
+}
+.footer_box .footer_img {
+    width: 1000px;
+    margin: 0 auto;
+}
+.footer_box .footer_img img {
+    width: 200px;
+    float: left;
+}
+.footer_box .footer_txt {
+}
+.footer_box .footer_txt ul {
+    color: #fff;
+    list-style: none;
+    overflow: hidden;
+    float: right;
+}
+.footer_box .footer_txt ul li {
+    padding: 0 25px;
+    float: left;
+    font-size: 16px;
+    border-right: 1px solid #616161;
+}
+.footer_box .footer_txt ul li:last-child {
+    padding-right: 0;
+    border: none;
+}
+.footer_box .footer_com {
+    margin-top: 30px;
+    float: right;
+    font-size: 13px;
+    color: #616161;
+    line-height: 30px;
+}

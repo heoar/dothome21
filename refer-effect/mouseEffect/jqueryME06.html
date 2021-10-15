@@ -4,109 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider Effect</title>
+    <title>mouse Effect</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.min.css">
     <style>
-        /* slider */
-        .slider-wrap {
+        .cursor {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url(../assets/img/bg06@x2.jpg) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            border: 5px solid #fff;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .contents {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-        }
-        .slider-img img {
             width: 100%;
-        }
-        .slider-img {
-            width: 600px;
-            height: 360px;
+            height: 100vh;
+            flex-direction: column;
             overflow: hidden;
-            margin: 10px;
-        }
-
-        .slider-inner {
-            position: relative;
-            width: 600px;
-            height: 1800px;
-            overflow: hidden;
-        }
-
-        .slider {
-            float: left;
-            width: 600px;
-            height: 360px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .slider::before {
-            position: absolute;
-            left: 5px; top: 5px;
-            background: rgba(0,0,0,0.4);
             color: #fff;
-            padding: 5px 10px 6px;
+            cursor: none;
         }
-        
-        .slider:nth-child(1){z-index: 5;}
-        .slider:nth-child(2){z-index: 4;}
-        .slider:nth-child(3){z-index: 3;}
-        .slider:nth-child(4){z-index: 2;}
-        .slider:nth-child(5){z-index: 1;}
-        .slider::before {content: attr(data-name);}
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents h2 em {
+            color:deepskyblue;
+            border-bottom: 2px solid deepskyblue;
+            font-style: normal;
+        }
+
     </style>
 </head>
-<body class="bg bg7 brown">
+<body class="bg bg6 rad">
 
     <!-- contents -->
     <main>
-        <div class="slider-wrap">
-            <div class="slider-img slider_img1">
-                <div class="slider-inner slider-inner1">
-                    <div class="slider slider1" data-name="이미지1"><img src="../assets/img/bg04.jpg" alt="이미지1"></div>
-                    <div class="slider slider1" data-name="이미지2"><img src="../assets/img/bg06.jpg" alt="이미지2"></div>
-                    <div class="slider slider1" data-name="이미지3"><img src="../assets/img/bg08.jpg" alt="이미지3"></div>
-                    <div class="slider slider1" data-name="이미지4"><img src="../assets/img/bg09.jpg" alt="이미지4"></div>
-                    <div class="slider slider1" data-name="이미지5"><img src="../assets/img/bg010.jpg" alt="이미지5"></div>
-                </div>
-            </div>
-            <div class="slider-img slider_img2">
-                <div class="slider-inner slider-inner2">
-                    <div class="slider slider2" data-name="이미지1"><img src="../assets/img/bg04.jpg" alt="이미지1"></div>
-                    <div class="slider slider2" data-name="이미지2"><img src="../assets/img/bg06.jpg" alt="이미지2"></div>
-                    <div class="slider slider2" data-name="이미지3"><img src="../assets/img/bg08.jpg" alt="이미지3"></div>
-                    <div class="slider slider2" data-name="이미지4"><img src="../assets/img/bg09.jpg" alt="이미지4"></div>
-                    <div class="slider slider2" data-name="이미지5"><img src="../assets/img/bg010.jpg" alt="이미지5"></div>
-                </div>
-            </div>
+        <div class="cursor"></div>
+            <article class="contents">
+                <p>Respect a man, he will do the more.</p>
+                <h2>사람을 <em>존경</em>하라, 그러면 그는 더 많은 일을 해 낼 것이다.</h2>
+            </article>
         </div>
     </main>
     <!-- //contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">slider Effect04 - jQuery</a></h1>
-        <p>이미지 슬라이드 - 상단 슬라이드</p>
+        <h1><a href="index.html">Mouse Effect06 - jQuery</a></h1>
+        <p>마우스 이펙트 - 스포트라이트 효과</p>
     </div>
 
     <div class="info right">
         <ul>
-            <li><a href="javascriptSE01.html">1</a></li>
-            <li><a href="javascriptSE02.html">2</a></li>
-            <li><a href="javascriptSE03.html">3</a></li>
-            <li><a href="javascriptSE04.html">4</a></li>
-            <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME07.html">7</a></li>
+            <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
-            <li><a href="jquerySE01.html">1</a></li>
-            <li><a href="jquerySE02.html">2</a></li>
-            <li><a href="jquerySE03.html">3</a></li>
-            <li class="active"><a href="jquerySE04.html">4</a></li>
-            <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jqueryMe01.html">1</a></li>
+            <li><a href="jqueryMe02.html">2</a></li>
+            <li><a href="jqueryMe03.html">3</a></li>
+            <li><a href="jqueryMe04.html">4</a></li>
+            <li><a href="jqueryMe05.html">5</a></li>
+            <li class="active"><a href="jqueryMe06.html">6</a></li>
+            <li><a href="jqueryMe07.html">7</a></li>
+            <li><a href="jqueryMe08.html">8</a></li>
         </ul>
     </div>
     <!-- //info -->
+
+
+        <div class="info left list">
+            <ul>
+                <li>pageX : <span class="pageX">0</span></li>
+                <li>pageY : <span class="pageY">0</span></li>
+            </ul>
+        </div>
 
 
     <!-- modal 했던 부분 -->
@@ -247,38 +239,14 @@
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        //sample1
-        const sliderImg1 = $(".slider-img1");
-        const sliderInner1 = $(".slider-inner1");
-        const slider1 = $(".slider1");
-
-        let currentIndex1 = 0;
-        let sliderHeight1 = slider1.height();
-
-        setInterval(function(){
-            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
-
-            let sliderPostion = currentIndex1 * -sliderHeight1;
-            sliderInner1.animate({ top: sliderPostion }, 600, "easeOutExpo")
-        }, 3000);
-
-        //sample2
-        const sliderImg2 = $(".slider-img2");
-        const sliderInner2 = $(".slider-inner2");
-        const slider2 = $(".slider2");
-
-        let currentIndex2 = 0;
-        let sliderHeight2 = slider2.height();
-
-        setInterval(function(){
-            sliderInner2.animate({ top: -sliderHeight2 },600, "easeOutExpo", function(){
-                $(".slider2:first-child").appendTo(sliderInner2);
-                sliderInner2.css("Top","");
-            })
-        }, 3000);
+       $(window).mousemove(function(e){
+           gsap.to(".cursor", {duration: 0.5, left: e.pageX - $(".cursor").width()/2, top: e.pageY - $(".cursor").height()/2 });
+       });
 
     </script>
 </body>

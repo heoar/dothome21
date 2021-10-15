@@ -1,7 +1,8 @@
 /* 
 * 작성자 : 임지현
 * 작성일 : 2021-10-08
-* 수정일 : 2021-10-08
+* 수정일 : 2021-10-11
+* 수정내용 : 셀렉트 박스 버튼 수정
 */
 
 /* HEADER */
@@ -25,9 +26,67 @@
 
 #header .menu ul li a {
     display: block;
-    width: 90px;
     padding: 10px 10px;
     font-size: 14px;
+}
+
+#header .m_menu {
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0);
+    padding: 15px 10px 10px 10px;
+}
+
+#header .m_menu span {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #414141;
+}
+
+#header .m_menuList {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+}
+#header .m_menuList.show {
+    display: block;
+}
+
+#header .m_menuList ul li {
+    margin-bottom: 10px;
+}
+#header .m_menuList ul li a {
+    font-size: 14px;
+}
+
+#header .m_menu span::before {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+#header .m_menu span::after {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    top: -7px;
 }
 
 #header .member ul li {
@@ -103,10 +162,14 @@
     border: none;
     border-radius: 5px;
     width: 70%;
-    height: 43px;
+    line-height: 31px;
     padding: 5px 10px;
     font-size: 14px;
-
+    background: #fff url(../img/qna_icon.svg) no-repeat right 10px center;
+    background-size: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .quiz_btn {
@@ -170,7 +233,7 @@
     border-radius: 5px;
 }
 
-#section3 .container{
+#section3 .container {
     justify-content: space-between;
 }
 
@@ -182,13 +245,13 @@
     overflow: hidden;
 }
 
-.dday_box img{
+.dday_box img {
     display: inline-block;
     width: 177px;
     height: 350px;
 }
 
-.dday_box .dday_container{
+.dday_box .dday_container {
     padding: 20px 0 0 20px;
 }
 
@@ -239,11 +302,13 @@
     border-bottom: 1px dashed #ccc;
     padding: 10px 0;
 }
+
 .review_board .review li a {
     display: block;
     font-size: 18px;
     font-weight: 400;
 }
+
 .review_board .review li a span {
     float: right;
 }
@@ -261,12 +326,15 @@
 }
 
 #footer p {
+    font-size: 80%;
     display: inline-block;
     line-height: 100%;
 }
+
 #footer p:first-child {
     padding-right: 20px;
 }
+
 #footer p:last-child {
     border-left: 1px solid #fff;
     padding-left: 20px;
@@ -275,6 +343,7 @@
 #footer p a {
     color: #fff;
 }
+
 /* //FOOTER */
 
 
@@ -291,13 +360,14 @@
 #boardWriteMain .boardWriteContent {
     margin-top: 82px;
     overflow: hidden;
-} 
+}
 
 .boardWriteContent label {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 .boardWriteContent input {
     width: 100%;
     padding: 10px;
@@ -306,6 +376,7 @@
     margin-bottom: 30px;
     box-sizing: border-box;
 }
+
 .boardWriteContent textarea {
     width: 100%;
     padding: 10px;
@@ -325,6 +396,7 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 /* //게시판 쓰기/수정하기 */
 
 /* 공지사항 게시판 */
@@ -335,12 +407,15 @@
 .bMain .board-title::before {
     background-color: #F0F0F0;
 }
+
 /* //공지사항 게시판 */
 
 /* 
 * 작성자 : 허아라
 * 작성일 : 2021-10-08
-* 수정일 : 2021-10-08
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 내용 : 회원가입 페이지 내 버튼 a태그 제거, 로그인 페이지 로그인버튼 type추가
 */
 
 
@@ -352,6 +427,7 @@
     background-size: cover;
     background-position: center;
 }
+
 #login_main .lg_form {
     display: inline-block;
     margin: 150px auto;
@@ -379,12 +455,14 @@
     text-align: left;
     font-size: 26px;
 }
+
 #login_main .lg_form .lg_box form input {
     width: 100%;
     padding: 10px;
     border-style: none;
     border-bottom: 1px solid #414141;
 }
+
 #login_main .lg_form .lg_box button {
     margin-top: 50px;
     font-size: 24px;
@@ -395,6 +473,7 @@
     color: #fff;
     cursor: pointer;
 }
+
 #login_main .lg_form .lg_box .info {
     margin-top: 20px;
     text-align: left;
@@ -419,6 +498,7 @@
     text-align: center;
     margin: 30px 0;
 }
+
 #join_main .jo_form {
     display: inline-block;
     margin: 100px auto;
@@ -443,6 +523,7 @@
     border: 1px solid #E3E3E3;
     font-size: 12px;
 }
+
 #join_main .jo_form .join-privacy .join_check {
     width: 96%;
     margin: 0 auto;
@@ -453,11 +534,12 @@
     font-size: 12px;
     margin-bottom: 30px;
 }
+
 #join_main .jo_form .join-privacy .join_check input {
     margin-right: 10px;
     width: 15px;
     height: 15px;
-    vertical-align:-3px;
+    vertical-align: -3px;
 }
 
 #join_main .jo_form .jo_box h4 {
@@ -471,18 +553,22 @@
     text-align: left;
     font-size: 18px;
 }
+
 #join_main .jo_form .jo_box form label {
-    margin-right: 200px;
+    display: block;
 }
+
 #join_main .jo_form .jo_box form input {
     width: 350px;
     border-style: none;
     border-bottom: 1px solid #414141;
     padding: 10px;
 }
+
 #join_main .jo_form .jo_box form input.wp {
     width: 500px;
 }
+
 #join_main .jo_form .jo_box .btn_submit {
     text-align: center;
     margin-top: 50px;
@@ -491,11 +577,9 @@
     border-radius: 5px;
     border-style: none;
     background: #414141;
+    color: #fff;
     cursor: pointer;
     margin-bottom: 50px;
-}
-#join_main .jo_form .jo_box .btn_submit a {
-    color: #fff;
 }
 
 #join_main .jo_form .jo_box .btn_sb {
@@ -518,6 +602,7 @@
     background-size: cover;
     background-position: center;
 }
+
 #joinCk_main .joCk_form {
     display: inline-block;
     margin: 100px auto;
@@ -539,18 +624,22 @@
     font-weight: 500;
     margin-bottom: 30px;
 }
+
 #joinCk_main .joCk_form .joCk_box h2 em {
     font-weight: 600;
 }
+
 #joinCk_main .joCk_form .joCk_box p {
     font-size: 24px;
     color: #414141;
     margin-bottom: 80px;
 }
+
 #joinCk_main .joCk_form .joCk_box img {
     width: 600px;
     margin-bottom: 50px;
 }
+
 #joinCk_main .joCk_form button {
     padding: 12px 240px;
     border-radius: 5px;
@@ -561,6 +650,7 @@
     border-style: none;
     cursor: pointer;
 }
+
 #joinCk_main .joCk_form button a {
     color: #fff;
 }
@@ -575,15 +665,18 @@
     background-repeat: no-repeat;
     background-position: right 10vw top 1vw;
 }
+
 #qna_wrap .qna_benner .qna_bg {
     width: 1200px;
     margin: 0 auto;
     padding-top: 50px;
 }
+
 #qna_wrap .qna_benner .qna_bg h3 {
     font-size: 28px;
     margin-bottom: 15px;
 }
+
 #qna_wrap .qna_benner .qna_bg p {
     font-size: 18px;
 }
@@ -592,7 +685,9 @@
 .qna_accordion {
     background: #fff;
 }
+
 #accordion {
+
     margin: 100px auto;
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
@@ -606,6 +701,7 @@
     position: relative;
     cursor: pointer;
 }
+
 #accordion h3::after {
     content: '';
     position: absolute;
@@ -623,20 +719,23 @@
     float: right;
     margin-right: 15%;
 }
+
 #accordion h3 span:nth-child(3) {
     position: absolute;
     left: 280px;
 }
+
 #accordion h3 span:nth-child(2) {
     float: left;
     margin-left: 3%;
 }
 
-#accordion > div {
+#accordion>div {
     width: 100%;
     background: #F1F0EB;
 }
-#accordion > div p {
+
+#accordion>div p {
     padding: 30px 40px;
     font-size: 18px;
 }
@@ -645,6 +744,7 @@
 #qna_wrap .mail_tell {
     margin-bottom: 100px;
 }
+
 #qna_wrap .mail_tell h4 {
     font-size: 18px;
     font-weight: 500;
@@ -652,6 +752,7 @@
     padding-bottom: 30px;
     padding-left: 10%;
 }
+
 .mail_tell h4::before {
     content: '';
     position: absolute;
@@ -663,16 +764,19 @@
     background-image: url(../img/Mail_icon.svg);
     background-repeat: no-repeat;
 }
+
 #qna_wrap .mail_tell .mail_form {
     padding-top: 50px;
     padding: 3%;
     font-size: 18px;
     border-top: 1px solid #414141;
 }
+
 #qna_wrap .mail_tell .mail_form label {
     margin-bottom: 10px;
     display: block;
 }
+
 #qna_wrap .mail_tell .mail_form input {
     width: 100%;
     box-sizing: border-box;
@@ -681,6 +785,7 @@
     border: 1px solid #c4c4c4;
     border-radius: 5px;
 }
+
 #qna_wrap .mail_tell .mail_form #email_txt {
     resize: none;
     width: 100%;
@@ -691,6 +796,7 @@
     border: 1px solid #c4c4c4;
     border-radius: 5px;
 }
+
 #qna_wrap .mail_tell button {
     float: right;
     font-size: 18px;
@@ -700,7 +806,148 @@
     color: #fff;
     cursor: pointer;
 }
- 
+
+/* -------------------------허아라 2021.10.14 추가 작업-------------------------------- */
+
+/* 마이페이지 */
+#user_nav {
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+    background: #F1F0EB;
+    border-bottom: 1px solid #ccc;
+}
+#user_nav .user {
+    width: 1200px;
+}
+#user_nav .user ul {
+    float: right;
+}
+#user_nav .user ul li {
+    float: left;
+    padding: 15px;
+}
+#user_nav .user ul li.active {
+    font-weight: bold;
+}
+#user_nav .user ul li:last-child {
+    padding-right: 0;
+}
+
+
+/* 마이페이지 폼 */
+.user_pages {
+    background: url(../img/user_bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.user_pages .user_box {
+    padding: 100px 0;
+}
+.user_box .user_form {
+    width: 600px;
+    padding: 50px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+}
+.user_box .user_form h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.user_box .user_form > div {}
+
+.user_box .user_form label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+.user_box .user_form input {
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #414141;
+    background: none;
+    box-sizing: border-box;
+}
+
+.user_box .user_form button {
+    border-style: none;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 26px;
+    width: 500px;
+    padding: 10px;
+    background: #414141;
+    border-radius: 5px;
+}
+.user_box .user_form button a {
+    color: #fff;
+}
+
+/* 문제만들기 */
+#questionWriteMain {
+    margin: 70px 0;
+}
+#questionWriteMain .questionWriteTitle {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #999;
+}
+
+#questionWriteMain .questionWriteContent {
+    margin-top: 82px;
+    overflow: hidden;
+}
+
+.questionWriteContent label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+#questionWriteMain .question_choice {
+    padding-bottom: 30px;
+}
+#questionWriteMain .question_choice input {
+    float: left;
+    margin-top: 2%;
+    margin-right: 1%;
+}
+#questionWriteMain .question_choice textarea {
+    width: 97%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+#questionWriteMain .question_choice textarea::placeholder {
+    padding-top: 10px;
+}
+
+.questionWriteContent textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    border-color: #ccc;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.questionWriteContent .board-btn {
+    display: block;
+    color: #fff;
+    background-color: #9FC3AF;
+    float: right;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 /* 
 * 작성자 : 전대섭
@@ -708,12 +955,15 @@
 * 수정자 : 임지현
 * 수정일 : 2021-10-08
 * 수정내용 : 게시판 css 수정
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 수정내용 : 게시판 css 수정
 */
 
 /* review */
 /* 배너 */
-.imgBanner{
-    display:inline-block;
+.imgBanner {
+    display: inline-block;
     background-image: url(../img/mainreview.jpg);
     width: 100%;
     height: 426px;
@@ -724,6 +974,7 @@
 .imgBanner .container {
     display: inline;
 }
+
 .container .rName {
     display: inline;
     text-align: center;
@@ -731,17 +982,19 @@
     top: 40%;
     transform: translateY(-40%);
 }
+
 .rTitle {
     color: #fff;
     font-size: 24px;
 }
-.rSub{
+
+.rSub {
     color: #fff;
     font-weight: 700;
     font-size: 30px;
 }
 
-.bMain img{
+.bMain img {
     display: inline-block;
     width: 60px;
     height: 60px;
@@ -749,7 +1002,8 @@
     top: 35px;
     left: 125px;
 }
-.bMain h2{
+
+.bMain h2 {
     display: block;
     font-size: 28px;
     font-weight: 800;
@@ -770,13 +1024,15 @@
 }
 
 /* 게시판,공지사항 글 보기 */
-.bvMainView .container{
+.bvMainView .container {
     overflow: hidden;
 }
-.bvMainView{
+
+.bvMainView {
     margin-bottom: 170px;
 }
-.bvTitle{
+
+.bvTitle {
     font-weight: 600;
     font-size: 20px;
     margin-top: 130px;
@@ -785,22 +1041,29 @@
     border-top: 1px solid #CDCDCD;
     border-bottom: 2px solid #CDCDCD;
 }
-.bvEtc{
+
+.bvEtc {
     overflow: hidden;
 }
-.bvNick{
+
+.bvNick {
     display: inline;
     float: left;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
 }
-.bvCoday{
+
+.bvCoday {
     display: inline;
     float: right;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
 }
-.bvCoday span{
+
+.bvCoday span {
     color: #CCCCCC;
 }
+
 .bvCont {
     min-height: 395px;
     border-bottom: 1px solid #CDCDCD;
@@ -808,13 +1071,16 @@
     margin-top: 50px;
     padding-bottom: 50px;
 }
-.bvCont p{
+
+.bvCont p {
     font-size: 18px;
 }
-.aWrapform{
+
+.aWrapform {
     float: right;
 }
-.form-write{
+
+.form-write {
     display: inline-block;
     width: 82px;
     height: 36px;
@@ -828,30 +1094,36 @@
     margin-top: 20px;
     font-size: 14px;
 }
-.form-write:nth-last-child(3){
+
+.form-write:nth-last-child(3) {
     margin-left: 20px;
 }
+
 /*게시판*/
-fieldset{
+fieldset {
     border: 0;
 }
+
 .board-search {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 20px;
-} 
+}
+
 .board-search .form-search {
     border: 1px solid #c6c6c6;
     border-radius: 5px;
     padding: 10px 20px;
     width: 300px;
 }
+
 .board-search .form-select {
     border: 1px solid #c6c6c6;
     border-radius: 5px;
     padding: 10px 20px;
     background-color: transparent;
 }
+
 .board-search .form-btn {
     border: 1px solid #9FC3AF;
     border-radius: 5px;
@@ -884,14 +1156,17 @@ fieldset{
     height: 400px;
     vertical-align: top;
 }
+
 .board-table table .left {
     text-align: left;
     padding-left: 20px;
 }
-.board-table .btn{
+
+.board-table .btn {
     float: right;
 }
-.board-table .btn a{
+
+.board-table .btn a {
     background: #000;
     color: #fff;
     padding: 10px 20px;
@@ -901,32 +1176,231 @@ fieldset{
 
 
 /*게시판 페이지*/
-.board-page{
+.board-page {
     margin: 50px 0 100px;
     overflow: hidden;
+    position: relative;
 }
-.board-page ul{
+
+.board-page ul {
     display: flex;
     justify-content: center;
-    width: 1000px;
-    float: left;
 }
-.board-page li a{
+
+.board-page li a {
     display: block;
     border: 1px solid #eee;
     padding: 13px 10px;
     margin-right: -1px;
 }
+
 .board-page li.active a {
     background-color: #000;
     color: #fff;
 }
-.form-btn.black{
+
+.form-btn.black {
     display: block;
     border: 1px solid #9FC3AF;
     background-color: #9FC3AF;
     color: #fff;
     padding: 10px 20px;
-    float: right;
     border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/*
+* 작성자 : 임지현
+* 작성일 : 2021.10.11
+* 내용 : 미디어 쿼리 영역 CSS 작성
+*/
+/* 미디어쿼리 영역 */
+@media (max-width: 1200px) {
+
+    /* HEADER */
+    #header .menu ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    #header .member ul li {
+        display: inline-block;
+    }
+
+    #header .member ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    /* //HEADER */
+
+    .main_banner .container h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .main_banner .container p {
+        font-size: 14px;
+    }
+
+    .main_banner .random_quiz,
+    .main_banner .quiz  {
+        padding: 30px;
+    }
+
+    .quiz_btn {
+        padding: 10px 21px;
+        font-size: 14px;
+        bottom: 31px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .main_banner .container p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    #header .menu {
+        display: none;
+    }
+    #header .m_menu {
+        display: block;
+    }
+
+    .main_banner .container {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+    }
+    .main_banner .container > div {
+        width: 100%;
+    }
+
+    #section1 .textarea {
+        padding-left: 15px;
+    }
+
+    .textarea h1 {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    .textarea p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .textarea a {
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+
+    .quiz_btn {
+        right: 90px;
+    }
+
+    #section3 .container {
+        display: block;
+    }
+
+    .dday_box {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .dday_box img {
+        height: 290px;
+    }
+
+    .dday_container h1 {
+        font-size: 20px;
+    }
+
+    .dday_container p {
+        font-size: 12px;
+    }
+
+    .dday_container .dday {
+        font-size: 55px;
+    }
+
+    .review_board{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review_board h1 {
+        font-size: 20px;
+    }
+
+    .review_board .review_btn {
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+
+    .review_board .review li a {
+        font-size: 14px;
+    }
+    /* //main */
+
+    #login_main .lg_form {
+        width: 100%;
+    }
+
+    #join_main .jo_form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    #join_main .jo_form .jo_box {
+        width: 100%;
+    }
+
+    #join_main .jo_form h2 {
+        font-size: 18px;
+    }
+
+    #join_main .jo_form .jo_box h4 {
+        font-size: 16px;
+    }
+
+    #join_main .jo_form .jo_box form label {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #join_main .jo_form .jo_box form input {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    #join_main .jo_form .jo_box .btn_sb {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    #join_main .jo_form .jo_box form input.wp {
+        width: 90%;
+    }
+
+    #join_main .jo_form .jo_box .btn_submit {
+        margin-top: 50px;
+        font-size: 14px;
+        padding: 15px 0;
+        width: 100%;
+    }
+    /* //login,join */
+
 }

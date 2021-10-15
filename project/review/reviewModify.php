@@ -1,3 +1,7 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -25,10 +29,41 @@
     <div class="container">
       <h1 class="boardWriteTitle">수정하기</h1>
       <div class="boardWriteContent">
-        <form action="#" name="boardWrite" method="post">
+        <form action="reviewModifySave.php" name="boardModify" method="post">
           <fieldset>
             <legend class="ir_so">시험후기 게시판 수정하기 영역입니다.</legend>
-            <div>
+            <?php
+              $boardID = $_GET['boardID'];
+
+              $sql = "SELECT b.boardTitle, b.boardContent, b.myMemberID , m.youName ";
+              $sql .= "FROM myBoard b join myMember m ON(b.myMemberID = m.myMemberID) ";
+              $sql .= "WHERE b.myBoardID = {$boardID}";
+
+              $result = $connect -> query($sql);
+
+              if($result){
+                $info = $result -> fetch_array(MYSQLI_ASSOC);
+            ?>
+                <div style="display:none">
+                  <label for="boardID">번호</label>
+                  <input type="text" id="boardID" name="boardID" class="title-text" value="<?=$_GET['boardID']?>"/>
+                </div>
+                <div style="display:none">
+                  <label for="myMemberID">작성자ID</label>
+                  <input type="text" id="myMemberID" name="myMemberID" class="title-text" value="<?=$info['myMemberID']?>"/>
+                </div>
+                <div>
+                  <label for="boardTitle">제목</label>
+                  <input type="text" id="boardTitle" name="boardTitle" class="title-text" value="<?=$info['boardTitle']?>"/>
+                </div>
+                <div>
+                  <label for="boardContent">내용</label>
+                  <textarea name="boardContent" id="boardContent" class="title-text" rows="13" ><?=$info['boardContent']?></textarea>
+                </div>
+            <?php
+              } 
+            ?>
+            <!-- <div>
               <label for="boardTitle">제목</label>
               <input type="text" id="boardTitle" name="boardTitle" class="title-text" placeholder="제목을 입력해주세요!" required
                 autofocus />
@@ -37,7 +72,7 @@
               <label for="boardContent">내용</label>
               <textarea name="boardContent" id="boardContent" class="title-text" rows="13" placeholder="내용을 작성해주세요!"
                 required></textarea>
-            </div>
+            </div> -->
           </fieldset>
           <button type="submit" class="board-btn" value="작성완료">작성완료</button>
         </form>

@@ -43,22 +43,22 @@
                             <li>보유기간 : 회원 탈퇴 시까지 보유(탈퇴일로부터 즉시 파기합니다.)<br>개인정보 수집에 대한 동의를 거부할 권리가 있으며, 회원 가입시 개인정보수집을
                                 동의함으로 간주합니다.</li>
                         </ul>
-                        <span class="join_check"><input type="checkbox" name="동의" value="약관에 동의합니다.">약관에 동의합니다.</span>
+                        <span class="join_check"><input type="checkbox" name="동의" value="약관에 동의합니다." class="joinCheck">약관에 동의합니다.</span>
                     </div>
-                    <form name="join" action="joinSave.php" method="POST">
+                    <form name="join" action="joinSave.php" method="POST" onsubmit="return joinSubmit();">
                         <div class="member-box">
                             <h4>정보입력</h4>
                             <div>
                                 <label for="youEmail">이메일</label>
                                 <input type="email" name="youEmail" id="youEmail" class="input_write"
                                     placeholder="Sample@naver.com" autocmplete="off" autofocus>
-                                <button class="btn_sb" type="button">중복 확인</button>
+                                <button class="btn_sb" type="button" onclick="emailChecking()">중복 확인</button>
                             </div>
                             <div>
-                                <label for="youName">닉네임</label>
-                                <input type="text" name="youName" id="youName" class="input_write" maxlength="5"
+                                <label for="youNickname">닉네임</label>
+                                <input type="text" name="youNickname" id="youNickname" class="input_write" maxlength="5"
                                     placeholder="닉네임 입력" autocmplete="off" required>
-                                <button class="btn_sb" type="button">중복 확인</button>
+                                <button class="btn_sb" type="button" onclick="nickChecking()">중복 확인</button>
                             </div>
                             <div>
                                 <label for="youName">이름</label>
@@ -71,7 +71,7 @@
                                     placeholder="비밀번호 입력" autocmplete="off" required>
                             </div>
                             <div>
-                                <label for="youPass">비밀번호 확인</label>
+                                <label for="youPassC">비밀번호 확인</label>
                                 <input type="password" name="youPassC" id="youPassC" class="input_write wp"
                                     maxlength="20" placeholder="비밀번호 확인" autocmplete="off" required>
                             </div>
@@ -93,7 +93,111 @@
     <!-- //footer -->
 
     <!-- js -->
+    <script src="../assets/js/jquery.min_1.12.4.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+      let emailCheck = false;
+      let nickCheck = false;
+
+      //submit 전 체크
+      function joinSubmit(){
+        //개인정보 동의 체크 여부
+        let joinCheck = $(".joinCheck").is(':checked');
+        //비밀번호, 비밀번호 확인
+        let youPass = $("#youPass").val();
+        let youPassC = $("#youPassC").val();
+
+        //중복확인 / 개인정보 동의 체크 
+        if(joinCheck == false){
+          alert("개인정보 수집 및 동의를 체크해주세요.");
+          return false;
+        } 
+        
+        if(emailCheck == false){
+          alert("이메일 중복체크를 확인해주세요.");
+          return false;
+        } 
+        
+        if(nickCheck == false){
+          alert("닉네임 중복체크를 확인해주세요.");
+          return false;
+        }
+
+        //비밀번호가 동일한지 체크
+        if(youPass !== youPassC){
+          alert("비밀번호가 동일하지 않습니다.");
+          return false;
+        }
+
+      }
+
+      //이메일 중복체크
+      function emailChecking(){
+        let youEmail = $('#youEmail').val();
+				
+				if(youEmail == null || youEmail == ''){
+          alert("이메일을 입력해주세요!");
+        }	else {
+          let request = $.ajax({
+            url: "check.php", //통신할 url
+            method: "POST", //통신할 메서드 타입
+            data: { "youEmail" : youEmail, "type" : "emailCheck"}, //전송할 데이타
+            dataType: "json",
+            success: function(data){
+              var word = "이미 존재하는 이메일입니다.";
+              if(data.result == 'good'){
+                word = "사용 가능한 이메일입니다.";
+                alert(word);
+                emailCheck = true;
+              } else {
+                word = "이미 존재하는 이메일입니다.";
+                alert(word);
+                emailCheck = false;
+              }
+            },
+            error : function(reqeust, status, error){
+              console.log('reqeust'+reqeust);
+              console.log('status'+status);
+              console.log('error'+error);
+            }
+				  });
+        } 
+      }
+
+      //닉네임 중복체크
+      function nickChecking(){
+        let youNickname = $('#youNickname').val();	
+				
+				if(youNickname == null || youNickname == ''){
+          alert("닉네임을 입력해주세요!");
+        } else {
+          let request = $.ajax({
+            url: "check.php", //통신할 url
+            method: "POST", //통신할 메서드 타입
+            data: { "youNickname" : youNickname, "type" : "nickCheck"}, //전송할 데이타
+            dataType: "json",
+            success: function(data){
+              var word = "이미 존재하는 닉네임입니다.";
+              if(data.result == 'good'){
+                  word = "사용 가능한 닉네임입니다.";
+                  alert(word);
+                  nickCheck = true;
+              } else {
+                word = "이미 존재하는 닉네임입니다.";
+                alert(word);
+                nickCheck = false;
+              }
+            },
+            error : function(reqeust, status, error){
+              console.log('reqeust'+reqeust);
+              console.log('status'+status);
+              console.log('error'+error);
+            }
+          });
+        }
+      }
+
+    </script>
 </body>
 
 </html>

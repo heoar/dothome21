@@ -1,3 +1,8 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -89,13 +94,31 @@
                 </div>
                 <div class="review_board">
                     <h1>시험 후기</h1>
-                    <a href="../review/reviewWrite.html" class="review_btn">후기 남기기</a>
+                    <a href="../review/reviewWrite.php" class="review_btn">후기 남기기</a>
                     <ul class="review">
+                      <?php
+                        $sql = "SELECT b.myBoardID, b.boardTitle, b.regTime ";
+                        $sql .= "FROM myBoard b ";
+                        $sql .= "ORDER BY myBoardID DESC LIMIT 5";
+  
+                        $result = $connect -> query($sql);
+
+                        if($result){
+                          $count = $result -> num_rows;
+                          
+                          if($count > 0){
+                            for($i = 1; $i <= $count; $i++){
+                              $info = $result -> fetch_array(MYSQLI_ASSOC);
+                              echo "<li><a href='../review/reviewView.php?boardID=".$info['myBoardID']."'>".$info['boardTitle']."<span>".date('Y.m.d', $info['regTime'])."</span></a></li>";
+                            }
+                          }
+                        }
+                      ?>
+                        <!-- <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
                         <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
-                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
-                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li>
+                        <li><a href="#">오늘 시험치고 왔습니다.<span>2021.10.04</span></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -158,7 +181,6 @@
           //이후 일정 미정
           $(".dday_container p").text("※일정을 준비중입니다.");
         }
-        console.log(test);
       }
 
       ddayTime();

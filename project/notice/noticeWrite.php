@@ -1,3 +1,8 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+  include "../connect/sessionCheck.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -25,7 +30,7 @@
     <div class="container">
       <h1 class="boardWriteTitle">글쓰기</h1>
       <div class="boardWriteContent">
-        <form action="#" name="boardWrite" method="post">
+        <form action="noticeWriteSave.php" name="boardWrite" method="post">
           <fieldset>
             <legend class="ir_so">공지사항 게시판 글쓰기 영역입니다.</legend>
             <div>

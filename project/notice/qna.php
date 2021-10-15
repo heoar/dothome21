@@ -1,3 +1,7 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -134,7 +138,7 @@
 
                 <div class="mail_tell">
                     <h4>기타사항을 메일로 문의 주시면 1~2일 내로 답변 드립니다.</h4>
-                    <form action="#" name="mailWrite" method="post" class="mail_form">
+                    <form action="qnaMail.php" name="mailWrite" method="post" class="mail_form" >
                         <fieldset>
                             <legend class="ir_so">메일 문의 영역</legend>
                             <div>

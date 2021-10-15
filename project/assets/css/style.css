@@ -105,6 +105,10 @@
     font-size: 14px;
 }
 
+#header .member ul li.login a {
+  width: auto;
+}
+
 #header .member ul li:last-child a {
     background-color: #9FC3AF;
     border-radius: 5px;
@@ -275,11 +279,13 @@
 
 .review_board {
     width: 47%;
+    min-height: 350px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     overflow: hidden;
     padding: 20px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .review_board h1 {
@@ -809,7 +815,7 @@
 
 /* -------------------------허아라 2021.10.14 추가 작업-------------------------------- */
 
-/* 마이페이지 */
+/* 마이페이지 네비 */
 #user_nav {
     width: 100%;
     text-align: right;
@@ -819,6 +825,7 @@
 }
 #user_nav .user {
     width: 1200px;
+    margin: 0 auto;
 }
 #user_nav .user ul {
     float: right;
@@ -828,10 +835,14 @@
     padding: 15px;
 }
 #user_nav .user ul li.active {
-    font-weight: bold;
+    font-weight: 600;
 }
 #user_nav .user ul li:last-child {
     padding-right: 0;
+}
+.user_form input::placeholder {
+    font-size: 18px;
+    color: #414141;
 }
 
 
@@ -904,7 +915,6 @@
     display: block;
     font-size: 18px;
     margin-bottom: 10px;
-
 }
 #questionWriteMain .question_choice {
     padding-bottom: 30px;
@@ -931,6 +941,11 @@
     border-color: #ccc;
     margin-bottom: 40px;
     box-sizing: border-box;
+}
+
+.questionWriteContent p {
+    float: right;
+    font-size: 16px;
 }
 
 .questionWriteContent .board-btn {

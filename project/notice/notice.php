@@ -1,3 +1,7 @@
+<?php
+  include "../connect/connect.php";
+  include "../connect/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -36,14 +40,14 @@
     <div class="container">
       <h2 class="board-title">공지사항</h2>
       <div class="board-search">
-        <form action="boardSearch.php" name="boardSearch" method="get">
+        <form action="noticeSearch.php" name="boardSearch" method="get" onsubmit="return searchBtnCheck();">
           <fieldset>
             <select name="searchOption" id="searchOption" class="form-select">
               <option value="title">제목</option>
               <option value="content">내용</option>
               <option value="name">등록자</option>
             </select>
-            <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search">
+            <input type="search" name="searchKeyword" id="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search">
             <button type="submit" class="form-btn">검색</button>
           </fieldset>
         </form>
@@ -67,90 +71,166 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <?php
+              if(isset($_GET['page'])){
+                $page = (int) $_GET['page'];
+              } else {
+                $page = 1;
+              }
+
+              $numView = 10;
+              $viewLimit = ($numView * $page) - $numView;
+              $sql = "SELECT b.noticeBoardID , b.noticeBoardTitle, m.youNickname, b.noticeBoardView, b.regTime ";
+              $sql .= "FROM myMember m JOIN noticeBoard b ON m.myMemberID = b.myMemberID ";
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $searchOption = $_GET['searchOption'];
+                $searchKeyword = $_GET['searchKeyword'];
+                switch($searchOption){
+                  case 'title':
+                    $sql .= "WHERE b.noticeBoardTitle LIKE '%{$searchKeyword}%' ";
+                    break;
+                  case 'content':
+                    $sql .= "WHERE b.noticeBoardContent LIKE '%{$searchKeyword}%' ";
+                    break;
+                  case 'name':
+                    $sql .= "WHERE m.youNickname LIKE '%{$searchKeyword}%' ";
+                    break;
+                }
+              }
+              $sql .= "ORDER BY noticeBoardID DESC LIMIT {$viewLimit}, {$numView}";
+
+              $result = $connect -> query($sql);
+
+              if($result){
+                $count = $result -> num_rows;
+                
+                if($count > 0){
+                  for($i = 1; $i <= $count; $i++){
+                    $info = $result -> fetch_array(MYSQLI_ASSOC);
+                    echo "<tr>";
+                    echo "<td>".$info['noticeBoardID']."</td>";
+                    echo "<td><a href='noticeView.php?boardID={$info['noticeBoardID']}'>".$info['noticeBoardTitle']."</a></td>";
+                    echo "<td>".$info['youNickname']."</td>";
+                    echo "<td>".date('Y-m-d', $info['regTime'])."</td>";
+                    echo "<td>".$info['noticeBoardView']."</td>";
+                    echo "</tr>";
+                  }
+                }
+              }
+            ?>
+            <!-- <tr>
               <td>10</td>
               <td><a href="#">정보처리기사 2021년 3회 가답안</a></td>
               <td>관리자</td>
               <td>2021-10-07</td>
               <td>5</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td><a href="#">정보처리기사 2021년 2회 가답안</a></td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td><a href="#">정보처리기사 2021년 1회 가답안</a></td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td><a href="#">정보처리기사 2020년 3회 가답안</a></td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>정보처리기사 2020년 2회 가답안</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>정보처리기사 2020년 1회 가답안</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>문제 만들기는 회원분만 가능합니다.</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>공지사항 테스트</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>관리자입니다.</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>정신머리 사이트 오픈</td>
-              <td>관리자</td>
-              <td>2021-10-07</td>
-              <td>5</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
       <div class="board-page">
         <ul>
-          <li><a href="#">&lt;</a></li>
+          <?php
+            $sql = "SELECT count(myBoardID) FROM myBoard b JOIN myMember m ON b.myMemberID = m.myMemberID ";
+            if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+              $searchOption = $_GET['searchOption'];
+              $searchKeyword = $_GET['searchKeyword'];
+              switch($searchOption){
+                case 'title':
+                  $sql .= "WHERE b.boardTitle LIKE '%{$searchKeyword}%' ";
+                  break;
+                case 'content':
+                  $sql .= "WHERE b.boardContent LIKE '%{$searchKeyword}%' ";
+                  break;
+                case 'name':
+                  $sql .= "WHERE m.youNickname LIKE '%{$searchKeyword}%' ";
+                  break;
+              }
+            }
+
+            $result = $connect -> query($sql);
+            $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+            $boardTotalCount = $boardTotalCount['count(myBoardID)'];
+
+            // echo "전체 갯수 : " .$boardTotalCount;
+
+            //총 페이지 수
+            $boardTotalPage = ceil($boardTotalCount/$numView);
+            // echo "총 페이지 수 : " .$boardTotalPage;
+
+            //1 2 3 4 5 6 7 8 9 10 11
+            //현재 페이지를 기준으로 보여주고 싶은 갯수
+            $pageView = 5;
+            $startPage = $page - $pageView;
+            $endPage = $page + $pageView;
+
+            //처음 페이지 초기화
+            if($startPage < 1) $startPage = 1;
+
+            //마지막 페이지 초기화
+            if($endPage >= $boardTotalPage) $endPage = $boardTotalPage;
+
+            //처음으로
+            if($page != 1) {
+              $uri = "page=1";
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $uri .= "&&searchOption=".$_GET['searchOption']."&&searchKeyword=".$_GET['searchKeyword'];
+              }
+              echo "<li><a href='notice.php?{$uri}'>&lt;&lt;</a></li>";
+            }
+
+            //이전페이지
+            if($page != 1){
+              $prevPage = $page - 1;
+              $uri = "page=".$prevPage;
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $uri .= "&&searchOption=".$_GET['searchOption']."&&searchKeyword=".$_GET['searchKeyword'];
+              }
+              echo "<li><a href='notice.php?{$uri}'>&lt;</a></li>";
+            }
+
+            for($i=$startPage; $i<=$endPage; $i++){
+              $active = '';
+              if($i == $page) $active = 'active';
+              $uri = "page=".$i;
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $uri .= "&&searchOption=".$_GET['searchOption']."&&searchKeyword=".$_GET['searchKeyword'];
+              }
+              echo "<li class='{$active}'><a href='notice.php?{$uri}'>{$i}</a></li>";
+            }
+
+            //다음페이지
+            if($page != $endPage){
+              $nextPage = $page + 1;
+              $uri = "page=".$nextPage;
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $uri .= "&&searchOption=".$_GET['searchOption']."&&searchKeyword=".$_GET['searchKeyword'];
+              }
+              echo "<li><a href='notice.php?{$uri}'>&gt;</a></li>";
+            }
+
+            //마지막으로
+            if($page != $boardTotalPage){
+              $uri = "page=".$boardTotalPage;
+              if(isset($_GET['searchOption']) && isset($_GET['searchKeyword'])){
+                $uri .= "&&searchOption=".$_GET['searchOption']."&&searchKeyword=".$_GET['searchKeyword'];
+              }
+              echo "<li><a href='notice.php?{$uri}'>&gt;&gt;</a></li>";
+            }
+          ?>
+          <!-- <li><a href="#">&lt;</a></li>
           <li class="active"><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
-          <li><a href="#">&gt;</a></li>
+          <li><a href="#">&gt;</a></li> -->
         </ul>
-        <a href="../review/reviewWrite.html" class="form-btn black">글쓰기</a>
+        <?php
+          if($_SESSION['youNickname']=="관리자"){
+            echo "<a href='noticeWrite.php' class='form-btn black'>글쓰기</a>";
+          }
+        ?>
       </div>
     </div>
   </main>

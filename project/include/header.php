@@ -25,8 +25,13 @@
 
   <div class="member">
     <ul>
-      <li><a href="../login/login.php">로그인</a></li>
-      <li><a href="../login/join.php">회원가입</a></li>
+      <?php if (isset($_SESSION['myMemberID'])) { ?>
+        <li class="login"><a href="#"><?= $_SESSION['youNickname'] ?>님 환영합니다.</a></li>
+        <li><a href="../login/logout.php">로그아웃</a></li>
+      <?php } else { ?>
+        <li><a href="../login/login.php">로그인</a></li>
+        <li><a href="../login/join.php">회원가입</a></li>
+      <?php } ?>
     </ul>
   </div>
 </div>

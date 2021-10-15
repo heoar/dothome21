@@ -202,12 +202,11 @@ figcaption {
 
 nav {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  bottom: 10px;
+  width: 100%;
+  bottom: 30px;
   top: auto;
+  display: inline-block;
+  text-align: center;
 }
 
 nav li {
@@ -635,10 +634,11 @@ nav li a:hover {
             justify-content: center;
   }
   nav {
-    width: 400px;
-    padding-left: 60px;
+    width: 100%;
     bottom: 10px;
     top: auto;
+    display: inline-block;
+    text-align: center;
   }
   nav li {
     list-style: none;

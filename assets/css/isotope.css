@@ -75,6 +75,9 @@
   border-bottom: 3px solid #a5d5fa;
   background-color: #fff;
 }
+.color-shape.figma {
+    background: rgb(227, 248, 255);
+}
 .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;
 }

@@ -192,10 +192,13 @@ $gradient6: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 
 nav {
-    @include position-Center;
-    bottom: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
     top: auto;
-
+    display: inline-block;
+    text-align: center;
+    
     li {
         list-style: none;
         display: inline;
@@ -502,10 +505,11 @@ nav {
 
     //nav
     nav {
-        width: 400px;
-        padding-left: 60px;
+        width: 100%;
         bottom: 10px;
         top: auto;
+        display: inline-block;
+        text-align: center;
     
         li {
             list-style: none;

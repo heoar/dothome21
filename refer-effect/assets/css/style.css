@@ -405,20 +405,6 @@ nav li a:hover {
           animation: unfoldOut 1s ease forwards;
 }
 
-#example.show .example-bg .example-cont {
-  -webkit-transform: scaley(0);
-          transform: scaley(0);
-  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
-          animation: zoomIn 0.5s 0.8s ease forwards;
-}
-
-#example.hide .example-bg .example-cont {
-  -webkit-transform: scaley(0);
-          transform: scaley(0);
-  -webkit-animation: zoomOut 0.5s ease forwards;
-          animation: zoomOut 0.5s ease forwards;
-}
-
 @-webkit-keyframes unfoldIn {
   0% {
     -webkit-transform: scaley(0.005) scalex(0);
@@ -503,24 +489,38 @@ nav li a:hover {
 
 @-webkit-keyframes zoomOut {
   0% {
-    -webkit-transform: scaley(1);
-            transform: scaley(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
   100% {
-    -webkit-transform: scaley(0);
-            transform: scaley(0);
+    -webkit-transform: scaley(0) scalex(0);
+            transform: scaley(0) scalex(0);
   }
 }
 
 @keyframes zoomOut {
   0% {
-    -webkit-transform: scaley(1);
-            transform: scaley(1);
+    -webkit-transform: scaley(1) scalex(1);
+            transform: scaley(1) scalex(1);
   }
   100% {
-    -webkit-transform: scaley(0);
-            transform: scaley(0);
+    -webkit-transform: scaley(0) scalex(0);
+            transform: scaley(0) scalex(0);
   }
+}
+
+#example.show .example-bg .example-cont {
+  -webkit-transform: scaley(0);
+          transform: scaley(0);
+  -webkit-animation: zoomIn 0.5s 0.8s ease forwards;
+          animation: zoomIn 0.5s 0.8s ease forwards;
+}
+
+#example.hide .example-bg .example-cont {
+  -webkit-transform: scaley(0);
+          transform: scaley(0);
+  -webkit-animation: zoomOut 0.5s ease forwards;
+          animation: zoomOut 0.5s ease forwards;
 }
 
 .code-view {

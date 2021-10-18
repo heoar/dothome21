@@ -16,4 +16,75 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+
+#mainCont2 {
+    background-color: #000;
+    height: 100vh;
+    font-size: 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-main2;
+    color: #FFBA54;
+
+    .main__cont {
+        h2 {
+            font-size: 8vw;
+            line-height: 26vw;
+            height: 26vw;
+            background: url(../img/react_img.png) no-repeat;
+            background-size: 40%;
+            background-position: center;
+        }
+    }
+
+    p {
+        font-size: 2vw;
+        text-align: center;
+        line-height: 2.5vw;
+    }
+}
+
+
+@media (max-width: 800px){
+    #mainCont {
+        font-size: 15vw;
+        br {
+            display: block;
+        }
+    }
+
+    #mainCont2 {
+        background-color: #000;
+        height: 100vh;
+        font-size: 9vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-main2;
+        color: #FFBA54;
+    
+        .main__cont {
+            h2 {
+                font-size: 12vw;
+                line-height: 110vw;
+                height: 50vw;
+                background: url(../img/react_img.png) no-repeat;
+                background-size: 55%;
+                background-position: center;
+            }
+        }
+    
+        p {
+            padding-top: 18vw;
+            font-size: 4vw;
+            text-align: center;
+            line-height: 6vw;
+        }
+    }
 }

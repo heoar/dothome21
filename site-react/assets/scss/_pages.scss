@@ -50,6 +50,86 @@
     }
 }
 
+/* 어바웃 */
+#aboutCont {
+    background-color: #F0EEEB;
+    font-size: 9vw;
+    align-items: center;
+    justify-content: center;
+
+    .about__cont {
+        width: 1200px;
+        margin: 0 auto;
+        h2 {
+            padding: 15vw 0;
+            line-height: 8vw;
+            font-size: 8vw;
+            font-family: $font-main2;
+        }
+    }
+    
+    .about_sub {
+        .sub_box {
+            padding-bottom: 10vw;
+            overflow: hidden;
+            .sub_img01 {
+                margin-bottom: 4vw;
+            }
+            .sub_img02 {
+                width: 50vw;
+                margin-right: 2vw;
+                float: left;
+            }
+
+            .sub_img03 {
+                width: 50vw;
+                padding-left: 2vw;
+                float: right;
+            }
+            .sub_txt03 {
+
+            }
+            p {
+                font-size: 1vw;
+                line-height: 1.5vw;
+                text-align: left;
+                font-family: $font-kor1;
+            }
+        }
+    }
+    .about_sub:last-child {
+        padding-bottom: 10vw;
+    }
+
+    .about_bottom {
+        width: 100%;
+        padding: 10vw 0;
+        background: #000;
+        text-align: center;
+        color: #fff;
+        
+        span {
+            font-size: 2vw;
+            font-family: $font-kor1;
+        }
+        h1 {
+            font-size: 9vw;
+            font-family: $font-main2;
+            line-height: 9vw;
+        }
+        button {
+            font-family: $font-sub;
+            font-size: 2vw;
+            padding: 2vw 5vw;
+            border: 1px solid #fff;
+            border-radius: 5vw;
+            background: #000;
+            color: #fff;
+            margin-bottom: 10vw;
+        }
+    }
+}
+
 
 @media (max-width: 800px){
     #mainCont {
@@ -85,6 +165,87 @@
             font-size: 4vw;
             text-align: center;
             line-height: 6vw;
+        }
+    }
+
+
+    /* 어바웃 모바일 */
+    #aboutCont {
+        padding: 5vw;
+        background-color: #F0EEEB;
+        font-size: 9vw;
+        align-items: center;
+        justify-content: center;
+
+        .about__cont {
+            width: 100%;
+            margin: 0 auto;
+            h2 {
+                margin-top: 10vw;
+                padding: 15vw 0;
+                font-size: 15vw;
+                font-family: $font-main2;
+                text-align: center;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+        .about_sub {
+            .sub_box {
+                padding-bottom: 10vw;
+                .sub_img01 {
+                    margin-bottom: 5vw;
+                }
+                .sub_img02 {
+                    width: 100%;
+                    margin-bottom: 5vw;
+                }
+
+                .sub_img03 {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 5vw;
+                }
+                p {
+                    font-size: 5vw;
+                    line-height: 8vw;
+                    text-align: left;
+                    font-family: $font-kor1;
+                }
+            }
+        }
+        .about_sub:last-child {
+            padding-bottom: 5vw;
+        }
+
+        .about_bottom {
+            padding: 2vw 0;
+            background: #000;
+            text-align: center;
+            color: #fff;
+            
+            span {
+                font-size: 5vw;
+                font-family: $font-kor1;
+                margin-bottom: 5vw;
+            }
+            h1 {
+                font-size: 15vw;
+                font-family: $font-main2;
+                line-height: 16vw;
+                margin-bottom: 10vw;
+            }
+            button {
+                font-family: $font-sub;
+                font-size: 5vw;
+                padding: 3vw 8vw;
+                border: 1px solid #fff;
+                border-radius: 20vw;
+                margin-bottom: 15vw;
+            }
         }
     }
 }

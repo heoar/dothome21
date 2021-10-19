@@ -171,7 +171,6 @@
 
     /* 어바웃 모바일 */
     #aboutCont {
-        padding: 5vw;
         background-color: #F0EEEB;
         font-size: 9vw;
         align-items: center;
@@ -179,6 +178,7 @@
 
         .about__cont {
             width: 100%;
+            padding: 5vw;
             margin: 0 auto;
             h2 {
                 margin-top: 10vw;

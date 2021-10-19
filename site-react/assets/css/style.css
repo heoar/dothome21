@@ -1211,7 +1211,6 @@ table {
   }
   /* 어바웃 모바일 */
   #aboutCont {
-    padding: 5vw;
     background-color: #F0EEEB;
     font-size: 9vw;
     -webkit-box-align: center;
@@ -1223,6 +1222,7 @@ table {
   }
   #aboutCont .about__cont {
     width: 100%;
+    padding: 5vw;
     margin: 0 auto;
   }
   #aboutCont .about__cont h2 {

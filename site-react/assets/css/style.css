@@ -1104,9 +1104,9 @@ table {
 }
 
 #aboutCont .about__cont h2 {
-  padding: 15vw 0;
-  line-height: 8vw;
-  font-size: 8vw;
+  padding: 200px 0;
+  line-height: 150px;
+  font-size: 150px;
   font-family: "HeirofLightBold";
 }
 
@@ -1121,12 +1121,14 @@ table {
 
 #aboutCont .about_sub .sub_box .sub_img02 {
   width: 50vw;
+  max-width: 800px;
   margin-right: 2vw;
   float: left;
 }
 
 #aboutCont .about_sub .sub_box .sub_img03 {
   width: 50vw;
+  max-width: 800px;
   padding-left: 2vw;
   float: right;
 }
@@ -1138,16 +1140,12 @@ table {
   font-family: "Chosunilbo_myungjo";
 }
 
-#aboutCont .about_sub:last-child {
-  padding-bottom: 10vw;
-}
-
 #aboutCont .about_bottom {
   width: 100%;
-  padding: 10vw 0;
   background: #000;
   text-align: center;
   color: #fff;
+  padding-bottom: 150px;
 }
 
 #aboutCont .about_bottom span {
@@ -1156,20 +1154,20 @@ table {
 }
 
 #aboutCont .about_bottom h1 {
-  font-size: 9vw;
+  padding: 0 10vw;
+  font-size: 150px;
   font-family: "HeirofLightBold";
-  line-height: 9vw;
+  line-height: 150px;
 }
 
 #aboutCont .about_bottom button {
   font-family: "Rajdhani";
-  font-size: 2vw;
-  padding: 2vw 5vw;
+  font-size: 50px;
+  padding: 20px 50px;
   border: 1px solid #fff;
-  border-radius: 5vw;
+  border-radius: 100px;
   background: #000;
   color: #fff;
-  margin-bottom: 10vw;
 }
 
 @media (max-width: 800px) {
@@ -1222,7 +1220,7 @@ table {
   }
   #aboutCont .about__cont {
     width: 100%;
-    padding: 5vw;
+    padding: 3vw;
     margin: 0 auto;
   }
   #aboutCont .about__cont h2 {

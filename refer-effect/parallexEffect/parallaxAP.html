@@ -60,6 +60,7 @@
         a { text-decoration: none; }
         li { list-style: none; }
         body { height: 10000px; }
+        iframe { border: 0; }
 
         .scroll {
             position: fixed;
@@ -94,10 +95,13 @@
         }
         #section3 {
             background: #fff;
-            height: 3000px;
+            height: 16000px;
             z-index: 2000;
         }
-        #section4 {}
+        #section4 {
+            height: 13000px;
+            background: #000;
+        }
         #section5 {}
         #section6 {}
         #section7 {}
@@ -252,6 +256,344 @@
         .s3Text1 .s6 {
             transform: translate(30vw, 10vw);
         }
+
+        .s3Text2 {
+            perspective: 500px;
+        }
+
+        .s3Text2 iframe {
+            width: 60vw;
+            height: 60vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .s3Text2 .i1-text {
+            position: absolute;
+            left: 0; top: 0;
+        }
+
+        .s3Text2 .i1-text-desc {
+            width: 60vw;
+            height: 60vh;
+            transform-style: preserve-3d;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .s3Text2 .i1 {
+            position: absolute;
+            left: 0; top: 0;
+        }
+        .s4Text1 {}
+        .s4Text1 > div {
+            width: 10vw; height: 10vw;
+            background: #000;
+            border-radius: 50%;
+        }
+        .s4Text1 .circle1 {
+            left: 50%; top: 10%;
+        }
+        .s4Text1 .circle2 {
+            left: 20%; top: 20%;
+        }
+        .s4Text1 .circle3 {
+            left: 60%; top: 20%;
+        }
+        .s4Text1 .circle4 {
+            left: 60%; top: 30%;
+        }
+        .s4Text1 .circle5 {
+            left: 90%; top: 90%;
+        }
+        .s4Text1 .circle6 {
+            left: 10%; top: 40%;
+        }
+
+        .s4Text2 {
+            color: #fff;
+        }
+        /* 고양이 */
+        .s4Text2 .cat {
+        position: relative;
+        height: 170px;
+        width: 192.1px;
+        }
+
+        .s4Text2 .ear {
+        position: absolute;
+        top: -30%;
+        height: 60%;
+        width: 25%;
+        background: #fff;
+        }
+        .s4Text2 .ear::before, .ear::after {
+        content: "";
+        position: absolute;
+        bottom: 24%;
+        height: 10%;
+        width: 5%;
+        border-radius: 50%;
+        background: #000;
+        }
+        .s4Text2 .ear::after {
+        transform-origin: 50% 100%;
+        }
+
+        .s4Text2 .ear--left {
+        left: -7%;
+        border-radius: 70% 30% 0% 0%/100% 100% 0% 0%;
+        transform: rotate(-15deg);
+        }
+        .s4Text2 .ear--left::before, .ear--left::after {
+        right: 10%;
+        }
+        .s4Text2 .ear--left::after {
+        transform: rotate(-45deg);
+        }
+
+        .s4Text2 .ear--right {
+        right: -7%;
+        border-radius: 30% 70% 0% 0%/100% 100% 0% 0%;
+        transform: rotate(15deg);
+        }
+        .s4Text2 .ear--right::before, .ear--right::after {
+        left: 10%;
+        }
+        .s4Text2 .ear--right::after {
+        transform: rotate(45deg);
+        }
+
+        .s4Text2 .face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        border-radius: 50%;
+        }
+
+        .s4Text2 .eye {
+        position: absolute;
+        top: 35%;
+        height: 30%;
+        width: 31%;
+        background: #fff;
+        border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+        }
+        .s4Text2 .eye::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        border-radius: 0 0 50% 50%/0 0 40% 40%;
+        background: #000;
+        -webkit-animation: blink 4s infinite ease-in;
+                animation: blink 4s infinite ease-in;
+        }
+        @-webkit-keyframes blink {
+        0% {
+            height: 0;
+        }
+        90% {
+            height: 0;
+        }
+        92.5% {
+            height: 100%;
+        }
+        95% {
+            height: 0;
+        }
+        97.5% {
+            height: 100%;
+        }
+        100% {
+            height: 0;
+        }
+        }
+        @keyframes blink {
+        0% {
+            height: 0;
+        }
+        90% {
+            height: 0;
+        }
+        92.5% {
+            height: 100%;
+        }
+        95% {
+            height: 0;
+        }
+        97.5% {
+            height: 100%;
+        }
+        100% {
+            height: 0;
+        }
+        }
+        .s4Text2 .eye::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        height: 10%;
+        width: 15%;
+        background: #fff;
+        border-radius: 50%;
+        }
+
+        .s4Text2 .eye--left {
+        left: 0;
+        }
+        .s4Text2 .eye--left::before {
+        right: -5%;
+        }
+
+        .s4Text2 .eye--right {
+        right: 0;
+        }
+        .s4Text2 .eye--right::before {
+        left: -5%;
+        }
+
+        .s4Text2 .eye-pupil {
+        position: absolute;
+        top: 25%;
+        height: 50%;
+        width: 20%;
+        background: #000;
+        border-radius: 50%;
+        -webkit-animation: look-around 4s infinite;
+                animation: look-around 4s infinite;
+        }
+        @-webkit-keyframes look-around {
+        0% {
+            transform: translate(0);
+        }
+        5% {
+            transform: translate(50%, -25%);
+        }
+        10% {
+            transform: translate(50%, -25%);
+        }
+        15% {
+            transform: translate(-100%, -25%);
+        }
+        20% {
+            transform: translate(-100%, -25%);
+        }
+        25% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+        }
+        @keyframes look-around {
+        0% {
+            transform: translate(0);
+        }
+        5% {
+            transform: translate(50%, -25%);
+        }
+        10% {
+            transform: translate(50%, -25%);
+        }
+        15% {
+            transform: translate(-100%, -25%);
+        }
+        20% {
+            transform: translate(-100%, -25%);
+        }
+        25% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+        }
+        .s4Text2 .eye--left .eye-pupil {
+        right: 30%;
+        }
+        .s4Text2 .eye--right .eye-pupil {
+        left: 30%;
+        }
+        .s4Text2 .eye-pupil::after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: -5%;
+        height: 20%;
+        width: 35%;
+        border-radius: 50%;
+        background: #fff;
+        }
+
+        .s4Text2 .muzzle {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        height: 6%;
+        width: 10%;
+        background: #fff;
+        transform: translateX(-50%);
+        border-radius: 50% 50% 50% 50%/30% 30% 70% 70%;
+        }
+
+        /* 텍스트 */
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+        svg {
+            display: block;
+            font: 10.5em 'Montserrat';
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+        .text-copy:nth-child(1){
+            stroke: #4D163D;
+            animation-delay: -1;
+        }
+
+        .text-copy:nth-child(2){
+            stroke: #840037;
+            animation-delay: -2s;
+        }
+
+        .text-copy:nth-child(3){
+            stroke: #BD0034;
+            animation-delay: -3s;
+        }
+
+        .text-copy:nth-child(4){
+            stroke: #BD0034;
+            animation-delay: -4s;
+        }
+
+        .text-copy:nth-child(5){
+            stroke: #FDB731;
+            animation-delay: -5s;
+        }
+
+        @keyframes stroke-offset{
+            100% {stroke-dashoffset: -35%;}
+        }
+       
+        .s4Text4 {
+            color: #fff;
+            font-size: 5vw;
+        }
+
     </style>
 </head>
 <body>
@@ -274,7 +616,7 @@
                  data-1500 = "transform: translate(-50%, 0%); opacity:0;"
                  data-2000 = "transform: translate(-50%, -50%); opacity:1;"            
                  data-2500 = "transform: translate(-50%, -50%); opacity:1; font-size: 8vw;"
-                 data-3500 = "transform: translate(-50%, -50%); opacity:1; font-size: 0vw;"
+                 data-3500 = "transform: translate(-50%, -50%); opacity:0; font-size: 0vw;"
             >웹퍼블리셔입니다.</div>  
 
              <div class="s1Text3 fixed"
@@ -403,29 +745,139 @@
                 data-0 = "display:none"
                 data-26800 = "display:block"
                 data-27000 = "display:block"
+                data-40000 = "display: none;"
             >
                 <span class="s1"
                     data-27000 = "transform: translate(-20vw, -20vw)"
                     data-28000 = "transform: translate(0vw, 0vw)"
+                    data-30000 = "transform: translate(0vw, -22vw);"
                 >s</span><span class="s2"
                     data-26500 = "transform: translate(-20vw, 20vw);"
                     data-27500 = "transform: translate(0vw, 0vw);"
+                    data-30000 = "transform: translate(0vw, -22vw);"
                 >c</span><span class="s3"
                     data-28000 = "transform: translate(10vw, -10vw);"
                     data-28500 = "transform: translate(0vw, 0vw);"
+                    data-30000 = "transform: translate(0vw, -22vw);"
                 >r</span><span class="s4"
                     data-29000 = "transform: translate(20vw, -20vw);"
                     data-29500 = "transform: translate(0vw, 0vw);"
+                    data-30000 = "transform: translate(0vw, -22vw);"
                 >i</span><span class="s5"
                     data-30000 = "transform: translate(10vw, 20vw);"
                     data-30500 = "transform: translate(0vw, 0vw);"
+                    data-31500 = "transform: translate(0vw, -22vw);"
                 >p</span><span class="s6"
-                    data-31500 = "transform: translate(30vw, 10vw);"
-                    data-32000 = "transform: translate(0vw, 0vw);"
+                    data-31000 = "transform: translate(30vw, 10vw);"
+                    data-31500 = "transform: translate(0vw, 0vw);"
+                    data-32000 = "transform: translate(0vw, -22vw);"
                 >t</span>
             </div>
+            <div class="s3Text2 fixed"
+                data-0 = "display:none"
+                data-31999 = "display:block"
+                data-37000 = "display: none;"
+            >
+                <iframe class="i1" src="../mouseEffect/javascriptME01.html"
+                data-32000 = "transform: translate3d(-80%, -50%, -10000px); opacity:0;"
+                data-33500 = "transform: translate3d(-30%, -10%, 0px); opacity:1;"
+                data-34000 = "transform: translate3d(-30%, -10%, 0px); opacity:1;"
+                data-36000 = "transform: translate3d(-50%, -10%, 0px); opacity:0;"
+                ></iframe>
+                <iframe class="i2" src="../parallexEffect/javascriptPE01.html"
+                data-33000 = "transform: translate3d(-10%, -20%, -10000px); opacity:0;"
+                data-33500 = "transform: translate3d(60%, -20%, 0px); opacity:1;"
+                data-34000 = "transform: translate3d(60%, -20%, 0px); opacity:1;"
+                data-36000 = "transform: translate3d(-50%, 60%, 0px); opacity:0;"
+                ></iframe>
+                <iframe class="i3" src="../mouseEffect/javascriptME04.html"
+                data-33100 = "transform: translate3d(-80%, -50%, -10000px); opacity:0;"
+                data-33500 = "transform: translate3d(-20%, -10%, 0px); opacity:1;"
+                data-34000 = "transform: translate3d(-20%, -10%, 0px); opacity:1;"
+                data-36000 = "transform: translate3d(-0%, -10%, 0px); opacity:0;"
+                ></iframe>
+            </div>
+           
         </section><!--//section3-->
-        <section id="section4"></section><!--//section4-->
+        <section id="section4">
+            <div class="s4Text1"
+                data-34999 = "display: none;"
+                data-35000 = "display: block;"
+                data-43000 = "display: none;"
+            >
+                <div class="circle1 fixed"
+                data-39000 = "width: 0vw; height: 0vw;"
+                data-41000 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle2 fixed"
+                data-39050 = "width: 0vw; height: 0vw;"
+                data-42500 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle3 fixed"
+                data-39100 = "width: 0vw; height: 0vw;"
+                data-42500 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle4 fixed"
+                data-39150 = "width: 0vw; height: 0vw;"
+                data-42500 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle5 fixed"
+                data-39200 = "width: 0vw; height: 0vw;"
+                data-42500 = "width: 200vw; height: 200vw;"
+                ></div>
+                <div class="circle6 fixed"
+                data-39250 = "width: 0vw; height: 0vw;"
+                data-42500 = "width: 200vw; height: 200vw;"
+                ></div>
+            </div>
+            <div class="s4Text2 fixed"
+                data-40800 = "opacity: 0;"
+                data-41000 = "transform: translate(-50%, -50%) scale(2); opacity: 1;"
+                data-43000 = "transform: translate(-50%, -50%) scale(2); opacity: 1;"
+                data-45000 = "transform: translate(-50%, -50%) scale(2); opacity: 0;"
+            >
+                <div class="cat">
+                    <div class="ear ear--left"></div>
+                    <div class="ear ear--right"></div>
+                    <div class="face">
+                        <div class="eye eye--left">
+                            <div class="eye-pupil"></div>
+                        </div>
+                        <div class="eye eye--right">
+                            <div class="eye-pupil"></div>
+                        </div>
+                        <div class="muzzle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="s4Text3 fixed">
+                <div class="s4text"
+                    data-45500 = "transform: translateX(0%); opacity: 0;"
+                    data-46000 = "transform: translateX(0%); opacity: 1;"
+                    data-48000 = "transform: translateX(-150%); opacity: 1;"
+                >
+                    <svg>
+                        <symbol id="s-text">
+                            <text text-anchor="middle" x="50%" y="80%">CONTACT</text>
+                        </symbol>
+                    
+                        <g class = "g-ants">
+                            <use xlink:href="#s-text" class="text-copy"></use>
+                            <use xlink:href="#s-text" class="text-copy"></use>
+                            <use xlink:href="#s-text" class="text-copy"></use>
+                            <use xlink:href="#s-text" class="text-copy"></use>
+                            <use xlink:href="#s-text" class="text-copy"></use>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="s4Text4 fixed"
+                    data-45500 = "transform: translateX(150%); top:45%; opacity: 0;"
+                    data-47800 = "transform: translateX(-50%); top:45%; opacity: 1;"
+            >
+                <h2>yuooo13@gmail.com</h2>
+            </div>
+        </section><!--//section4-->
         <section id="section5"></section><!--//section5-->
         <section id="section6"></section><!--//section6-->
         <section id="section7"></section><!--//section7-->
@@ -441,6 +893,7 @@
 
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
+
     </script>
 </body>
 </html>

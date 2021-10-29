@@ -24,7 +24,7 @@ a {
 .main_wrap .main_menu {
     float: left;
     width: 300px;
-    height: 100vh;
+    height: 150vh;
 }
 .main_wrap .main_menu > div {
     padding-bottom: 20px;
@@ -56,6 +56,9 @@ a {
     text-align: center;
     
 }
+.main_wrap .main_menu ul {
+
+}
 .main_wrap .main_menu ul.sub {
     display: none;
 }
@@ -65,9 +68,46 @@ a {
 .main_wrap .main_box .main_br {
     margin-bottom: 50px;
 }
-.main_wrap .main_box .main_br .br img{
+/* .main_wrap .main_box .main_br .br img{
     width: 75%;
+} */
+
+
+/*슬라이드*/
+.slider-img img {
+    width: 1000px;
 }
+.slider-img {
+    height: 600px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.slider-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    float: left;
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 6px;
+}
+
+.slider:nth-child(1){z-index: 3;}
+.slider:nth-child(2){z-index: 2;}
+.slider:nth-child(3){z-index: 1;}
+.slider::before {content: attr(data-name);}
 
 /* 탭메뉴 */
 .main_wrap .main_box .tep_menu {
@@ -109,13 +149,15 @@ a {
     width: 100px;
 }
 .main_wrap .main_box .tep_menu {
-    position: relative;
+ 
 }
 .main_wrap .main_box .tep_menu .tep02 {
-    position: absolute;
-    right: 50px; top: 80px;
+
 }
 .main_wrap .main_box .tep_menu .tep02.hide {
+    display: none;
+}
+.main_wrap .main_box .tep_menu .tep.hide {
     display: none;
 }
 

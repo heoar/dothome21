@@ -40,7 +40,13 @@
                 <div class="main_box">
                     <div class="main_br">
                         <div class="br">
-                            <img class="slider" src="img/Coding_img02.jpg" alt="배너이미지">
+                            <div class="slider-img slider_img">
+                                <div class="slider-inner slider-inner">
+                                    <div class="slider slider" data-name="이미지1"><img src="img/Coding_img02.jpg" alt="이미지1"></div>
+                                    <div class="slider slider" data-name="이미지2"><img src="img/Coding_img02.jpg" alt="이미지2"></div>
+                                    <div class="slider slider" data-name="이미지3"><img src="img/Coding_img02.jpg" alt="이미지2"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tep_menu">
@@ -146,27 +152,48 @@
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
     <script>
         //탭메뉴
         const tabBtn = $(".tep_menu ul li");
         const tabCtn = $("tep_menu > div");
 
         const manuBtn = $(".menu01 h2");
+        const manuViw = $(".menu01 > ul");
 
-        tabBtn.click(()=>{
+        tabBtn.click(function(){
             let target = $(this);
             tabBtn.removeClass("view");
             target.addClass("view");
 
-            
+            let index = target.index();
+            $(".tep_menu .tep02").removeClass("hide");
+            $(".tep_menu .tep").addClass("hide");
         })
 
-        manuBtn.click(()=>{
-            $(".menu01 > ul").removeClass(".sub");
+        manuBtn.click(function(){
+            manuViw.removeClass("sub");
         })
 
+       
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
 
-        // $(document).ready(function() {
+        let currentIndex = 0;
+        let sliderHeight = slider.height();
+
+        setInterval(function(){
+            currentIndex < 2 ? currentIndex++ : currentIndex = 0;
+
+            let sliderPostion = currentIndex * -sliderHeight;
+            sliderInner.animate({ top: sliderPostion }, 600, "easeOutExpo")
+        }, 3000);
+
+    
+        // $(document).click(function() {
         //     $(".menu01 > li").click(function(){
         //         $(this).children(".sub").stop().slideDown();
         //     });

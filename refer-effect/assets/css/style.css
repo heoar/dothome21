@@ -162,8 +162,8 @@ figcaption {
 }
 
 #main.game {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2af598), to(#009efd));
-  background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 #main.menu {
@@ -171,7 +171,7 @@ figcaption {
 }
 
 #main.mouse {
-  background: linear-gradient(-225deg, #A8BFFF 0%, #884D80 100%);
+  background: linear-gradient(-225deg, #EACCF8 0%, #6654F1 100%);
 }
 
 #main.parallex {

@@ -11,7 +11,7 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
 .container {
     width: 1400px;
     margin: 0 auto;
-    height: 800vh;
+
 }
 
 /* 헤더 */
@@ -19,6 +19,13 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
     top: 0;
     width: 100%;
     position: fixed;
+}
+.menu.show {
+    width: 100%;
+    height: 100%;
+    background: #0396A6;
+    z-index: 999;
+    transition: .8s;
 }
 header .hem_menu {
     position: relative;
@@ -32,6 +39,7 @@ header .hem_menu {
     cursor: pointer;
 }
 .hem_menu .hem::after {
+    transition: .5s;
     position: absolute;
     content: '';
     width: 20px; height: 3px;
@@ -39,6 +47,7 @@ header .hem_menu {
     background: #0D626B;
 }
 .hem_menu .hem::before {
+    transition: .5s;
     position: absolute;
     content: '';
     width: 20px; height: 3px;
@@ -62,6 +71,38 @@ header .hem_menu {
 .hem_menu ul li:last-child {
     float: right;
 }
+/* 텝 메뉴 */
+.menu .tep_menu {
+    font-family: 'GmarketSansMedium';
+    padding: 50px 100px;
+    display: none;
+}
+.menu .tep_menu a {
+    transition: .3s;
+    font-size: 150px;
+    color: #74F1FF;
+    line-height: 200px;
+}
+.menu .tep_menu a:hover{
+    transition: .5s;
+    color: #fff;
+}
+.menu.show .tep_menu {
+    display: block;
+}
+.menu.show .hem_menu .hem::after{
+    transition: .5s;
+    content: '';
+    top: 18px;
+    transform: rotate(-40deg);
+}
+.menu.show .hem_menu .hem::before {
+    transition: .5s;
+    content: '';
+    top: 18px;
+    transform: rotate(40deg);
+}
+
 
 /* 타이틀 */
 .title { margin-top: 200px; margin-bottom: 20px;}
@@ -80,10 +121,10 @@ header .hem_menu {
 }
 .title img {
     z-index: -1;
-    width: 38vw;
-    max-width: 800px;
+    width: 700px;
     position: absolute;
-    left: 31vw; top: 8vw;
+    left: 50%; top: 10%;
+    transform: translateX(-50%);
 }
 
 .sb_text {

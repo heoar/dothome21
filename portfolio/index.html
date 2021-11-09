@@ -21,15 +21,28 @@
                     <li>CONTACT</li>
                 </ul>
             </div>
+            <div class="tep_menu">
+                <ul>
+                    <li><a href="#c">ABOUT STORY</a></li>
+                    <li><a href="#c">PROJECT</a></li>
+                    <li><a href="#c">EFFECT</a></li>
+                    <li><a href="#c">ANIMATION</a></li>
+                </ul>
+            </div>
         </div>
    </header>
+   <!--//header-->
+
    <main>
        <article>
            <div class="container">
                <div class="top">
                     <div class="title">
                         <h2>HEOAR</h2>
-                        <img src="assets/img/ggs.png" alt="안경">
+                        <img src="assets/img/ggs.png" alt="안경"
+                        data-0 = "transform: translate(-50%, 0%) rotate(0turn); opacity: 1;"
+                        data-2500 = "transform: translate(-50%, 600%) rotate(-0.5turn); opacity: 0;"
+                        >
                         <h2>PORTFOLIO</h2>
                     </div>
                     <div class="sb_text">
@@ -48,5 +61,17 @@
            </div>
        </article>
    </main>
+    <!--//main-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+         var s = skrollr.init();
+
+        $(".hem_menu").click(function(){
+            $(".menu").toggleClass("show")
+        });
+    </script>
 </body>
 </html>

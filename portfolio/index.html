@@ -12,7 +12,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-   <header>
+    <div class="scroll">0</div>
+
+    <header>
         <div class="menu">
             <div class="hem_menu">
             <div class="hem"></div>
@@ -30,18 +32,18 @@
                 </ul>
             </div>
         </div>
-   </header>
-   <!--//header-->
+    </header>
+    <!--//header-->
 
-   <main>
-       <article>
-           <div class="container">
-               <div class="top">
+    <main>
+        <article>
+            <div class="container">
+                <div class="top">
                     <div class="title">
                         <h2>HEOAR</h2>
                         <img src="assets/img/ggs.png" alt="안경"
                         data-0 = "transform: translate(-50%, 0%) rotate(0turn); opacity: 1;"
-                        data-2500 = "transform: translate(-50%, 600%) rotate(-0.5turn); opacity: 0;"
+                        data-2500 = "transform: translate(-50%, 600%) rotate(-0.8turn); opacity: 0;"
                         >
                         <h2>PORTFOLIO</h2>
                     </div>
@@ -49,29 +51,77 @@
                         <p>web design • coding solutions • WEB PUBLISHERS</p>
                     </div>
                     <div class="sb_button">
-                        <div class="button">
-                            <canvas id="tutorial" width="150" height="150"></canvas>
-                        </div>
                         <div class="sb_cont">
                             <span>SCROLL</span>
                             <img src="assets/img/scroll.svg" alt="스크롤">
                         </div>
                     </div>
+                    <div class="cloud">
+                        <img src="assets/img/cloud.png" alt="구름"
+                        data-100 = "transform: translate(-20%, 0%)"
+                        data-1500 = "transform: translate(30%, -10%)"
+                        >
+                    </div>
                 </div>
-           </div>
-       </article>
-   </main>
+            </div>
+        </article>
+    </main>
     <!--//main-->
+
+    <article>
+        <div class="container">
+            <div class="about">
+                <div class="glasses_bg"
+                    data-2500 = "transform: translate(-50%, 0%); opacity: 0;"
+                    data-4000 = "transform: translate(-50%, 300%); opacity: 1;"
+                ></div>
+            </div>
+        </div>
+    </article>
+    <!--//about-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
-         var s = skrollr.init();
+            var s = skrollr.init();
 
         $(".hem_menu").click(function(){
             $(".menu").toggleClass("show")
         });
+
+        const contentWrap = $(".about").height();
+        $("body").css("height", contentWrap);
+        const scrollHeight = $(window).height();
+        let lastScrollTop = 0;
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+
+            //셋 타임아웃 반대
+            clearTimeout($.data(this, "scrollCheck"));
+
+            //움직이지 않았을때
+            $.data(this, "scrollCheck",setTimeout(function(){
+                $(".glasses_bg").removeClass("recoil");
+            }, 100))
+
+            if( scrollTop > lastScrollTop ){
+                $(".glasses_bg").removeClass("top");
+                $(".glasses_bg").addClass("recoil");
+            } else {
+                $(".glasses_bg").addClass("top");
+                $(".glasses_bg").addClass("recoil");
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        window.addEventListener("scroll", ()=>{
+            let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scroll").innerHTML = scrollTop;
+        })
     </script>
 </body>
 </html>

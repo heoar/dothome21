@@ -11,8 +11,21 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
 .container {
     width: 1400px;
     margin: 0 auto;
-
 }
+.scroll {
+    position: fixed;
+    right: 120px; top: 15px;
+    width: 50px; height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+
+
 
 /* 헤더 */
 .menu {
@@ -26,6 +39,9 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
     background: #0396A6;
     z-index: 999;
     transition: .8s;
+    background-image: url(../img/ggs02.png);
+    background-repeat: no-repeat;
+    background-position: bottom 100px right 120px;
 }
 header .hem_menu {
     position: relative;
@@ -169,4 +185,36 @@ header .hem_menu {
     width: 20px;
 }
 
+/* 어바웃 */
+.about {
+    margin: 800px auto;
+    height: 200vh;
+    text-align: center;
+    position: relative;
+}
 
+/* 안경 애니메이션 */
+.about .glasses_bg {
+    width: 450px; height: 450px;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translate(-50%, 0);
+    z-index: -1000;
+    background-image: url(../img/gss.png);
+}
+
+.about .glasses_bg.recoil {
+    animation: recoil 2s steps(7, start) infinite;
+}
+.about .glasses_bg.top.recoil {
+    animation: backrecoil 2s steps(7, start) infinite;
+}
+
+@keyframes recoil {
+    0% {background-position: 0 0;}
+    100% {background-position: 0 3150px;}
+}
+@keyframes backrecoil {
+    0% {background-position: -450px 0;}
+    100% {background-position: -450px -3150px;}
+}

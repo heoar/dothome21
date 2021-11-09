@@ -1,0 +1,131 @@
+/* 틀 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; }
+
+/* 레이아웃 */
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    height: 800vh;
+}
+
+/* 헤더 */
+.menu {
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+header .hem_menu {
+    position: relative;
+}
+.hem_menu .hem {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid #0D626B;
+    position: absolute;
+    left: 13px; top: 13px;
+    cursor: pointer;
+}
+.hem_menu .hem::after {
+    position: absolute;
+    content: '';
+    width: 20px; height: 3px;
+    left: 10px; top: 15px;
+    background: #0D626B;
+}
+.hem_menu .hem::before {
+    position: absolute;
+    content: '';
+    width: 20px; height: 3px;
+    left: 10px; top: 22px;
+    background: #0D626B;
+}
+
+.hem_menu ul {
+    padding: 20px;
+    margin-top: 7px;
+    margin-left: 50px;
+    color: #0D626B;
+    font-family: 'DM Sans';
+    font-size: 18px;
+    
+}
+.hem_menu ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+.hem_menu ul li:last-child {
+    float: right;
+}
+
+/* 타이틀 */
+.title { margin-top: 200px; margin-bottom: 20px;}
+.title h2 {
+    font-size: 150px;
+    text-align: center;
+    line-height: 157px;
+    color: #0396A6;
+    position: relative;
+    background: linear-gradient(120deg, #0396A6 30%, #E8F8F9 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title h2:last-child {
+    z-index: -2;
+}
+.title img {
+    z-index: -1;
+    width: 38vw;
+    max-width: 800px;
+    position: absolute;
+    left: 31vw; top: 8vw;
+}
+
+.sb_text {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sb_text p {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    color: #0D626B;
+    margin-bottom: 50px;
+}
+
+/* 스크롤 버튼 */
+.sb_button {
+    font-family: 'DM Sans';
+    margin: 0 auto;
+    text-align: center;
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    border: 1px solid #0396A6;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.sb_button:hover {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 1px solid #0396A6;
+}
+
+.sb_button .sb_cont {
+    position: absolute;
+    font-size: 18px;
+    color: #0396A6;
+    left: 50%; top: 70%;
+    transform: translate(-50%, -70%);
+}
+
+.sb_button .sb_cont img {
+    width: 20px;
+}
+
+

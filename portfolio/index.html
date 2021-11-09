@@ -43,7 +43,7 @@
                         <h2>HEOAR</h2>
                         <img src="assets/img/ggs.png" alt="안경"
                         data-0 = "transform: translate(-50%, 0%) rotate(0turn); opacity: 1;"
-                        data-2500 = "transform: translate(-50%, 600%) rotate(-0.8turn); opacity: 0;"
+                        data-1100 = "transform: translate(-50%, 300%) rotate(0.1turn); opacity: 0;"
                         >
                         <h2>PORTFOLIO</h2>
                     </div>
@@ -58,8 +58,8 @@
                     </div>
                     <div class="cloud">
                         <img src="assets/img/cloud.png" alt="구름"
-                        data-100 = "transform: translate(-20%, 0%)"
-                        data-1500 = "transform: translate(30%, -10%)"
+                        data-100 = "transform: translate(-20%, -30%)"
+                        data-1500 = "transform: translate(20%, -30%)"
                         >
                     </div>
                 </div>
@@ -72,8 +72,9 @@
         <div class="container">
             <div class="about">
                 <div class="glasses_bg"
-                    data-2500 = "transform: translate(-50%, 0%); opacity: 0;"
-                    data-4000 = "transform: translate(-50%, 300%); opacity: 1;"
+                    data-1300 = "transform: translate(-50%, 0%); opacity: 0;"
+                    data-1800 = "transform: translate(-50%, 100%); opacity: 1;"
+                    data-4500 = "transform: translate(-50%, 650%); opacity: 1;"
                 ></div>
             </div>
         </div>
@@ -120,7 +121,7 @@
         window.addEventListener("scroll", ()=>{
             let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
 
-            document.querySelector(".scroll").innerHTML = scrollTop;
+            document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
         })
     </script>
 </body>

@@ -32,6 +32,7 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
     top: 0;
     width: 100%;
     position: fixed;
+    z-index: 10;
 }
 .menu.show {
     width: 100%;
@@ -40,6 +41,7 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
     z-index: 999;
     transition: .8s;
     background-image: url(../img/ggs02.png);
+    background-size: 700px;
     background-repeat: no-repeat;
     background-position: bottom 100px right 120px;
 }
@@ -95,9 +97,9 @@ header .hem_menu {
 }
 .menu .tep_menu a {
     transition: .3s;
-    font-size: 150px;
+    font-size: 100px;
     color: #74F1FF;
-    line-height: 200px;
+    line-height: 140px;
 }
 .menu .tep_menu a:hover{
     transition: .5s;
@@ -185,10 +187,17 @@ header .hem_menu {
     width: 20px;
 }
 
+.cloud {
+    width: 800px;
+    position: absolute;
+    left: 50%; top: 120%;
+    transform: translate(-50%);
+}
+
 /* 어바웃 */
 .about {
-    margin: 800px auto;
-    height: 200vh;
+    margin: 1000px auto;
+    height: 3000px;
     text-align: center;
     position: relative;
 }
@@ -204,10 +213,10 @@ header .hem_menu {
 }
 
 .about .glasses_bg.recoil {
-    animation: recoil 2s steps(7, start) infinite;
+    animation: recoil 1.5s steps(7, start) infinite;
 }
 .about .glasses_bg.top.recoil {
-    animation: backrecoil 2s steps(7, start) infinite;
+    animation: backrecoil 1.5s steps(7, start) infinite;
 }
 
 @keyframes recoil {

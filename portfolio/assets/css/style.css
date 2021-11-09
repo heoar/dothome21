@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; }
+body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; }
 
 /* 레이아웃 */
 
@@ -71,7 +71,7 @@ header .hem_menu {
     line-height: 157px;
     color: #0396A6;
     position: relative;
-    background: linear-gradient(120deg, #0396A6 30%, #E8F8F9 87%);
+    background: linear-gradient(120deg, #0396A6 0%, #E8F8F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

@@ -47,10 +47,16 @@
                         >
                         <h2>PORTFOLIO</h2>
                     </div>
-                    <div class="sb_text">
+                    <div class="sb_text"
+                        data-0 = "opacity: 1;"
+                        data-300 = "opacity: 0;"
+                    >
                         <p>web design • coding solutions • WEB PUBLISHERS</p>
                     </div>
-                    <div class="sb_button">
+                    <div class="sb_button"
+                        data-0 = "opacity: 1;"
+                        data-300 = "opacity: 0;"
+                    >
                         <div class="sb_cont">
                             <span>SCROLL</span>
                             <img src="assets/img/scroll.svg" alt="스크롤">
@@ -80,6 +86,43 @@
                 <div class="about_txt">
                     <p>We provide visual<br>coding solutions for you webs</p>
                 </div>
+
+                <div class="swiper-slide">
+                    <div class="study">
+                        <div class="slider-inner">
+                            <div class="slider" data-name="이미지1"><img src="assets/img/study01.jpg" alt="이미지1"></div>
+                            <div class="slider" data-name="이미지2"><img src="assets/img/study02.jpg" alt="이미지2"></div>
+                            <div class="slider" data-name="이미지3"><img src="assets/img/study03.jpg" alt="이미지3"></div>
+                            <div class="slider" data-name="이미지4"><img src="assets/img/study04.jpg" alt="이미지4"></div>
+                            <div class="slider" data-name="이미지5"><img src="assets/img/study05.jpg" alt="이미지5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my_career">
+                    <h3>Hello, do you want to know me?</h3>
+                    <p>I used to be a designer and now I'm going to be a web publisher</p>
+                    <div class="career_img">
+                        <img src="assets/img/my_career01.png" alt="이미지01">
+                        <img src="assets/img/my_career02.png" alt="이미지02">
+                    </div>
+                    <div class="work">
+                        <ul>
+                            <li>20</li>
+                            <li>30</li>
+                        </ul>
+                        <div class="work_br">
+                            <div class="work_drag">23</div>
+                        </div>
+                    </div>
+                    <div class="career">
+                        <p>let me introduce my career</p>
+                        <ul>
+                            <li>2011~2012<br><span>청강문화산업대학 디자인과 졸업</span></li>
+                            <li>2013~2019<br><span>디자인 직종에서 디자이너로 활동</span></li>
+                            <li>2021.07~2021.12<br><span>UI/UX 웹퍼블리셔 과정 수강</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </article>
@@ -88,47 +131,72 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="assets/js/custom.js"></script>
     <script>
-            var s = skrollr.init();
+        var s = skrollr.init();
 
-        $(".hem_menu").click(function(){
-            $(".menu").toggleClass("show")
-        });
+        // const sliderWrap = $(".swiper-slide");
+        // const sliderImg = $(".study");
+        // const sliderInner = $(".slider-inner");
+        // const slider = $(".slider");
+        // let sliderDuration = 600;
 
-        const contentWrap = $(".about").height();
-        $("body").css("height", contentWrap);
-        const scrollHeight = $(window).height();
-        let lastScrollTop = 0;
+        // let currentIndex = 0;
+        // let sliderCount = slider.length;
+        // let sliderWidth = slider.width();
+        // let sliderEasing = "easeOutExpo";
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
+        // setInterval(function(){
+        //     ( currentIndex < sliderCount -1 ) ? currentIndex++ : currentIndex = 0
 
+        //     let sliderPosition = currentIndex * -sliderWidth;
+        //     sliderInner.animate({left: sliderPosition}, sliderDuration, sliderEasing);
+        // }, 3000);
 
-            //셋 타임아웃 반대
-            clearTimeout($.data(this, "scrollCheck"));
+        let slider = document.querySelector(".study");
+        let innerSlider = document.querySelector(".slider-inner");
+        let pressed = false;
+        let startx;
+        let x;
 
-            //움직이지 않았을때
-            $.data(this, "scrollCheck",setTimeout(function(){
-                $(".glasses_bg").addClass("stop");
-            }, 100))
-
-            if( scrollTop > lastScrollTop ){
-                $(".glasses_bg").removeClass("top");
-                $(".glasses_bg").removeClass("stop");
-                $(".glasses_bg").addClass("recoil");
-            } else {
-                $(".glasses_bg").removeClass("stop");
-                $(".glasses_bg").addClass("top");
-                $(".glasses_bg").addClass("recoil");
-            }
-            lastScrollTop = scrollTop;
-        });
-
-        window.addEventListener("scroll", ()=>{
-            let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
-
-            document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
+        slider.addEventListener("mousedown", e => {
+        pressed = true
+        startx = e.offsetX - innerSlider.offsetLeft
+        slider.style.cursor = "grabbing"
         })
+
+        slider.addEventListener("mouseenter", () => {
+        slider.style.cursor = "grab"
+        })
+
+        slider.addEventListener("mouseup", () => {
+        slider.style.cursor = "grab"
+        })
+
+        window.addEventListener("mouseup", () => {
+        pressed = false
+        })
+
+        slider.addEventListener("mousemove", e => {
+        if (!pressed) return
+        e.preventDefault()
+        x = e.offsetX
+
+        innerSlider.style.left = `${x - startx}px`
+        checkboundary()
+        })
+
+        function checkboundary() {
+        let outer = slider.getBoundingClientRect()
+        let inner = innerSlider.getBoundingClientRect()
+
+        if (parseInt(innerSlider.style.left) > 0) {
+            innerSlider.style.left = "0px"
+        } else if (inner.right < outer.right) {
+            innerSlider.style.left = `-${inner.width - outer.width}px`
+        }
+        }
+
     </script>
 </body>
 </html>

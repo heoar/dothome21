@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; overflow-x:hidden; }
+body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; }
 
 /* 레이아웃 */
 
@@ -194,7 +194,7 @@ header .hem_menu {
 
 /* 어바웃 */
 .about {
-    margin: 1000px auto;
+    margin-top: 1000px;
     height: 3000px;
     text-align: center;
     position: relative;
@@ -364,4 +364,19 @@ header .hem_menu {
 .my_career .career ul li span {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
+}
+
+/* 어바웃 스토리 */
+.about_story {
+    height: 100vh;
+    background-image: url(../img/about_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about_story h2 {
+    text-align: center;
+    font-size: 150px;
+    padding: 200px 0;
+    color: #fff;
 }

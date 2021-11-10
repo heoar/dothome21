@@ -39,16 +39,12 @@
         document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
     });
 
+
     $(function () {
-        $( ".work_drag" ).draggable({
+        $(".work_drag").draggable({
             containment : 'parent',
-            axis: 'x',
-            drag : function(){
-                $(".career_img img:nth-child(2)").hide();
-            }
+            axis: 'x'
         });
     });
-
-
-
+    
 })(jQuery);

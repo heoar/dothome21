@@ -226,6 +226,9 @@ header .hem_menu {
 .about .glasses_bg.top.recoil {
     animation: backrecoil 1.5s steps(7, start) infinite;
 }
+.about .glasses_bg.recoil.stop {
+    animation-play-state: paused;
+}
 
 @keyframes recoil {
     0% {background-position: 0 0;}

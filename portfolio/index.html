@@ -109,11 +109,12 @@
 
             //움직이지 않았을때
             $.data(this, "scrollCheck",setTimeout(function(){
-                $(".glasses_bg").removeClass("recoil");
+                $(".glasses_bg").addClass("stop");
             }, 100))
 
             if( scrollTop > lastScrollTop ){
                 $(".glasses_bg").removeClass("top");
+                $(".glasses_bg").removeClass("stop");
                 $(".glasses_bg").addClass("recoil");
             } else {
                 $(".glasses_bg").addClass("top");

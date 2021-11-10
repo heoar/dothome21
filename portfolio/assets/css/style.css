@@ -202,6 +202,14 @@ header .hem_menu {
     position: relative;
 }
 
+.about_txt p {
+    display: inline-block;
+    margin-top: 500px;
+    font-size: 50px;
+    line-height: 60px;
+    color: #0396A6;
+}
+
 /* 안경 애니메이션 */
 .about .glasses_bg {
     width: 450px; height: 450px;

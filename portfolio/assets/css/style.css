@@ -217,9 +217,9 @@ header .hem_menu {
 }
 .about .swiper-slide .study {
     position: absolute;
-    left: 75%; top: 35%;
-    transform: translate(-50%, -35%);
-    width: 2000px;
+    left: 0; top: 35%;
+    transform: translate(0, -35%); 
+    width: 2000vw;
     overflow: hidden;
 }
 
@@ -368,9 +368,9 @@ header .hem_menu {
 
 /* 어바웃 스토리 */
 .about_story {
-    height: 100vh;
+    height: 200vh;
     background-image: url(../img/about_bg.jpg);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -379,4 +379,14 @@ header .hem_menu {
     font-size: 150px;
     padding: 200px 0;
     color: #fff;
+}
+.story_img {
+    position: relative;
+}
+
+.story_img img {
+    width: 1000px;
+    position: absolute;
+    left: 50%; top: -10%;
+    transform:translate(-50%, 10%);
 }

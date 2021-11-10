@@ -230,6 +230,10 @@ header .hem_menu {
     animation-play-state: paused;
 }
 
+.about .glasses_bg.top.recoil.stop {
+    animation-play-state: paused;
+}
+
 @keyframes recoil {
     0% {background-position: 0 0;}
     100% {background-position: 0 3150px;}

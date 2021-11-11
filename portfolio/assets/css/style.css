@@ -368,18 +368,36 @@ header .hem_menu {
 
 /* 어바웃 스토리 */
 .about_story {
+    text-align: center;
     height: 200vh;
     background-image: url(../img/about_bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .about_story h2 {
-    text-align: center;
     font-size: 150px;
     padding: 200px 0;
     color: #fff;
 }
+.about_story .story_text {
+    font-family: 'DM Sans';
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 50%; top: 35%;
+    transform: translate(-50%, -35%);
+}
+
+.about_story .story_text p {
+    font-size: 24px;
+
+}
+.about_story .story_text span {
+    font-size: 18px;
+}
+
 .story_img {
     position: relative;
 }

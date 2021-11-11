@@ -117,7 +117,7 @@
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
             perspective:  600px;
-            border: 6px solid #000;
+            border: 3px solid #12B7BD;
             border-radius: 1vw;
             background-color: #fff;
             padding: 1vw;   
@@ -132,6 +132,8 @@
             transform-style: preserve-3d;
             transition: all 0.6s;
             cursor: pointer;
+            border: 1px solid #D1EAF1;
+            border-radius: 5%;
         }
         /* .cardWrap .card:hover {
             transform: rotateY(-180deg);
@@ -172,35 +174,44 @@
         }
         /* card img */
         .cardWrap .card .front {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/desert.svg);
-            
+            background-image: url(img/desert.jpg);
+            background-size: cover;
         }
         .card[data-type=img1] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/rhinoceros.svg);
+            background-image: url(img/card01.jpg);
+            background-size: cover;
         }
         .card[data-type=img2] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/gorila.svg);
+            background-image: url(img/card02.jpg);
+            background-size: cover;
         }
         .card[data-type=img3] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/hyena.svg);
+            background-image: url(img/card03.jpg);
+            background-size: cover;
         }
         .card[data-type=img4] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/cheetah.svg);
+            background-image: url(img/card04.jpg);
+            background-size: cover;
         }
         .card[data-type=img5] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/tiger.svg);
+            background-image: url(img/card05.jpg);
+            background-size: cover;
         }
         .card[data-type=img6] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/hippopotamus.svg);
+            background-image: url(img/card06.jpg);
+            background-size: cover;
         }
         .card[data-type=img7] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/lion.svg);
+            background-image: url(img/card07.jpg);
+            background-size: cover;
         }
         .card[data-type=img8] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/black-panther.svg);
+            background-image: url(img/card08.jpg);
+            background-size: cover;
         }
         .card[data-type=img9] .back {
-            background-image: url(http://silvery92.dothome.co.kr/assets/img/wolf.svg);
+            background-image: url(img/card09.jpg);
+            background-size: cover;
         }
     </style>
 </head>
@@ -312,146 +323,138 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        const $cardWrap = $(".cardWrap"),
-            $card = $(".card"),
-            $btnSound = $(".btn-sound"),
-            $themeSong = $("#theme-song")[0],
-            $success = $(".success"),
-            $successMsg = $(".success .msg"),
-            $btnConutinue = $(".btn-continue"),
-            $turns = $(".turns span"),
-            $wins = $(".wins span"),
-            $attempts = $(".attempts span"),
+         const $cardWrap = $(".cardWrap"),
+              $card = $(".card"),
+              $btnSound = $(".btn-sound"),
+              $themeSong = $("#theme-song")[0],
+              $success = $(".success"),
+              $successMsg = $(".success .msg"),
+              $btnCountinue = $(".btn-continue"),
+              $turns = $(".turns span"),
+              $wins = $(".wins span"),
+              $attempts = $(".attempts span"),
 
-            dataMatch = "data-matched",
-            dataType = "data-type",
-            selectedClass = "is-selected",
-            playSoundClass = "is-playing",
-            visibleClass = "is-visivle",
-            playStop = "is-disabled",
-            timeoutLength = 900;
+              dataMatch = "data-matched",
+              dataType = "data-type",
+              selectedClass = "is-selected",
+              playSoundClass = "is-playing",
+              visibleClass = "is-visible",
+              playStop = "is-disabled",
+              timeoutLength = 900;
 
-            let sound = [
-            "../assets/audio/Beyond - Patrick Patrikios.mp3",
+        let sound = [
             "../assets/audio/match2.mp3",
             "../assets/audio/match.mp3",
             "../assets/audio/up.mp3",],
-            socundMathc = new Audio(sound[0]),
-            socundnoMathc = new Audio(sound[1]),
-            socundSuccess = new Audio(sound[2]);
+            soundMatch = new Audio(sound[0]),
+            soundNoMatch = new Audio(sound[1]),
+            soundSuccess = new Audio(sound[2]),
+            turnsCount = 5,     //기회 횟수
+            attempsCount = 0,   //시도 횟수
+            winCount = 0,       //우승 횟수
+            card1, card2, msg;
 
-            //음악 버튼을 클릭하면 꺼지고 클릭하면 다시 켜지기 toggleClass / attr
-            $btnSound.on("click",function(){
-                soundMatch = new Audio(sound[0]),
-                soundNoMatch = new Audio(sound[1]),
-                soundSuccess = new Audio(sound[2]),
-                turnsCount = 5,         //기회 횟수
-                attempsCount = 0,       //시도 횟수
-                winCount = 0,           //성공 횟수
-                card1, card2, msg;
-                
+        // audio 
+        $btnSound.on("click", function(){
+            $(this).find("i").toggleClass("fa-volume-up fa-volume-off");
+            $(this).toggleClass("is-playing");
 
-            // audio 
-            $btnSound.on("click", function(){
-                $(this).find("i").toggleClass("fa-volume-up fa-volume-off");
-                $(this).toggleClass("is-playing");
-                if( $(this).hasClass("is-playing") ){
-                    $themeSong.play();
-                } else {
-                    $themeSong.pause();
-                }
-                
-            })
-        });
-        
-        
-        //카드를 클릭하면 is-selected를 추가
-        $card.click(function(){
-            //dataMatched == false이면 클릭한 카드에 isSlected 추가
-            if ( $(this).attr(dataMatch) == "false" ){
-                $(this).addClass(selectedClass);
+            if( $(this).hasClass("is-playing") ){
+                $themeSong.play();
+            } else {
+                $themeSong.pause();
             }
-            let selectedCards = $("." + selectedClass);
+        });
 
-            //카드 1과 카드2가 같다면
-            if (selectedCards.length == 2){
+        //카드를 클릭하면 is-selected를 추가
+        $card.on("click", function(){
+            
+            //dataMatched == false이면 클릭한 카드에 isslected 추가
+            if( $(this).attr(dataMatch) == "false"){
+                $(this).addClass(selectedClass);
+            }                      
+            let selectedCards = $("."+selectedClass);
+
+            //만약에 카드1와 카드2가 같다면 dataMatched -> true
+            if(selectedCards.length == 2){
                 //버그 방지
-                $cardWrap.addClass(playStop);
+                $cardWrap.addClass(playStop); 
                 card1 = selectedCards.eq(0).attr(dataType);
                 card2 = selectedCards.eq(1).attr(dataType);
 
-                
                 if( card1 == card2 ){
-                    //카드1과 카드2가 같으면 dataMatch => true / 음악 재생(정답일때)
+                    //만약에 카드1과 카드2가 같으면 dataMatched -> true / 음악재생(정답일때)
                     selectedCards.attr(dataMatch, true).removeClass(selectedClass);
                     $cardWrap.removeClass(playStop);
 
-                    //성공 음악 재생 /음악이 off->재생x
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    //성공 음악 재생 //음악 off -> 재생 X
+                    if( $btnSound.hasClass(playSoundClass)){
                         soundMatch.play();
                     }
                 } else {
                     //실패 음악 재생
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    if( $btnSound.hasClass(playSoundClass)){
                         soundNoMatch.play();
                     }
-                    //카드가 같지 않으면 그대로 / 음악 재생(틀렸을때) / 기회 -
+
+                    //만약에 카드1과 카드2가 같지 않으면 그대로~ / 음악재생(틀렸을 때) / 기회-
                     setTimeout(function(){
                         turnsCount--;
                         $turns.html(turnsCount);
                         selectedCards.removeClass(selectedClass);
                         $cardWrap.removeClass(playStop);
-                    },timeoutLength);
+                    }, timeoutLength);
 
-                    //기회가 없을 때 시도 +1 / 기회 다시 +5
+                    //기회가 없을 때 시도+1 기회+5
                     if( turnsCount <= 0 ){
                         turnsCount = 5;
                         attempsCount++;
                         $attempts.html(attempsCount);
-                        $card.attr(dataMatch, false); //모든 카드 초기화
+                        //$card.attr(dataMatch, false); // 모든 카드를 초기화
                     }
                 }
             }
             
-            
-
-            //카드를 완성했을 때
+            //카드를 완성 했을 때
             //dataMatch의 ture 갯수 == 전체 카드 갯수 : 성공 음악 추가, 우승+1, 성공메세지
-            if ( $('[' + dataMatch + '="true"]').length == $card.length ){
+            //$card.length
+            //$('['+dataMatch +'="true"]').length 
+            if( $('['+dataMatch +'="true"]').length  == $card.length ){
                 setTimeout(function(){
-                    //성공 메세지
+                    //성공 메세지   
                     $success.addClass(visibleClass);
+                    winCount++;
+                    $wins.html(winCount);
+
                     //성공 음악 추가
-                    if( $btnSound.hasClass(playSoundClass) ){
+                    if( $btnSound.hasClass(playSoundClass )){
                         soundSuccess.play();
                     }
 
                 }, timeoutLength);
                 
-
                 //완성 메세지
                 switch(attempsCount){
                     case 0 :
-                        msg = "레벨1...올 클리어!! 참 잘했어요!"
+                        msg = "레벨1.... 최고의 실력입니다. 머리가 좋네요!!";
                         break;
                     case 1 :
-                        msg = "레벨2...아깝네요~ 다시해볼까요?"
+                        msg = "레벨2... 그럭저럭 하네요~~~";
                         break;
                     case 2 :
-                        msg = "레벨3...잘하셨어요! 조금만 더 힘내봐요!"
+                        msg = "레벨3... 머리가 나쁘네요~~~~~";
                         break;
                     case 3 :
-                        msg = "레벨4...다음엔 더 잘해봐요!"
+                        msg = "레벨4... 진짜 못하네~~~~~";
                         break;
                     default :
-                        msg = "go,go! 다시 해보자구요!";
+                        msg = "^**^";
                 }
                 $successMsg.text(msg);
             }
 
-
-            //게임 다시 시작하기
-            $btnConutinue.on("click", function(){
+            //게임 다시 시작할 때
+            $btnCountinue.on("click", function(){
                 $success.removeClass(visibleClass);
                 shuffleCards();
                 turnsCount = 5;
@@ -460,40 +463,41 @@
                 $turns.html(turnsCount);
             });
         });
-        
-            //카드 섞기
-            function shuffleCards(){
-                $card.attr(dataMatch, false);
 
-                // var num = [1,2,3,4,5,6,7,8,9];
-                // for(
-                //     var remove = num.splice(3,1)
-                //     var remove = num.splice(2,1)
-                //     var remove = num.splice(4,1)
-                //     var remove = num.splice(0,1)
-                //     var remove = num.splice(7,1)
-                //     var remove = num.splice(5,1)
-                //     var remove = num.splice(1,1)
-                //     var remove = num.splice(8,1)
-                //     var remove = num.splice(6,1)
-                // )
-            
-                let cards = $cardWrap.children();
-                for(let i=0; i<=cards.length; i++){
-                    $cardWrap.append(cards.splice(Math.floor(Math.random()*cards.length), 1 )[0] )
+        //카드 섞기
+        function shuffleCards(){
+            $card.attr(dataMatch, false);
+
+            // var num = [1,2,3,4,5,6,7,8,9];
+            // for(
+            //     var remove = num.splice(3,1)
+            //     var remove = num.splice(4,1)
+            //     var remove = num.splice(1,1)
+            //     var remove = num.splice(6,1)
+            //     var remove = num.splice(8,1)
+            //     var remove = num.splice(2,1)
+            //     var remove = num.splice(5,1)
+            //     var remove = num.splice(7,1)
+            //     var remove = num.splice(0,1)
+            // )
+
+            //$cardWrap
+            let cards = $cardWrap.children();
+            for( let i=0; i<=cards.length; i++ ){
+                $cardWrap.append(cards.splice( Math.floor(Math.random() * cards.length), 1)[0] )
             }
 
             $card.each(function(index){
-                    setTimeout(()=>{
-                        $(this).addClass(selectedClass);
-                    }, 200 * index);
+                setTimeout(() => {
+                    $(this).addClass(selectedClass);
+                }, 200 * index)
             });
 
-            setTimeout(()=>{
+            setTimeout(() => {
                 $card.removeClass(selectedClass);
             }, 4000);
-        };
-    
+        }
+
         //카드 섞기 및 시작하기
         shuffleCards();
 

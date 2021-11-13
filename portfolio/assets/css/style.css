@@ -4,10 +4,11 @@
     padding: 0;
 }
 
-body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; }
+body { overflow-x:hidden; font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; }
+
+
 
 /* 레이아웃 */
-
 .container {
     width: 1400px;
     margin: 0 auto;
@@ -23,6 +24,13 @@ body { font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); 
     border-radius: 50%;
     z-index: 10000;
 }
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
 
 
 /* 헤더 */
@@ -369,42 +377,248 @@ header .hem_menu {
 /* 어바웃 스토리 */
 .about_story {
     text-align: center;
-    height: 200vh;
+    height: 100vh;
     background-image: url(../img/about_bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
+    margin-bottom: 100px;
 }
 
-.about_story h2 {
-    font-size: 150px;
-    padding: 200px 0;
-    color: #fff;
-}
 .about_story .story_text {
     font-family: 'DM Sans';
     color: #fff;
     position: absolute;
     width: 100%;
-    left: 50%; top: 35%;
-    transform: translate(-50%, -35%);
+    left: 50%; top: 75%;
+    transform: translate(-50%, -75%);
 }
 
 .about_story .story_text p {
     font-size: 24px;
-
+    line-height: 60px;
 }
 .about_story .story_text span {
     font-size: 18px;
 }
 
-.story_img {
+/* 성격 */
+.personalitys { position: relative; height: 4500px; }
+.personalitys .pers_img {
+    text-align: center;
+    position: absolute;
+    left: 50%; top: 100px;
+    transform: translateX(-50%);
+}
+.personalitys .pers_img .img_box {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #A79D9B;
     position: relative;
+    clip-path: circle(250px at center);
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all 0.2s;
+}
+.personalitys .pers_img .img_box img {
+    position: absolute;
+    left: 0; top: 0;
 }
 
-.story_img img {
-    width: 1000px;
+.personalitys .pers_img .img_box img:nth-child(1) {
+    transform: translate3d(0%, 0%, 150px);
+}
+
+.personalitys h2 {
+    font-size: 120px;
+}
+.personalitys .txt.left {
+    position: relative;
+}
+.personalitys .txt.left h2 {
+    text-align: left;
     position: absolute;
-    left: 50%; top: -10%;
-    transform:translate(-50%, 10%);
+    z-index: -2;
+    color: #fff;
+    -webkit-text-stroke: 1px #0396A6;
+}
+.personalitys .txt.right {
+    position: relative;
+    color: #0396A6;
+}
+.personalitys .txt.right h2 {
+    text-align: right;
+    position: absolute;
+    right: 0; top: 550px;
+}
+
+/* 스킬 이미지 */
+.skill_box {
+    text-align: center;
+    height: 100vh;
+}
+.skill_box img {
+    width: 1000px;
+}
+
+/* 프로젝트 */
+.projects {
+    background-image: url(../img/project_bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1000px;
+    text-align: center;
+    color: #fff;
+}
+.projects svg {
+    display: inline-block;
+    font-size: 180px;
+    margin-top: 200px;
+}
+.projects p {
+    font-family: 'DM Sans';
+    font-size: 24px;
+    line-height: 60px;
+    color: #D5DEE8;
+}
+.projects span {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    color: #D5DEE8;
+}
+
+.project_frame {
+    height: 200vh;
+    text-align: center;
+    position: relative;
+}
+.project_frame img {
+    width: 1000px;
+    border: 1px solid #DDD;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+}
+.project_frame .site_view.show {
+    display: none;
+    transition: .2;
+}
+
+.project_frame .site_box.left {
+    max-width: 800px;
+    height: 400px;
+    text-align: left;
+    padding: 100px 50px;
+    background: #212121e9;
+    position: absolute;
+    left: 0; top: 40%;
+}
+.project_frame .site_box.right {
+    max-width: 800px;
+    height: 400px;
+    text-align: right;
+    padding: 100px 50px;
+    background: #212121e9;
+    position: absolute;
+    right: 0; top: 40%;
+}
+
+.project_frame .site_box h2 {
+    font-size: 50px;
+    line-height: 62px;
+    color: #80E7F2;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.project_frame .site_box p {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #fff;
+    font-size: 24;
+    margin-bottom: 50px;
+}
+.project_frame .site_box button {
+    margin-right: 10px;
+    border-style: none;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+}
+.project_frame .site_box button a {
+    color: #74F1FF;
+}
+.project_frame .site_box button a span {
+    color: #fff;
+}
+
+/* 이펙트 */
+.effects .effect_box {
+    background-image: url(../img/effect_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1000px;
+    text-align: center;
+    color: #fff;
+}
+.effects .effect_box h2 {
+    padding-top: 20%;
+    font-size: 180px;
+}
+.effects .effect_box p {
+    font-size: 24px;
+    font-family: 'DM Sans';
+}
+.effects .effect_box span {
+    font-size: 18px;
+    font-family: 'DM Sans';
+}
+.effects .effect_frame {
+    width: 100%;
+    height: 600vh;
+    padding-top: 300px;
+    background: linear-gradient(to top, #CAC6C1 0%, #1B262A 30%);
+    position: relative;
+    z-index: 1;
+}
+.effects .effect_frame .bgst {
+    position: absolute;
+    left: 60%; top: 12%;
+    transform: translateX(-60%);
+    z-index: -1;
+    width: 1200px;
+}
+.effects .effect_frame p {
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.effects .effect_frame > div {
+    margin-bottom: 200px;
+}
+.effects .effect_frame iframe {
+    width: 70%;
+    height: 650px;
+    vertical-align: bottom;
+}
+.effects .effect_frame img {
+    width: 70%;
+
+}
+
+/* 애니메이션 */
+.anima_box {
+    background-image: url(../img/animation_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1000px;
+    text-align: center;
+    color: #fff;
+}
+.anima_box h2 {
+    font-size: 180px;
+    padding-top: 350px;
 }

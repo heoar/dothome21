@@ -88,11 +88,15 @@ header .hem_menu {
     color: #0D626B;
     font-family: 'DM Sans';
     font-size: 18px;
-    
 }
 .hem_menu ul li {
     display: inline-block;
     cursor: pointer;
+}
+.hem_menu ul li a {
+    color: #0D626B;
+    font-family: 'DM Sans';
+    font-size: 18px;
 }
 .hem_menu ul li:last-child {
     float: right;
@@ -467,6 +471,8 @@ header .hem_menu {
 .projects {
     background-image: url(../img/project_bg.jpg);
     background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
     height: 1000px;
     text-align: center;
     color: #fff;
@@ -738,18 +744,37 @@ header .hem_menu {
     background-image: url(../img/footer_bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: top;
     height: 1000px;
+    background-position: top;
+    box-sizing: border-box;
     color: #fff;
+    padding-left: 100px;
+}
+.footer_bg {
+    position: relative;
 }
 .footer_bg span {
-    padding-top: 200px;
-    padding-left: 100px;
+    padding-top: 300px;
     font-size: 20px;
     display: inline-block;
     margin-bottom: 100px;
+    opacity: .6;
 }
 .footer_bg p {
-    padding-left: 100px;
     font-size: 70px;
+    margin-bottom: 100px;
+}
+.footer_bg a {
+    width: 445px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+}
+.footer_bg img {
+    width: 900px;
+    position: absolute;
+    right: 0; top: 35%;
+    opacity: .5;
 }

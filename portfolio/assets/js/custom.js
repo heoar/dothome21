@@ -5,6 +5,10 @@
         $(".menu").toggleClass("show")
     });
 
+    $(".tep_menu li").click(function(){
+        $(".menu").toggleClass("show")
+    });
+
     //안경 애니메이션
     const contentWrap = $(".about").height();
     $("body").css("height", contentWrap);

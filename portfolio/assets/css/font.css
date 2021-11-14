@@ -36,6 +36,13 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Cp2ywxg089UriASitCBimCw.woff2) format('woff2');
   }
+  @font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2) format('woff2');
+  }
 
   /* 나눔 고딕 */
   @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);

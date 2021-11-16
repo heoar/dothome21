@@ -142,7 +142,7 @@
           "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://blog.kakaocdn.net/dn/KWSlV/btq4MTbqRrV/r2vIqzLlKBOtVKsBX8sga0/img.png",
           "title": "<audio>",
           "desc1": "<audio> 태그는 오디오 파일을 설정합니다.",
-          "desc2": "-",
+          "desc2": "<audio> 태그는 오디오 파일을 설정합니다.",
           "element": "블록 요소(Block Element)",
           "tag": "닫는 태그 사용(<audio> ~ </audio>)",
           "version": "HTML5",

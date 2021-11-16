@@ -11,7 +11,8 @@
     <link href="assets/css/font.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body  data-start = "height: 1000px;"
+       data-end = "height: 0;">
     <div class="scroll">0</div>
 
     <header>
@@ -42,8 +43,9 @@
                     <div class="title">
                         <h2>HEOAR</h2>
                         <img src="assets/img/ggs.png" alt="안경"
-                        data-0 = "transform: translate(-50%, 0%) rotate(0turn); opacity: 1;"
-                        data-1100 = "transform: translate(-50%, 300%) rotate(0.1turn); opacity: 0;"
+                        data-0 = "transform: translate(-50%, 0%) rotate(0turn); opacity: 1; display: block;"
+                        data-1100 = "transform: translate(-50%, 300%) rotate(0.1turn); opacity: 0; display: block;"
+                        data-end = "transform: translate(-50%, 300%) rotate(0.1turn); opacity: 0; display:none;"
                         >
                         <h2>PORTFOLIO</h2>
                     </div>
@@ -89,11 +91,31 @@
             <div class="swiper-slide">
                 <div class="study">
                     <div class="slider-inner">
-                        <div class="slider" data-name="이미지1"><img src="assets/img/study01.jpg" alt="이미지1"></div>
-                        <div class="slider" data-name="이미지2"><img src="assets/img/study02.jpg" alt="이미지2"></div>
-                        <div class="slider" data-name="이미지3"><img src="assets/img/study03.jpg" alt="이미지3"></div>
-                        <div class="slider" data-name="이미지4"><img src="assets/img/study04.jpg" alt="이미지4"></div>
-                        <div class="slider" data-name="이미지5"><img src="assets/img/study05.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study01.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="assets/img/study02.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="assets/img/study03.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="assets/img/study04.jpg" alt="이미지4"></div>
+                        <div class="slider"><img src="assets/img/study05.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study06.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study07.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study08.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study09.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study10.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study11.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study12.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study13.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study14.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study15.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study16.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study17.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study18.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study19.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study20.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study21.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study22.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study23.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study24.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="assets/img/study25.jpg" alt="이미지5"></div>
                     </div>
                 </div>
             </div>
@@ -138,11 +160,12 @@
         <div class="container">
             <div class="personalitys">
                 <div class="pers_box"
-                    data-5500 = "position: relative; top: 0; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-6000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-8000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-8500 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-9000 = "position: relative; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:0;"
+                    data-4000 = "position: relative; top: 0; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1; display: none;"
+                    data-5500 = "position: relative; top: 0; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1; display: block;"
+                    data-6000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1; display: block;"
+                    data-8000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1; display: block;"
+                    data-8500 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1; display: block;"
+                    data-9000 = "position: relative; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:0; display: none;"
                 >
                     <div class="txt left">
                     <h2
@@ -412,8 +435,7 @@
     <script src="assets/js/custom.js"></script>
     <script>
         var s = skrollr.init();
-       
-        
+
     </script>
 </body>
 </html>

@@ -90,7 +90,6 @@
         }
     }
 
-
     //커리어 바 이동
     $(function () {
         $(".work_drag").draggable({
@@ -144,10 +143,14 @@
 
     /* 코드 뷰 */
     $(".project_frame .code_bt").click(function(){
-       if($(".code_view").toggleClass("show")){
-        $(".site_view").toggleClass("show")
+       var $this = $(".site_view");
+       if($this.hide()){
+
+       } else {
+        $(".site_view").show();
        }
     });
+
 
     /* 애니메이션 뷰 */
    

@@ -509,9 +509,15 @@ header .hem_menu {
     left: 50%; top: 0;
     transform: translateX(-50%);
 }
-/* .project_frame .site_view.show {
+.project_frame .site_view1.show {
     display: none;
-} */
+}
+.project_frame .site_view2.show {
+    display: none;
+}
+.project_frame .site_view3.show {
+    display: none;
+}
 
 .project_frame .site_box.left {
     max-width: 800px;
@@ -672,6 +678,16 @@ header .hem_menu {
     margin: 40px;
     cursor: pointer;
 }
+.show_center.anima2 {
+    display: none;
+}
+.show_center.anima3 {
+    display: none;
+}
+.show_center.anima4 {
+    display: none;
+}
+
 
 /* 작은원 위치*/
 .animas .anima_show .show_left > div:nth-child(1) {

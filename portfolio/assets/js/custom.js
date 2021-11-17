@@ -142,17 +142,18 @@
     });
 
     /* 코드 뷰 */
-    $(".project_frame .code_bt").click(function(){
-       var $this = $(".site_view");
-       if($this.hide()){
-
-       } else {
-        $(".site_view").show();
-       }
-    });
+    for(let i=1; i<=3; i++){
+        $(".project_frame .code_bt" + i).click(function(){
+            $(".site_view" + i).toggleClass("show");
+        })
+    }
 
 
     /* 애니메이션 뷰 */
-   
+   for(let i=1; i<=6; i++){
+        $(".animabt" + i ).click(function(){
+            $(".anima" + i).css("display","block");
+        })
+    }
     
 })(jQuery);

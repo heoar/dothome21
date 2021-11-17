@@ -95,7 +95,7 @@ header .hem_menu {
 }
 .hem_menu ul li a {
     color: #0D626B;
-    font-family: 'DM Sans';
+    font-family: 'paybooc-Medium';
     font-size: 18px;
 }
 .hem_menu ul li:last-child {
@@ -135,7 +135,13 @@ header .hem_menu {
 
 
 /* 타이틀 */
-.title { margin: 200px; margin-bottom: 20px;}
+.top {
+    transform: translateY(50%);
+    height: 50vh;
+}
+.title {
+    margin-bottom: 50px;
+}
 .title h2 {
     font-size: 150px;
     text-align: center;
@@ -188,6 +194,7 @@ header .hem_menu {
 }
 
 .sb_button .sb_cont {
+    z-index: 100;
     position: absolute;
     font-size: 18px;
     color: #0396A6;
@@ -222,45 +229,6 @@ header .hem_menu {
     color: #0396A6;
 }
 
-/* 피그마 슬라이드 */
-.about .swiper-slide {
-    margin-bottom: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.about .swiper-slide .study {
-    position: absolute;
-    left: 0; top: 35%;
-    transform: translate(0, -35%); 
-    width: 2000vw;
-    overflow: hidden;
-}
-
-.about .swiper-slide .study img {
-    width: 500px;
-    margin: 10px;
-    float: left;
-    border: 1px solid #C9C9C9;
-    border-radius: 3px;
-    box-shadow: 10px 5px 5px #146d9d11;
-}
-.slider-inner {
-    position: relative;
-    width: 13900px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    gap: 5px;
-    pointer-events: none;
-}
-
-.slider {
-    float: left;
-    width: 550px;
-    height: 480px;
-    position: relative;
-}
 
 
 /* 안경 애니메이션 */
@@ -370,13 +338,14 @@ header .hem_menu {
 }
 .my_career .career ul li {
     font-family: 'DM Sans';
+    font-weight: 500;
     font-size: 18px;
     float: left;
     text-align: left;
     padding: 40px;
 }
 .my_career .career ul li span {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'ONE-Mobile-Regular';
     font-size: 14px;
 }
 
@@ -460,7 +429,7 @@ header .hem_menu {
 
 /* 스킬 이미지 */
 .skill_box {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     font-family: 'GmarketSansMedium';
     text-align: center;
@@ -488,25 +457,26 @@ header .hem_menu {
 .skill_box .skill_poto {
     text-align: right;
     position: absolute;
-    top: 50%;
+    left: 5%;
+    top: 40%;
 }
 .skill_box .skill_js img {
-    width: 200px;
+    width: 150px;
     position: absolute;
     top: 30%;
-    left: 140%;
+    left: 130%;
 }
 .skill_box .skill_html img {
-    width: 200px;
+    width: 130px;
     position: absolute;
-    top: 30%;
-    left: -30%;
+    top: 40%;
+    left: -20%;
 }
 .skill_box .skill_poto img {
-    width: 200px;
+    width: 150px;
     position: absolute;
     top: 20%;
-    left: 135%;
+    left: 125%;
 }
 
 
@@ -617,7 +587,7 @@ header .hem_menu {
     margin-bottom: 30px;
 }
 .project_frame .site_box p {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'ONE-Mobile-Regular';
     color: #fff;
     font-size: 24;
     margin-bottom: 50px;
@@ -662,7 +632,7 @@ header .hem_menu {
 }
 .effects .effect_frame {
     width: 100%;
-    height: 800vh;
+    height: 550vh;
     padding-top: 300px;
     background: linear-gradient(to top, #CAC6C1 0%, #1B262A 30%);
     position: relative;
@@ -679,18 +649,18 @@ header .hem_menu {
     color: #fff;
     padding: 20px;
     font-size: 24px;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'ONE-Mobile-Regular';
 }
 .effects .effect_frame > div {
     margin-bottom: 200px;
 }
 .effects .effect_frame iframe {
-    width: 65%;
+    width: 70%;
     height: 80vh;
     vertical-align: bottom;
 }
 .effects .effect_frame img {
-    width: 65%;
+    width: 70%;
 
 }
 
@@ -759,6 +729,14 @@ header .hem_menu {
     display: none;
 }
 
+.anima_show .anima_img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #000;
+    margin: 0 auto;
+}
+
 
 /* 작은원 위치*/
 .animas .anima_show .show_left > div:nth-child(1) {
@@ -768,15 +746,20 @@ header .hem_menu {
 .animas .anima_show .show_left > div:nth-child(2) {
     background: #2AB17F;
 }
-.animas .anima_show .show_left > div:nth-child(3) {
-    margin-left: 70%;
+.animas .anima_show .show_left>div:nth-child(3) {
     background: #EBB8E6;
+}
+.animas .anima_show .show_left > div:nth-child(4) {
+    margin-left: 70%;
 }
 .animas .anima_show .show_right > div:nth-child(1) {
     margin-left: -10%;
     background: #9FBD59;
 }
-.animas .anima_show .show_right > div:nth-child(3) {
+.animas .anima_show .show_right>div:nth-child(3) {
+
+}
+.animas .anima_show .show_right > div:nth-child(4) {
     margin-left: -10%;
 }
 
@@ -794,7 +777,7 @@ header .hem_menu {
 }
 
 /* 풋터 레퍼런스 */
-.references { margin-bottom: 300px; overflow: hidden; }
+.references { margin-bottom: 300px; overflow: hidden; width: 1200px; margin: 0 auto; }
 .references h2 {
     text-align: center;
     font-size: 120px;
@@ -811,32 +794,32 @@ header .hem_menu {
 }
 .references .refer_box {
     float: left;
-    margin-left: 5%;
+    margin-left: 100px;
 }
 
 .references .refer_box ul {
     margin-left: 12px;
 }
 .references .refer_box ul li {
-    padding: 5px 0;
+    margin: 15px 0;
     list-style: initial;
+}
+.references .refer_box ul li a:hover {
+    border-bottom: 1px solid #000;
 }
 
 .footer_img {
     background-image: url(../img/footer_bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
-    padding-bottom: 200px;
+    background-size: cover;
     background-position: top;
-    box-sizing: border-box;
     color: #fff;
+    padding-bottom: 80px;
     padding-left: 100px;
 }
-.footer_bg {
-    position: relative;
-}
+
 .footer_bg span {
-    padding-top: 300px;
+    margin-top: 10%;
     font-size: 20px;
     display: inline-block;
     margin-bottom: 100px;
@@ -844,7 +827,7 @@ header .hem_menu {
 }
 .footer_bg p {
     font-size: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 5%;
 }
 .footer_bg a {
     width: 445px;
@@ -854,12 +837,7 @@ header .hem_menu {
     font-size: 20px;
     color: #fff;
 }
-.footer_bg img {
-    width: 800px;
-    position: absolute;
-    right: 0; top: 35%;
-    opacity: .5;
-}
+
 
 
 

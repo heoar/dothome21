@@ -9,7 +9,7 @@ body { overflow-x:hidden; font-family: 'GmarketSansBold'; background-image: url(
 
 /* 레이아웃 */
 .container {
-    width: 1400px;
+    width: 95%;
     margin: 0 auto;
 }
 .scroll {
@@ -135,7 +135,7 @@ header .hem_menu {
 
 
 /* 타이틀 */
-.title { margin-top: 200px; margin-bottom: 20px;}
+.title { margin: 200px; margin-bottom: 20px;}
 .title h2 {
     font-size: 150px;
     text-align: center;
@@ -296,7 +296,7 @@ header .hem_menu {
     100% {background-position: -450px -3150px;}
 }
 
-/* 마이커리어 */
+/* 마이 커리어 */
 .my_career {}
 .my_career h3 {
     font-size: 18px;
@@ -460,20 +460,91 @@ header .hem_menu {
 
 /* 스킬 이미지 */
 .skill_box {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'GmarketSansMedium';
     text-align: center;
     height: 100vh;
+    position: relative;
 }
 .skill_box img {
-    width: 1000px;
+    width: 20vw;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+.skill_box .skill_js {
+    text-align: right;
+    position: absolute;
+}
+.skill_box .skill_html {
+    text-align: left;
+    position: absolute;
+    right: 0;
+}
+.skill_box .skill_poto {
+    text-align: right;
+    position: absolute;
+    top: 50%;
+}
+.skill_box .skill_js img {
+    width: 200px;
+    position: absolute;
+    top: 30%;
+    left: 140%;
+}
+.skill_box .skill_html img {
+    width: 200px;
+    position: absolute;
+    top: 30%;
+    left: -30%;
+}
+.skill_box .skill_poto img {
+    width: 200px;
+    position: absolute;
+    top: 20%;
+    left: 135%;
+}
+
+
+.skill_box .skill_js h3 {
+    font-size: 50px;
+    color: #0396A6;
+}
+.skill_box .skill_js p {
+    font-size: 24px;
+    font-family: 'Nanum Gothic',
+    sans-serif;
+}
+.skill_box .skill_html h3 {
+    font-size: 50px;
+    color: #0396A6;
+}
+.skill_box .skill_html p {
+    font-size: 24px;
+    font-family: 'Nanum Gothic',
+    sans-serif;
+}
+.skill_box .skill_poto h3 {
+    font-size: 50px;
+    color: #0396A6;
+}
+.skill_box .skill_poto p {
+    font-size: 24px;
+    font-family: 'Nanum Gothic',
+    sans-serif;
 }
 
 /* 프로젝트 */
 .projects {
     background-image: url(../img/project_bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
-    height: 1000px;
+    height: 900px;
     text-align: center;
     color: #fff;
     margin-bottom: 100px;
@@ -496,7 +567,7 @@ header .hem_menu {
 }
 
 .project_frame {
-    width: 1400px;
+    width: 95%;
     margin: 0 auto;
     height: 200vh;
     text-align: center;
@@ -691,22 +762,22 @@ header .hem_menu {
 
 /* 작은원 위치*/
 .animas .anima_show .show_left > div:nth-child(1) {
-    margin-left: 75px;
+    margin-left: 70%;
     background: #2BE3FA;
 }
 .animas .anima_show .show_left > div:nth-child(2) {
     background: #2AB17F;
 }
 .animas .anima_show .show_left > div:nth-child(3) {
-    margin-left: 75px;
+    margin-left: 70%;
     background: #EBB8E6;
 }
 .animas .anima_show .show_right > div:nth-child(1) {
-    margin-left: -5px;
+    margin-left: -10%;
     background: #9FBD59;
 }
 .animas .anima_show .show_right > div:nth-child(3) {
-    margin-left: -5px;
+    margin-left: -10%;
 }
 
 .animas .anima_show .show_right {
@@ -740,13 +811,9 @@ header .hem_menu {
 }
 .references .refer_box {
     float: left;
-    margin-left: 150px;
+    margin-left: 5%;
 }
-.references .refer_box:last-child {
-    float: right;
-    margin-left: 0;
-    margin-right: 100px;
-}
+
 .references .refer_box ul {
     margin-left: 12px;
 }
@@ -792,4 +859,11 @@ header .hem_menu {
     position: absolute;
     right: 0; top: 35%;
     opacity: .5;
+}
+
+
+
+/* 반응형 */
+@media (max-width: 900px){
+
 }

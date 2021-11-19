@@ -1,0 +1,296 @@
+* { margin: 0; padding: 0; }
+
+/* 레이아웃 */
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.canter {
+    width: 1100px;
+    margin: 0 auto;
+}
+li { list-style: none; }
+strong { font-style: normal;}
+em { font-style: normal;}
+a {  text-decoration: none;color: #000; }
+
+/* 메뉴 */
+.menu_box {
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.menu_box img {
+    float: left;
+    width: 200px;
+    position: absolute;
+    left: 0; bottom: 20px;
+}
+.menu_box ul {
+    float: right;
+    margin-bottom: 30px;
+}
+.menu_box ul li {
+    float: left;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.menu_box ul li:last-child {
+    padding-right: 0;
+}
+
+/* 메인 컨텐츠 */
+.main_box {}
+.main_br {}
+.main_br .br_box { height: 650px; overflow: hidden; }
+.main_br .br_box img {
+    width: 100%;
+    float: left;
+}
+.main_br .date_box {
+    padding: 20px 0;
+    background: #F4F8F9;
+ }
+.main_br .date_box h2 {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.main_br .date_day { overflow: hidden; }
+.main_br .date_day .day_box {
+    display: inline-block;
+    width: 215px;
+    padding: 20px 20px;
+    margin-right: 10px;
+    border: 2px solid #E1E1E3;
+    background: #fff;
+}
+.main_br .date_day .day_box:last-child {
+    margin-right: 0;
+}
+.main_br .day_box span {
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4F6586;
+    border: 3px solid #859DB7;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.main_br .day_box h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.main_br .day_box ul li {
+    padding: 10px 0;
+    color: #7a7a7a;
+    font-size: 13px;
+}
+.main_br .day_box ul li em {
+    padding: 5px 5px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 5px;
+    background: #6892CF;
+    margin-right: 10px;
+}
+
+/* 자료박스 */
+.board_box { padding: 50px 0; overflow: hidden; }
+.board_box > div { float: left; }
+/* 자료 왼쪽영역 */
+.board_box .board_left { margin-right: 20px; }
+.board_box .board_left .left_box {
+    padding: 20px;
+    width: 300px;
+    height: 180px;
+    margin-bottom: 20px;
+    border: 2px solid #E1E1E3;
+}
+.board_box .board_left .left_box .tap_menu ul img {
+    width: 30px;
+    float: right;
+    cursor: pointer;
+}
+.board_box .board_left .left_box .tap_menu ul li {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.board_box .board_left .left_box .tap_menu ul .active a {
+    color: #868686;
+}
+.board_box .board_left .left_box .tap_menu ul li:first-child {
+    padding-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    border-right: 3px solid #000;
+}
+.board_box .board_left .left_box .list_li ul li {
+    font-size: 14px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.board_box .board_left .left_box .list_li ul li em {
+    font-size: 14px;
+     color: #ccc;
+}
+.board_box .board_left .left_br img {
+    width: 343px;
+}
+
+/* 자료 오른쪽영역 */
+.board_right { width: 725px; }
+.board_right > div {
+    border: 2px solid #E1E1E3;
+}
+.board_right .kita_report {
+    height: 180px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.board_right .kita_report img {
+    width: 30px;
+    right: 20px; top: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+.board_right .kita_report h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.board_right .kita_report ul li {
+    padding: 5px 0;
+    font-size: 14px;
+}
+.board_right .kita_report ul li span {
+    color: #ccc;
+    float: right;
+}
+.board_right .kita_report ul li em {
+    font-size: 12px;
+    color: #fff;
+    background: #3174cf;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 0 5px 0;
+    margin-right: 10px;
+}
+.board_right .kita_mation {
+    padding: 12px 30px;
+    overflow: hidden;
+    position: relative;
+}
+.board_right .kita_mation img {
+    width: 30px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+.board_right .kita_mation h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.board_right .kita_mation .mation {
+    float: left;
+}
+.board_right .kita_mation .mation ul li {
+    font-size: 14px;
+    padding: 10px 0;
+}
+.board_right .kita_mation .mation ul li em {
+    display: block;
+    color: #ccc;
+}
+.board_right .kita_mation .mation:last-child {
+    float: right;
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+}
+
+/* 풋터 */
+footer {
+    width: 100%;
+    background: #26405E;
+    height: 250px;
+    color: #6F819C;
+}
+.footer_top {
+    padding: 20px 0;
+    font-size: 14px;
+    overflow: hidden;
+    border-bottom: 1px solid #6F819C;
+}
+.footer_top .ft_list {
+    float: left;
+}
+.footer_top .ft_list ul li {
+    margin-top: 12px;
+    padding: 0 12px;
+    display: inline-block;
+    border-left: 1px solid #6F819C;
+}
+.footer_top ul li:first-child {
+    border: 0;
+    padding-left: 0;
+}
+.footer_top .ft_bar {
+    float: right;
+}
+.footer_top .ft_bar {
+    font-size: 14px;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #6F819C;
+    color: #fff;
+    background: none;
+    position: relative;
+}
+.footer_top .ft_bar div span {
+    font-size: 30px;
+    position: absolute;
+    right: 12px; top: -15px;
+}
+.footer_bottom {
+    padding: 25px 0;
+    overflow: hidden;
+}
+.footer_bottom .ft_lg img {
+    width: 200px;
+    float: left;
+}
+.footer_bottom p {
+    font-size: 14px;
+    margin: 13px 15px;
+    float: left;
+}
+.footer_bottom .footer_sns {
+    float: left;
+}
+.footer_bottom .footer_sns img {
+    width: 40px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.footer_bottom .footer_call {
+    float: right;
+    border-left: 1px solid #6F819C;
+    padding-left: 30px;
+}
+.footer_bottom .footer_call div {
+    font-size: 14px;
+}
+.footer_bottom .footer_call div em {
+    font-size: 30px;
+    display: block;
+    color: #fff;
+}

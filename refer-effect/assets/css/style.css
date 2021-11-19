@@ -587,7 +587,7 @@ nav li a:hover {
 }
 
 .code-view .view-cont {
-  height: 500px;
+  height: 1000px;
   overflow-y: scroll;
   background: #f8f8f8;
 }

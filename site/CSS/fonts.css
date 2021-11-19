@@ -116,4 +116,9 @@
 /* 구글 */
 @import url('https://fonts.googleapis.com/css2?family=Glegoo&display=swap');
 
-/* 나눔 스퀘어 */
+/* 나눔 고딕 */
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+.nanumgothic * {
+    font-family: 'Nanum Gothic', sans-serif;
+}

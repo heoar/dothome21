@@ -71,6 +71,44 @@
         })
     }
 
+    //code
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((el) => {
+            hljs.highlightElement(el);
+        });
+    });
+
+    // const Vtite = document.querySelectorAll(".view-title ul li");
+    // const Vcont = document.querySelectorAll(".view-cont > div");
+
+    // Vtite.forEach((element, index)=>{
+    //     element.addEventListener("click", function(){
+    //         Vtite.forEach( el => {
+    //             el.classList.remove("active");
+    //         });
+    //         element.classList.add("active");
+
+    //         Vcont.forEach( el =>{
+    //             el.style.display="none";
+    //         });
+    //         Vcont[index].style.display = "block";
+    //     });
+    // });
+
+    const Vtite = $(".view-title ul li");
+    const Vcont = $(".view-cont > div");
+
+    Vtite.each(function(index,item){
+        $(this).click(function(){
+            // Vtite.removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+
+            Vcont.css("display","none");
+            Vcont.eq(index).css("display","block");
+        })
+        console.log(index)
+    })
+
 
     /* 애니메이션 뷰 */
    for(let i=1; i<=6; i++){

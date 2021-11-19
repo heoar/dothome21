@@ -537,7 +537,7 @@ header .hem_menu {
 }
 
 .project_frame {
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
     height: 200vh;
     text-align: center;
@@ -550,6 +550,58 @@ header .hem_menu {
     left: 50%; top: 0;
     transform: translateX(-50%);
 }
+
+/* 코드 뷰 */
+.code_box {
+    margin: 0 auto;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.code_box .view-title {
+    text-align: left;
+}
+.code_box .view-title li {
+    display: inline;
+    list-style: none;
+}
+.code_box .view-title li.active a {
+    color: #0396A6;
+    border-bottom: 2px solid #0396A6;
+}
+
+.code_box .view-title li a {
+    width: 100px;
+    text-decoration: none;
+    color: #242424;
+    padding: 20px 5px 8px;
+    margin: 0 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.code_box .view-cont {
+    height: 900px;
+    text-align: left;
+    padding: 30px;
+    overflow-y: scroll;
+    background: #f8f8f8;
+    display: block;
+}
+/* .code_box .view-cont>div {
+    display: none;
+}
+
+.code_box .view-cont>div:nth-child(1) {
+    display: block;
+} */
+
 .project_frame .site_view1.show {
     display: none;
 }

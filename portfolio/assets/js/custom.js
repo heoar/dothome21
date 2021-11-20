@@ -1,5 +1,12 @@
 (function($){
 
+    //스크롤
+    window.addEventListener("scroll", ()=>{
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
+
+        document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
+    });
+
     //메뉴버튼
     $(".hem_menu .hem").click(function(){
         $(".menu").toggleClass("show")
@@ -8,6 +15,46 @@
     $(".tep_menu li").click(function(){
         $(".menu").toggleClass("show")
     });
+
+    //스터디 스크롤
+    const slider = document.querySelector('.slide_box');
+    let isMouseDown = false;
+    let startX, scrollLeft;
+
+    document.querySelectorAll(".study").forEach((element) => {
+        let style = element.getAttribute("class");
+        element.addEventListener("mouseover", () => {
+            document.querySelector(".cursor").classList.add("active");
+        });
+        element.addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("active");
+        });
+    })
+
+    slider.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        isMouseDown = false;
+    });
+    
+    slider.addEventListener('mouseup', () => {
+        isMouseDown = false;
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
 
     //안경 애니메이션
     const contentWrap = $(".about").height();
@@ -36,14 +83,6 @@
         lastScrollTop = scrollTop;
     });
 
-    //스크롤
-    window.addEventListener("scroll", ()=>{
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || window.scrollY;
-
-        document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
-    });
-
-
     //커리어 바 이동
     $(function () {
         $(".work_drag").draggable({
@@ -54,9 +93,10 @@
                 let career = 23 + 2;
                 career++;
                 
-                console.log(career)
+                //console.log(career)
 
                 $(".work_drag span").text(career);
+                $(".career_img img:nth-child(3)").css("display","none");
             }
         });
     });

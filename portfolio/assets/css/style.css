@@ -4,7 +4,17 @@
     padding: 0;
 }
 
-body { overflow-x:hidden; font-family: 'GmarketSansBold'; background-image: url(../img/topbg.jpg); background-repeat: no-repeat; background-size: 100%; margin: 0; padding: 0; }
+body {
+    cursor: none;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'GmarketSansBold';
+    background-image: url(../img/topbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 
 /* 레이아웃 */
@@ -32,8 +42,23 @@ body { overflow-x:hidden; font-family: 'GmarketSansBold'; background-image: url(
 footer {
     margin: 0; padding: 0;
 }
-
-
+.cursor {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #0396A6;
+    background: rgba(255, 255, 255, 0.664);
+    border-radius: 50%;
+    position: absolute;
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+    transition: transform .5s;
+}
+.cursor.active {
+    transform: scale(2);
+    border: 0;
+    background: #0396A6;
+}
 
 /* 헤더 */
 .menu {
@@ -227,6 +252,23 @@ header .hem_menu {
     font-size: 50px;
     line-height: 60px;
     color: #0396A6;
+}
+
+/* 스터디 슬라이드 */
+.study {}
+.study .slide_box {
+    display: flex;
+    margin: 200px 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.study .slide_box .slide {
+    padding: 100px 0;
+}
+.study .slide_box .slide img {
+    width: 500px;
+    margin: 0 20px;
+    border: 1px solid #ccc;
 }
 
 

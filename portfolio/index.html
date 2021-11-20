@@ -14,7 +14,9 @@
 </head>
 <body  data-start = "height: 1000px;"
        data-end = "height: 0;">
+
     <div class="scroll">0</div>
+    <div class="cursor"></div>
 
     <header>
         <div class="menu">
@@ -91,7 +93,33 @@
 
             <div class="swiper-slide">
                 <div class="study">
-                   
+                   <div class="slide_box">
+                       <div class="slide"><img src="assets/img/study01.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study02.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study03.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study04.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study05.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study06.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study07.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study08.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study09.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study10.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study11.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study12.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study13.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study14.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study15.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study16.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study17.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study18.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study19.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study20.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study21.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study22.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study23.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study24.jpg" alt="스터디"></div>
+                       <div class="slide"><img src="assets/img/study25.jpg" alt="스터디"></div>
+                   </div>
                 </div>
             </div>
             <div class="my_career">
@@ -5266,7 +5294,13 @@ function searchBtnCheck(){
     <script src="assets/js/custom.js"></script>
     <script>
         var s = skrollr.init();
-
+       
+        //마우스 움직이기
+         window.addEventListener("mousemove", function(e){
+            let x = e.clientX - 15 + "px";
+            let y = e.clientY - 15 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+        });
     </script>
 </body>
 </html>

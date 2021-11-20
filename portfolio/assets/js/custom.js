@@ -58,8 +58,6 @@
 
                 $(".work_drag span").text(career);
             }
-            
-            
         });
     });
 
@@ -95,26 +93,64 @@
     //     });
     // });
 
-    const Vtite = $(".view-title ul li");
-    const Vcont = $(".view-cont > div");
+    const Vtite1 = $(".code_view1 .view-title ul li");
+    const Vcont1 = $(".code_view1 .view-cont > div");
 
-    Vtite.each(function(index,item){
+    Vtite1.each(function(index,item){
         $(this).click(function(){
             // Vtite.removeClass("active");
             $(this).addClass("active").siblings().removeClass("active");
 
-            Vcont.css("display","none");
-            Vcont.eq(index).css("display","block");
+            Vcont1.css("display","none");
+            Vcont1.eq(index).css("display","block");
         })
-        console.log(index)
+    })
+
+    const Vtite2 = $(".code_view2 .view-title ul li");
+    const Vcont2 = $(".code_view2 .view-cont > div");
+
+    Vtite2.each(function(index,item){
+        $(this).click(function(){
+            // Vtite.removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+
+            Vcont2.css("display","none");
+            Vcont2.eq(index).css("display","block");
+        })
+    })
+
+    const Vtite3 = $(".code_view3 .view-title ul li");
+    const Vcont3 = $(".code_view3 .view-cont > div");
+
+    Vtite3.each(function(index,item){
+        $(this).click(function(){
+            // Vtite.removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+
+            Vcont3.css("display","none");
+            Vcont3.eq(index).css("display","block");
+        })
     })
 
 
     /* 애니메이션 뷰 */
-   for(let i=1; i<=6; i++){
-        $(".animabt" + i ).click(function(){
-            $(".anima" + i).css("display","block");
+    // for(let i=1; i<=8; i++){
+    //     $(".animabt" + i ).click(function(){
+    //         $(".animabt" + i ).addClass("active").siblings().removeClass("active");
+    //     })
+    // }
+
+    const animabt = $(".show_bt > div");
+    const animaVi = $(".anima_img > div");
+
+    animabt.each(function(index,item){
+        $(this).click(function(){
+            // Vtite.removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+
+            animaVi.css("display","none");
+            animaVi.eq(index).css("display","block");
         })
-    }
+    })
     
 })(jQuery);

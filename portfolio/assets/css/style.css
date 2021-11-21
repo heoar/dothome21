@@ -46,6 +46,7 @@ footer {
     width: 30px;
     height: 30px;
     border: 3px solid #0396A6;
+    text-align: center;
     background: rgba(255, 255, 255, 0.664);
     border-radius: 50%;
     position: absolute;
@@ -54,8 +55,15 @@ footer {
     pointer-events: none;
     transition: transform .5s;
 }
+.cursor span {
+    color: #fff;
+    display: block;
+    font-size: 5px;
+    padding-top: 8px;
+}
 .cursor.active {
     transform: scale(2);
+    padding: 5px;
     border: 0;
     background: #0396A6;
 }
@@ -857,6 +865,7 @@ header .hem_menu {
     transform: translateX(-50%);
 }
 .anima_show .anima_img > div:nth-child(1) { z-index: 8;}
+.anima_show .anima_img > div:nth-child(1) span { display: block;}
 .anima_show .anima_img > div:nth-child(2) { z-index: 7;}
 .anima_show .anima_img > div:nth-child(3) { z-index: 6;}
 .anima_show .anima_img > div:nth-child(4) { z-index: 5;}
@@ -865,6 +874,14 @@ header .hem_menu {
 .anima_show .anima_img > div:nth-child(7) { z-index: 2;}
 .anima_show .anima_img > div:nth-child(8) { z-index: 1;}
 
+.anima_show .anima_img > div span {
+    position: absolute;
+    color: #000;
+    left: 50%; top: 110%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    display: none;
+}
 /* 클릭 이벤트 */
 .anima_show > div > div.active {
     box-shadow: 0 0 0 5px #0396A6 inset;

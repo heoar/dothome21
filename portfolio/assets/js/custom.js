@@ -25,9 +25,11 @@
         let style = element.getAttribute("class");
         element.addEventListener("mouseover", () => {
             document.querySelector(".cursor").classList.add("active");
+            document.querySelector(".cursor span").innerText = "Drag"
         });
         element.addEventListener("mouseout", () => {
             document.querySelector(".cursor").classList.remove("active");
+            document.querySelector(".cursor span").innerText = ""
         });
     })
 
@@ -109,7 +111,7 @@
         })
     }
 
-    //code
+    //code 색상
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('pre code').forEach((el) => {
             hljs.highlightElement(el);
@@ -182,6 +184,7 @@
 
     const animabt = $(".show_bt > div");
     const animaVi = $(".anima_img > div");
+    const animaGo = $(".anima_img > div span");
 
     animabt.each(function(index,item){
         $(this).click(function(){
@@ -190,6 +193,9 @@
 
             animaVi.css("display","none");
             animaVi.eq(index).css("display","block");
+
+            animaGo.css("display","none");
+            animaGo.eq(index).css("display","block");
         })
     })
     

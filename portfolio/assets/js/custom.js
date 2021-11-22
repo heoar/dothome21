@@ -135,6 +135,7 @@
     //     });
     // });
 
+    //코드 뷰
     const Vtite1 = $(".code_view1 .view-title ul li");
     const Vcont1 = $(".code_view1 .view-cont > div");
 
@@ -174,14 +175,7 @@
         })
     })
 
-
-    /* 애니메이션 뷰 */
-    // for(let i=1; i<=8; i++){
-    //     $(".animabt" + i ).click(function(){
-    //         $(".animabt" + i ).addClass("active").siblings().removeClass("active");
-    //     })
-    // }
-
+    //애니메이션 뷰
     const animabt = $(".show_bt > div");
     const animaVi = $(".anima_img > div");
     const animaGo = $(".anima_img > div span");

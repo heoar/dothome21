@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 레이아웃 */
+Header {
+    background: #000;
+    font-size: 24px;
+    font-family: 'GmarketSansLight';
+}
+
+/* 헤더 */
+Header nav { display: inline-block; padding: 15px 0; }
+Header nav ul { float: left; }
+Header nav ul li {display: inline-block; margin: 0 15px;}
+Header nav ul li:first-child { margin-left: 0;}
+Header nav ul li.active { border-bottom: 2px solid #fff; }
+Header nav ul li a { color: #fff; }
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/* 포스터 */
+.posterWrap {
+    padding: 100px 0;
+    overflow: hidden;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.589);
+    background-image: url(../img/banner_bg.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: top center;
+}
+.posterWrap .poster_img { margin-right: 50px; float: left; }
+.posterWrap .poster_img img { width: 420px; }
+
+.posterWrap .poster_txt h2 {
+    font-family: 'GmarketSansMedium';
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 15px;
+}
+.posterWrap .poster_txt strong {
+    display: block;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.posterWrap .poster_txt span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.posterWrap .poster_txt span em {
+    color: #FFBA07;
+}
+.posterWrap .poster_txt p {
+    font-size: 24px;
+    font-family: 'GmarketSansLight';
+}

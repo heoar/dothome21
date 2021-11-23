@@ -72,11 +72,11 @@
   margin-bottom: 1%;
   float: left;
 
-  border-bottom: 3px solid #a5d5fa;
+  border-bottom: 3px solid #C0E4C8;
   background-color: #fff;
 }
 .color-shape.figma {
-    background: rgb(227, 248, 255);
+    background: #D1EDE5;
 }
 .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;

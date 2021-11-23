@@ -223,7 +223,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#4B6551;
 }
 
 
@@ -280,15 +280,15 @@
 }
 
 .gridly .webstandard a {
-	color: #157ed3;
+	color: #6C381A;
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #ffbd07;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
 	color: #8432c4;
 	display: block;
-	border-bottom: 3px solid #8432c4;
+	border-bottom: 3px solid #FF6107;
 	margin-right: 20px;
 	
 }
@@ -384,7 +384,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #f2a1d1;
+	background: #FFC368;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -407,7 +407,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a92c76;
+	color: #6C381A;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
@@ -1941,7 +1941,12 @@
 
 
 .donutImg {text-align: center; }
-.donutImg h5 {color: #f47cc3; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.donutImg h5 {
+	color: #4B6551;
+	font-size: 23px;
+	padding-top: 22px;
+	text-transform: uppercase;
+}
 .donutImg p {color: #565656; font-size: 18px; }
 .donutImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 

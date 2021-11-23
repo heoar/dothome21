@@ -52,7 +52,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 /* Header  */
 
 #header{
-	background:#a5d5fa center 57px;
+	background:#C0E4C8 center 57px;
 	padding: 10px 0 10px 0px;
 }
 #header.sub {
@@ -64,9 +64,8 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	display: none;
 }
 #header.sub .header_tit h1 {
-
 	padding: 15px 150px;
-	background-color: #82c8ec;
+	background-color: #C0E4C8;
 }
 
 #header.sub .header_tit h2 {

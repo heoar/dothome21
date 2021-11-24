@@ -308,6 +308,7 @@ header .hem_menu {
     width: 500px;
     margin: 0 20px;
     border: 1px solid #ccc;
+    box-shadow: 5px 10px 5px #c6e9f05d;
 }
 
 
@@ -467,8 +468,6 @@ header .hem_menu {
 .personalitys .pers_img .img_box {
     width: 500px;
     height: 500px;
-    border-radius: 50%;
-    background-color: #A79D9B;
     position: relative;
     clip-path: circle(250px at center);
     transform: perspective(600px) rotateX(0deg) rotateY(0deg);
@@ -479,6 +478,21 @@ header .hem_menu {
 .personalitys .pers_img .img_box img {
     position: absolute;
     left: 0; top: 0;
+}
+.personalitys .pers_img .img_box .imge {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url(../img/about_me01.jpg);
+    background-size: cover;
+    display: block;
+}
+.personalitys .pers_img .img_box .imges{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url(../img/about_me02.jpg);
+    background-size: cover;
 }
 
 .personalitys .pers_img .img_box img:nth-child(1) {
@@ -620,7 +634,7 @@ header .hem_menu {
 .project_frame {
     width: 80%;
     margin: 0 auto;
-    height: 1300px;
+    height: 1600px;
     text-align: center;
     position: relative;
 }
@@ -692,10 +706,11 @@ header .hem_menu {
 .project_frame .site_view3.show {
     display: none;
 }
+.project_frame .site_box { position: relative; }
 
 .project_frame .site_box.left {
     max-width: 800px;
-    height: 300px;
+    height: 400px;
     text-align: left;
     padding: 60px 50px;
     background: #212121e9;
@@ -704,7 +719,7 @@ header .hem_menu {
 }
 .project_frame .site_box.right {
     max-width: 800px;
-    height: 300px;
+    height: 400px;
     text-align: right;
     padding: 60px 50px;
     background: #212121e9;
@@ -722,8 +737,9 @@ header .hem_menu {
 .project_frame .site_box p {
     font-family: 'ONE-Mobile-Regular';
     color: #fff;
-    font-size: 24;
-    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 30px;
 }
 .project_frame .site_box button {
     margin-right: 10px;
@@ -733,15 +749,50 @@ header .hem_menu {
     border-radius: 5px;
     background: none;
     cursor: pointer;
+    color: #fff;
+    transition: all .3s;
 }
+
+/**/
+.project_frame .site_box.right button:hover,
+.project_frame .site_box.right button:hover a {
+    background: #fff;
+    color: #000;
+    transition: all .3s;
+}
+
+.project_frame .site_box.left button:nth-child(3) {
+    position: absolute;
+    left: 14%; top: 80%;
+    font-size: 60px;
+    border: 0;
+}
+.project_frame .site_box.left button:nth-child(3) span {
+    padding-left: 0px;
+    transition: all .6s;
+}
+.project_frame .site_box.left button:nth-child(3):hover span {
+    padding-left: 20px;
+    transition: all .6s;
+}
+.project_frame .site_box.left button:nth-child(3) a {
+    font-family: 'GmarketSansLight';
+}
+.project_frame .site_box.left button:nth-child(4) {
+    border: 0;
+    padding: 0;
+}
+/**/
+
 .project_frame .site_box button a {
-    font-family: 'ONE-Mobile-Regular';
+    font-family: 'GmarketSansMedium';
     color: #fff;
 }
-.project_frame .site_box button a span {
+/* .project_frame .site_box button a span {
     font-family: 'ONE-Mobile-Regular';
     color: #fff;
-}
+} */
+
 
 /* 이펙트 */
 .effects .effect_box {

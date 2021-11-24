@@ -15,6 +15,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 
 /* 레이아웃 */
@@ -26,7 +29,7 @@ body {
     position: fixed;
     right: 30px; bottom: 30px;
     width: 50px; height: 50px;
-    background: rgba(134, 190, 255, 0.541);
+    background: #8BDAEB;
     text-align: center;
     line-height: 50px;
     color: #fff;
@@ -51,7 +54,7 @@ footer {
     border-radius: 50%;
     position: absolute;
     position: fixed;
-    z-index: 10;
+    z-index: 999;
     pointer-events: none;
     transition: transform .5s;
 }
@@ -74,20 +77,22 @@ footer {
     width: 100%;
     position: fixed;
     z-index: 10;
+    transition: .8s;
 }
-.menu.show {
+/* .menu.show {
     width: 100%;
     height: 100%;
     background: #0396A6;
-    z-index: 999;
+    z-index: 888;
     transition: .8s;
     background-image: url(../img/ggs02.png);
     background-size: 700px;
     background-repeat: no-repeat;
     background-position: bottom 100px right 120px;
-}
+} */
 header .hem_menu {
     position: relative;
+    z-index: 999;
 }
 .hem_menu .hem {
     width: 40px; height: 40px;
@@ -97,6 +102,8 @@ header .hem_menu {
     left: 13px; top: 13px;
     cursor: pointer;
 }
+
+/* 메뉴 아이콘 */
 .hem_menu .hem::after {
     content: '';
     transition: .5s;
@@ -134,25 +141,49 @@ header .hem_menu {
 .hem_menu ul li:last-child {
     float: right;
 }
-/* 텝 메뉴 */
+/* 탑 메뉴 */
+.menu {}
 .menu .tep_menu {
+    position: absolute;
+    top: 0;
+    left: -3000px;
+    width: 100%;
+    height: 100vh;
+    transition: 2s;
+    opacity: 0;
+    background: #8BDAEB;
+    background-image: url(../img/ggs02.png);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: bottom 100px right 120px;
+}
+.menu .tep_menu ul {
+    display: none;
     font-family: 'GmarketSansMedium';
     padding: 50px 100px;
-    display: none;
+    margin-top: 100px;
 }
 .menu .tep_menu a {
-    transition: .3s;
+    transition: color .3s;
     font-size: 100px;
-    color: #74F1FF;
+    color: #0396A6;
     line-height: 140px;
 }
 .menu .tep_menu a:hover{
-    transition: .5s;
+    transition: color .5s;
     color: #fff;
 }
 .menu.show .tep_menu {
+   left: 0;
+   opacity: 1;
+   transition: 1s;
+}
+/* 버튼 눌렀을 때 */
+.menu.show .tep_menu ul {
     display: block;
 }
+
+/* 닫기 아이콘 */
 .menu.show .hem_menu .hem::after{
     transition: .5s;
     content: '';
@@ -589,7 +620,7 @@ header .hem_menu {
 .project_frame {
     width: 80%;
     margin: 0 auto;
-    height: 200vh;
+    height: 1300px;
     text-align: center;
     position: relative;
 }
@@ -664,21 +695,21 @@ header .hem_menu {
 
 .project_frame .site_box.left {
     max-width: 800px;
-    height: 400px;
+    height: 300px;
     text-align: left;
-    padding: 100px 50px;
+    padding: 60px 50px;
     background: #212121e9;
     position: absolute;
-    left: 0; top: 40%;
+    left: 0; top: 50%;
 }
 .project_frame .site_box.right {
     max-width: 800px;
-    height: 400px;
+    height: 300px;
     text-align: right;
-    padding: 100px 50px;
+    padding: 60px 50px;
     background: #212121e9;
     position: absolute;
-    right: 0; top: 40%;
+    right: 0; top: 50%;
 }
 
 .project_frame .site_box h2 {
@@ -704,9 +735,11 @@ header .hem_menu {
     cursor: pointer;
 }
 .project_frame .site_box button a {
-    color: #74F1FF;
+    font-family: 'ONE-Mobile-Regular';
+    color: #fff;
 }
 .project_frame .site_box button a span {
+    font-family: 'ONE-Mobile-Regular';
     color: #fff;
 }
 
@@ -815,6 +848,7 @@ header .hem_menu {
     top: 10%;
 }
 .animas .anima_show .show_bt>div:nth-child(1) {
+    left: 8%;
     background: #2BE3FA;
 }
 .animas .anima_show .show_bt>div:nth-child(2) {
@@ -827,9 +861,13 @@ header .hem_menu {
     background: #F8C0EA;
 }
 .animas .anima_show .show_bt>div:nth-child(4) {
-    left: 10%;
+    left: 8%;
     top: 70%;
     background: #C4C54D;
+}
+.animas .anima_show .show_bt>div:nth-child(5) {
+   right: 8%;
+   background: #89E6D2;
 }
 .animas .anima_show .show_bt>div:nth-child(6) {
     right: 5%;
@@ -842,7 +880,7 @@ header .hem_menu {
     background: #fcca43;
 }
 .animas .anima_show .show_bt>div:nth-child(8) {
-    right: 10%;
+    right: 8%;
     top: 70%;
     background: #fcca43;
 }
@@ -867,15 +905,15 @@ header .hem_menu {
     left: 50%;
     transform: translateX(-50%);
 }
-.anima_show .anima_img > div:nth-child(1) { z-index: 8; background-image: url(../img/anima01.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(1) span { display: block;}
-.anima_show .anima_img>div:nth-child(2) { display: none; z-index: 7; background-image: url(../img/anima02.jpg); background-size: cover; }
-.anima_show .anima_img > div:nth-child(3) { display: none; z-index: 6; background-image: url(../img/anima03.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(4) { display: none; z-index: 5;background-image: url(../img/anima04.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(5) { display: none; z-index: 4;}
-.anima_show .anima_img > div:nth-child(6) { display: none; z-index: 3;}
-.anima_show .anima_img > div:nth-child(7) { display: none; z-index: 2;}
-.anima_show .anima_img > div:nth-child(8) { display: none; z-index: 1;}
+.anima_show .anima_img > div:nth-child(1) {opacity: 1; transition: opacity 1s; z-index: 8; background-image: url(../img/anima01.jpg); background-size: cover;}
+.anima_show .anima_img > div:nth-child(1) span { display: block; }
+.anima_show .anima_img>div:nth-child(2) { opacity: 0; transition: opacity 1s; z-index: 7; background-image: url(../img/anima02.jpg); background-size: cover; }
+.anima_show .anima_img > div:nth-child(3) { opacity: 0; transition: opacity 1s; z-index: 6; background-image: url(../img/anima03.jpg); background-size: cover;}
+.anima_show .anima_img > div:nth-child(4) { opacity: 0; transition: opacity 1s; z-index: 5; background-image: url(../img/anima04.jpg); background-size: cover;}
+.anima_show .anima_img > div:nth-child(5) { opacity: 0; transition: opacity 1s; z-index: 4; background-image: url(../img/anima05.jpg); background-size: cover;}
+.anima_show .anima_img > div:nth-child(6) { opacity: 0; transition: opacity 1s; z-index: 3;}
+.anima_show .anima_img > div:nth-child(7) { opacity: 0; transition: opacity 1s; z-index: 2;}
+.anima_show .anima_img > div:nth-child(8) { opacity: 0; transition: opacity 1s; z-index: 1;}
 
 .anima_show .anima_img > div span {
     position: absolute;

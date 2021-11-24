@@ -12,7 +12,7 @@
         $(".menu").toggleClass("show")
     });
 
-    $(".tep_menu li").click(function(){
+    $(".tep_menu li a").click(function(){
         $(".menu").toggleClass("show")
     });
 
@@ -185,8 +185,8 @@
             // Vtite.removeClass("active");
             $(this).addClass("active").siblings().removeClass("active");
 
-            animaVi.css("display","none");
-            animaVi.eq(index).css("display","block");
+            animaVi.css("opacity","0");
+            animaVi.eq(index).css("opacity","1");
 
             animaGo.css("display","none");
             animaGo.eq(index).css("display","block");

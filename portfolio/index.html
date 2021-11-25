@@ -40,7 +40,7 @@
     <!--//header-->
 
     <main>
-        <article>
+        <section>
             <div class="container">
                 <div class="top">
                     <div class="title">
@@ -75,11 +75,11 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
     </main>
     <!--//main-->
 
-    <article>
+    <section>
         <div class="about">
             <div class="glasses_bg"
                 data-1300 = "transform: translate(-50%, 0%); opacity: 0;"
@@ -149,10 +149,10 @@
                 </div>
             </div>
         </div>
-    </article>
+    </section>
     <!--//about-->
 
-    <article id="about">
+    <section id="about">
         <div class="about_story">
             <div class="story_text">
                 <p>My page My Own space</p>
@@ -205,12 +205,12 @@
                 </div>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article>
+    <section>
         <div class="container">
             <div class="skill_box">
-                <img src="assets/img/skimg.png" alt="스킬 이미지">
+                <img src="assets/img/skimg.svg" alt="스킬 이미지">
                 <div class="skill_js">
                     <img src="assets/img/sk01.png" alt="이미지">
                     <h3>Js/jQuery</h3>
@@ -227,9 +227,9 @@
                 </div>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article id="project">
+    <section id="project">
         <div class="projects">
             <div class="container">
                 <div class="proTXT">
@@ -261,9 +261,9 @@
                     to mobile by writing code using various functions</span>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article>
+    <section>
         <!-- 클로바 -->
         <div class="project_frame">
             <div class="code_view1">
@@ -2312,7 +2312,7 @@ nav li a:hover {
         &lt;div class="container"&gt;
             &lt;div class="row"&gt;
                 &lt;div class="help clearfix"&gt;
-                    &lt;article class="help_box1"&gt;
+                    &lt;section class="help_box1"&gt;
                         &lt;h3&gt;&lt;em&gt;공지사항&lt;/em&gt;&lt;/h3&gt;
                         &lt;div class="notice"&gt;
                             &lt;ul&gt;
@@ -2374,8 +2374,8 @@ nav li a:hover {
                                 &lt;/li&gt;
                             &lt;/ul&gt;
                         &lt;/div&gt;
-                    &lt;/article&gt;
-                    &lt;article class="help_box2"&gt;
+                    &lt;/section&gt;
+                    &lt;section class="help_box2"&gt;
                         &lt;h3&gt;메가박스 할인카드&lt;/h3&gt;
                         &lt;div class="card"&gt;
                             &lt;ul&gt;
@@ -2402,8 +2402,8 @@ nav li a:hover {
                                 &lt;/li&gt;
                             &lt;/ul&gt;
                         &lt;/div&gt;
-                    &lt;/article&gt;
-                    &lt;article class="help_box3"&gt;
+                    &lt;/section&gt;
+                    &lt;section class="help_box3"&gt;
                         &lt;h3&gt;고객센터&lt;/h3&gt;
                         &lt;div class="service"&gt;
                             &lt;ul&gt;
@@ -2828,7 +2828,7 @@ nav li a:hover {
                                 &lt;/li&gt;
                             &lt;/ul&gt;
                         &lt;/div&gt;
-                    &lt;/article&gt;
+                    &lt;/section&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -3174,11 +3174,11 @@ nav li a:hover {
 
 /* help */
 .help { overflow: hidden; padding-bottom: 200px; }
-.help article { float: left; width: 32%; margin-right: 2%; height: 350px; }
-.help article > div { border: 1px solid #dbdbdb; height: 350px; }
-.help article.help_box3 { margin-right: 0; }
-.help article.help_box3 div { border: 0; }
-.help article h3 { font-size: 30px; font-weight: 500; margin-bottom: 20px; }
+.help section { float: left; width: 32%; margin-right: 2%; height: 350px; }
+.help section > div { border: 1px solid #dbdbdb; height: 350px; }
+.help section.help_box3 { margin-right: 0; }
+.help section.help_box3 div { border: 0; }
+.help section h3 { font-size: 30px; font-weight: 500; margin-bottom: 20px; }
 
 /* 공지사항 */
 .notice { position: relative; padding: 17px; }
@@ -3273,10 +3273,10 @@ body.modal_on {overflow: hidden;}
     .banner_menu .bm_left ul { display: none; }
     .banner_menu .bm_right ul:first-child { display: none; }
 
-    .help article.help_box1 { width: 49%; margin-right: 2%; }
-    .help article.help_box2 { width: 49%; margin-right: 0%; }
-    .help article.help_box3 { width: 100%; margin-right: 2%; }
-    .help article { height: auto; }
+    .help section.help_box1 { width: 49%; margin-right: 2%; }
+    .help section.help_box2 { width: 49%; margin-right: 0%; }
+    .help section.help_box3 { width: 100%; margin-right: 2%; }
+    .help section { height: auto; }
     .service li { width: 25%; }
     .service li:nth-child(1) { border-bottom: 1px solid #d7d7d7;}
     .service li:nth-child(2) { border-bottom: 1px solid #d7d7d7; border-right: 0; }
@@ -3343,13 +3343,13 @@ body.modal_on {overflow: hidden;}
 
     #help .row { padding: 0 24px; }
     .help { padding-bottom: 24px; }
-    .help article.help_box1 { box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
-    .help article.help_box2 { box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
-    .help article.help_box3 { width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
-    .help article.help_box1 h3 { font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; }
-    .help article.help_box2 h3 { font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; }
-    .help article.help_box3 h3 { display: none; }
-    .help article.help_box3 > div { height: auto; }
+    .help section.help_box1 { box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
+    .help section.help_box2 { box-sizing: border-box; padding: 24px; width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
+    .help section.help_box3 { width: 100%; background: #fff; margin-right: 0%; margin-top: 24px; }
+    .help section.help_box1 h3 { font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; }
+    .help section.help_box2 h3 { font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px; }
+    .help section.help_box3 h3 { display: none; }
+    .help section.help_box3 > div { height: auto; }
     .service li { border: 0; }
     .service li:nth-child(1) { border-bottom: 0; }
     .service li:nth-child(2) { border-bottom: 0; }
@@ -3404,11 +3404,11 @@ body.modal_on {overflow: hidden;}
     .new .new_right .select .s2 { width: 100%; }
 
     #help .row { padding: 0 8px; }
-    .help article.help_box1 { margin-top: 8px; padding: 16px; }
-    .help article.help_box2 { margin-top: 8px; padding: 16px; }
-    .help article.help_box3 { margin-top: 8px; }
-    .help article.help_box1 h3 { font-size: 18px; margin-bottom: 0; }
-    .help article.help_box2 h3 { font-size: 18px; margin-bottom: 0; }
+    .help section.help_box1 { margin-top: 8px; padding: 16px; }
+    .help section.help_box2 { margin-top: 8px; padding: 16px; }
+    .help section.help_box3 { margin-top: 8px; }
+    .help section.help_box1 h3 { font-size: 18px; margin-bottom: 0; }
+    .help section.help_box2 h3 { font-size: 18px; margin-bottom: 0; }
     .card { padding: 8px; }
     .service li { width: 50%; }
     .service li:nth-child(1) { border-right: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7; }
@@ -3427,7 +3427,7 @@ body.modal_on {overflow: hidden;}
     .notice ul li ul { left: 9px; top: 56px; }
     .notice ul li ul li { padding: 8px; }
     .notice ul li a { padding: 5px 10px; }
-    .help article > div { height: 287px; }
+    .help section > div { height: 287px; }
     .card ul li { padding: 8px; margin-bottom: 8px; min-height: 90px; }
     .card ul li span { left: 11px; top: 10px; }
     .card ul li span img { width: 60px; }
@@ -3583,7 +3583,7 @@ body.modal_on {overflow: hidden;}
     &lt;!-- //header --&gt;
 
     &lt;main&gt;
-        &lt;article class="main_banner"&gt;
+        &lt;section class="main_banner"&gt;
             &lt;div class="container"&gt;
                 &lt;div class="random_quiz"&gt;
                     &lt;h1&gt;랜덤문제&lt;/h1&gt;
@@ -3605,7 +3605,7 @@ body.modal_on {overflow: hidden;}
                     &lt;/form&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-        &lt;/article&gt;
+        &lt;/section&gt;
 
         &lt;section id="section1" class="main_section"&gt;
             &lt;div class="container"&gt;
@@ -5176,9 +5176,9 @@ function searchBtnCheck(){
                 <button class="code_bt3"><a>• CODE <span>View &#8641</span></a></button>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article id="effect">
+    <section id="effect">
         <div class="effects">
             <div class="effect_box">
                 <h2>EFFECT</h2>
@@ -5212,9 +5212,9 @@ function searchBtnCheck(){
                 </div>
             </div>
         </div>
-    </article>
+    </section>
 
-    <article id="anima">
+    <section id="anima">
         <div class="animas">
             <div class="anima_box">
                 <h2>ANIMATION</h2>
@@ -5248,7 +5248,7 @@ function searchBtnCheck(){
                 </div>
             </div>
         </div>
-    </article>
+    </section>
     
     <footer>
         <div class="references">
@@ -5309,7 +5309,11 @@ function searchBtnCheck(){
     <script src="assets/js/highlight.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-        var s = skrollr.init();
+        skrollr.init({
+            mobileCheck: function() {
+                return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            }
+        });
        
         //마우스 움직이기
          window.addEventListener("mousemove", function(e){

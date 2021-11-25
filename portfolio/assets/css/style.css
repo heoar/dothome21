@@ -923,12 +923,12 @@ header .hem_menu {
 .animas .anima_show .show_bt>div:nth-child(6) {
     right: 5%;
     top: 30%;
-    background: #fcca43;
+    background: #c4c4c4;
 }
 .animas .anima_show .show_bt>div:nth-child(7) {
     right: 5%;
     top: 50%;
-    background: #fcca43;
+    background: #C5D59E;
 }
 .animas .anima_show .show_bt>div:nth-child(8) {
     right: 8%;
@@ -959,11 +959,11 @@ header .hem_menu {
 .anima_show .anima_img > div:nth-child(1) {opacity: 1; transition: opacity 1s; z-index: 8; background-image: url(../img/anima01.jpg); background-size: cover;}
 .anima_show .anima_img > div:nth-child(1) span { display: block; }
 .anima_show .anima_img>div:nth-child(2) { opacity: 0; transition: opacity 1s; z-index: 7; background-image: url(../img/anima02.jpg); background-size: cover; }
-.anima_show .anima_img > div:nth-child(3) { opacity: 0; transition: opacity 1s; z-index: 6; background-image: url(../img/anima03.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(4) { opacity: 0; transition: opacity 1s; z-index: 5; background-image: url(../img/anima04.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(5) { opacity: 0; transition: opacity 1s; z-index: 4; background-image: url(../img/anima05.jpg); background-size: cover;}
-.anima_show .anima_img > div:nth-child(6) { opacity: 0; transition: opacity 1s; z-index: 3;}
-.anima_show .anima_img > div:nth-child(7) { opacity: 0; transition: opacity 1s; z-index: 2;}
+.anima_show .anima_img > div:nth-child(3) { opacity: 0; transition: opacity 1s; z-index: 6; background-image: url(../img/anima03.jpg); background-size: cover; }
+.anima_show .anima_img > div:nth-child(4) { opacity: 0; transition: opacity 1s; z-index: 5; background-image: url(../img/anima04.jpg); background-size: cover; }
+.anima_show .anima_img > div:nth-child(5) { opacity: 0; transition: opacity 1s; z-index: 4; background-image: url(../img/anima05.jpg); background-size: cover; }
+.anima_show .anima_img > div:nth-child(6) { opacity: 0; transition: opacity 1s; z-index: 3; background-image: url(../img/anima06.jpg); background-size: cover; }
+.anima_show .anima_img > div:nth-child(7) { opacity: 0; transition: opacity 1s; z-index: 2; background-image: url(../img/anima07.jpg); background-size: cover; }
 .anima_show .anima_img > div:nth-child(8) { opacity: 0; transition: opacity 1s; z-index: 1;}
 
 .anima_show .anima_img > div span {

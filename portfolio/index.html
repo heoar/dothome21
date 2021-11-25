@@ -1407,8 +1407,8 @@ nav li a:hover {
                     구성하고 기본 틀을<br>잡을지를 익히기 위해 연습한 제 첫번째
                     작업물 네이버 클로바사이트입니다.
                 </p>
-                <button class="site_bt1"><a href="https://heoar.github.io/dothome21/site/testType03.html" target="_blank">SITE VIEW <span>&#8641</span></a></button>
-                <button class="code_bt1"><a>• CODE <span>View &#8641</span></a></button>
+                <button class="site_bt1"><a href="https://heoar.github.io/dothome21/site/testType03.html" target="_blank">SITE View</a></button>
+                <button class="code_bt1"><a>CODE View</a></button>
             </div>
         </div>
 
@@ -3534,8 +3534,8 @@ body.modal_on {overflow: hidden;}
                     사용자 디바이스 환경에 따라 모바일까지 호환될 수 있도록<br>
                     레이아웃 재구성 및 웹표준을 준수한 반응형 홈페이지입니다.
                 </p>
-                <button class="site_bt2"><a href="https://heoar.github.io/dothome21/mega/index.html" target="_blank">SITE <span>View &#8641</span></a></button>
-                <button class="code_bt2"><a>CODE <span>View &#8641</span></a></button>
+                <button class="site_bt2"><a href="https://heoar.github.io/dothome21/mega/index.html" target="_blank">SITE View</a></button>
+                <button class="code_bt2"><a>CODE View</a></button>
             </div>
         </div>
 
@@ -5172,8 +5172,8 @@ function searchBtnCheck(){
                     완성을 목표로 진행한 정보처리기사 시험 커뮤니티 사이트<br>
                     ‘정신머리’입니다.
                 </p>
-                <button class="site_bt3"><a href="http://bhar.dothome.co.kr/project/pages/index.php" target="_blank">SITE VIEW <span>&#8641</span></a></button>
-                <button class="code_bt3"><a>• CODE <span>View &#8641</span></a></button>
+                <button class="site_bt3"><a href="http://bhar.dothome.co.kr/project/pages/index.php" target="_blank">SITE View</a></button>
+                <button class="code_bt3"><a>CODE View</a></button>
             </div>
         </div>
     </section>
@@ -5309,9 +5309,14 @@ function searchBtnCheck(){
     <script src="assets/js/highlight.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+        console.log($(window).scrollTop());
+ 
         skrollr.init({
-            mobileCheck: function() {
-                return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            forceHeight: false,
+            mobileCheck: function(){
+                if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+                    // mobile device
+                }
             }
         });
        

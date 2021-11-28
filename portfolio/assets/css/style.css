@@ -17,6 +17,11 @@ body {
 }
 html {
     scroll-behavior: smooth;
+     scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -1213,11 +1218,6 @@ header .hem_menu {
 
 }
 @media (max-width: 380px) {
-    html,
-    body {
-        width: 100%;
-    }
-
     .cursor {display: none;}
     .scroll {display: none;}
 

@@ -123,8 +123,9 @@
                 </div>
             </div>
             <div class="my_career">
-                <h3>Hello, do you want to know me?</h3>
-                <p>I used to be a designer and now I'm going to be a web publisher</p>
+                <div class="container">
+                    <h3>Hello, do you want to know me?</h3>
+                    <p>I used to be a designer and now I'm going to be a web publisher</p>
                 <div class="career_img">
                     <img src="assets/img/my_career01.png" alt="이미지01">
                     <img src="assets/img/my_career02.png" alt="이미지02">
@@ -132,12 +133,15 @@
                 </div>
                 <div class="work">
                     <ul>
-                        <li>20</li>
+                        <li>23</li>
+                        <label for="">
+                            <input type="range" name="career" value="23" min="23" max="30" id="range-input">
+                        </label>
                         <li>30</li>
                     </ul>
-                    <div class="work_br">
+                    <!-- <div class="work_br">
                         <div class="work_drag"><span>23</span></div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="career">
                     <p>let me introduce my career</p>
@@ -146,6 +150,7 @@
                         <li>• 2013~2019<br><span>디자인 분야에서 디자이너로 활동</span></li>
                         <li>• 2021.07~2021.12<br><span>학원 웹퍼블리셔 과정 수강</span></li>
                     </ul>
+                </div>
                 </div>
             </div>
         </div>
@@ -163,11 +168,11 @@
         <div class="container">
             <div class="personalitys">
                 <div class="pers_box"
-                    data-4300 = "position: relative; top: 0; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:0;"
-                    data-5719 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-8000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-8500 = "position: fixed; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:1;"
-                    data-9000 = "position: relative; top: 10%; left: 0; right: 0;  width: 1400px; margin: 0 auto; opacity:0;"
+                    data-4300 = "position: relative; top: 0; left: 0; right: 0;  width: 95%; margin: 0 auto; opacity:0;"
+                    data-5719 = "position: fixed; top: 10%; left: 0; right: 0;  width: 95%; margin: 0 auto; opacity:1;"
+                    data-8000 = "position: fixed; top: 10%; left: 0; right: 0;  width: 95%; margin: 0 auto; opacity:1;"
+                    data-8500 = "position: fixed; top: 10%; left: 0; right: 0;  width: 95%; margin: 0 auto; opacity:1;"
+                    data-9000 = "position: relative; top: 10%; left: 0; right: 0;  width: 95%; margin: 0 auto; opacity:0;"
                 >
                     <div class="txt left">
                     <h2
@@ -210,7 +215,7 @@
     <section>
         <div class="container">
             <div class="skill_box">
-                <img src="assets/img/skimg.svg" alt="스킬 이미지">
+                <img class="sk_img" src="assets/img/skimg.svg" alt="스킬 이미지">
                 <div class="skill_js">
                     <img src="assets/img/sk01.png" alt="이미지">
                     <h3>Js/jQuery</h3>
@@ -5265,7 +5270,7 @@ function searchBtnCheck(){
                     </ul>
                 </div>
                 <div class="refer_box">
-                    <h3>Site Reference</h3>
+                    <h3>Site implement</h3>
                     <ul>
                         <li><a href="https://heoar.github.io/dothome21/mega/index.html" target="_blank">Megabox</a></li>
                         <li><a href="https://heoar.github.io/dothome21/site/index.html" target="_blank">wireframe</a></li>
@@ -5274,7 +5279,7 @@ function searchBtnCheck(){
                     </ul>
                 </div>
                 <div class="refer_box">
-                    <h3>Effect</h3>
+                    <h3>Effect practice</h3>
                     <ul>
                         <li><a href="https://heoar.github.io/dothome21/refer-effect/mouseEffect/index.html" target="_blank">mouseEffect</a></li>
                         <li><a href="https://heoar.github.io/dothome21/refer-effect/sliderEffect/index.html" target="_blank">sliderEffect</a></li>
@@ -5309,7 +5314,7 @@ function searchBtnCheck(){
     <script src="assets/js/highlight.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-        console.log($(window).scrollTop());
+        // console.log($(window).scrollTop());
  
         skrollr.init({
             forceHeight: false,

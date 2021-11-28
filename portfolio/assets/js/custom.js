@@ -86,28 +86,37 @@
     });
 
     //커리어 바 이동
-    $(function () {
-        $(".work_drag").draggable({
-            containment : 'parent',
-            axis: 'x',
-            
-            drag: function(){
-                let career = 23 + 2;
-                career++;
-                
-                //console.log(career)
 
-                $(".work_drag span").text(career);
-                $(".career_img img:nth-child(3)").css("display","none");
-            }
-        });
-    });
+    const clamp = (value, min, max) => {
+        return min < max
+            ? (value < min ? min : value > max ? max : value)
+            : (value < max ? max : value > min ? min : value);
+    }
+
+    // $(function () {
+    //     $(".work_drag").draggable({
+    //         containment : 'parent',
+    //         axis: 'x',
+            
+    //         drag: function(){
+    //             let career = 23 + 2;
+    //             career++;
+                
+    //             //console.log(career)
+
+    //             $(".work_drag span").text(career);
+    //             $(".career_img img:nth-child(3)").css("display","none");
+    //         }
+    //     });
+    // });
+    
 
 
     /* 코드 뷰 */
     for(let i=1; i<=3; i++){
         $(".project_frame .code_bt" + i).click(function(){
             $(".site_view" + i).toggleClass("show");
+            $(".code_view" + i).toggleClass("show");
         })
     }
 
@@ -135,7 +144,7 @@
     //     });
     // });
 
-    //코드 뷰
+    //코드 탭메뉴
     const Vtite1 = $(".code_view1 .view-title ul li");
     const Vcont1 = $(".code_view1 .view-cont > div");
 

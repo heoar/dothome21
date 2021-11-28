@@ -375,11 +375,30 @@ header .hem_menu {
     position: relative;
     padding: 30px 0;
 }
+
+/* 드래그용 인풋 */
+.my_career .work input[type=range] {
+    width: 650px;
+    height: 5px;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    background: #0396A6;
+}
+.my_career .work input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0396A6;
+}
+
 .my_career .work ul {
     width: 800px;
+    padding: 20px 0;
     position: absolute;
     left: -75px;
-    margin: -35px auto;
+    margin: -50px auto;
     overflow: hidden;
 }
 .my_career .work ul li:first-child {
@@ -388,29 +407,7 @@ header .hem_menu {
 .my_career .work ul li:last-child {
     float: right;
 }
-.my_career .work::after {
-    content: '';
-    position: absolute;
-    left: 50%; top: 0;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 3px;
-    background: #0396A6;
-    z-index: -1;
-}
-.my_career .work .work_drag {
-    position: absolute;
-    color: #fff;
-    font-family: 'GmarketSansMedium';
-    line-height: 42px;
-    left: 0; top: -20px;
-    width: 40px; height: 40px;
-    box-shadow: 0 0 0 2px #0396A6;
-    background: #0396A6;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    cursor: pointer;
-}
+
 
 .my_career .career {
     overflow: hidden;
@@ -532,9 +529,10 @@ header .hem_menu {
     height: 100vh;
     position: relative;
 }
-.skill_box img {
-    width: 20vw;
+.skill_box .sk_img {
+    width: 35%;
     max-width: 800px;
+    min-width: 300px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -648,6 +646,25 @@ header .hem_menu {
 }
 
 /* 코드 뷰 */
+.code_view1 {
+    display: none;
+}
+.code_view1.show {
+    display: block;
+}
+.code_view2 {
+    display: none;
+}
+.code_view2.show {
+    display: block;
+}
+.code_view3 {
+    display: none;
+}
+.code_view3.show {
+    display: block;
+}
+
 .code_box {
     margin: 0 auto;
     border: 2px solid #f2f2f2;
@@ -707,6 +724,7 @@ header .hem_menu {
 .project_frame .site_view3.show {
     display: none;
 }
+.project_frame .code_
 .project_frame .site_box { position: relative; }
 
 .project_frame .site_box.left {
@@ -765,6 +783,7 @@ header .hem_menu {
     background-image: url(../img/effect_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 130vh;
     text-align: center;
@@ -830,6 +849,7 @@ header .hem_menu {
 }
 .animas .anima_box h2 {
     font-size: 180px;
+    text-align: center;
     padding-top: 30%;
 }
 .animas .anima_frame {
@@ -1026,6 +1046,163 @@ header .hem_menu {
 
 
 /* 반응형 */
-@media (max-width: 900px){
+@media (max-width: 960px){
+    .menu .tep_menu { background-size: 60%; }
+    .menu.show .tep_menu {width: 100%; }
+    .menu .tep_menu a { font-size: 9vw; line-height: 14vw;}
+    .menu .tep_menu ul { padding: 0 10vw; }
+
+    .title h2 { font-size: 100px; line-height: 110px; }
+    .title img { width: 600px; }
+
+    .my_career .career ul li { padding: 30px; }
+
+    .about_story .story_text { width: 90%; margin: 0 auto; padding-top: 32%; }
+    .about_story .story_text span { font-size: 14px; }
+    .about_story .personalitys { width: 100%; margin: 0 auto; }
+    .personalitys .txt h2 { font-size: 80px; }
+    
+    .skill_box .skill_js h3 { font-size: 4vw; }
+    .skill_box .skill_js p { font-size: 2vw; }
+    .skill_box .skill_js img { left: 110%; width: 60%; }
+    .skill_box .skill_html h3 { font-size: 4vw; }
+    .skill_box .skill_html p { font-size: 2vw; }
+    .skill_box .skill_html img { left: -40%; width: 35%; }
+    .skill_box .skill_poto { left: 0; }
+    .skill_box .skill_poto h3 { font-size: 4vw; }
+    .skill_box .skill_poto p { font-size: 2vw; }
+    .skill_box .skill_poto img { left: 105%; width: 50%; }
+
+    .project_frame { width: 98%; }
+    .project_frame img { width: 90%; }
+    .code_box { width: 90%; }
+
+    .animas .anima_box { height: 90vh; }
+    .animas .anima_box h2 { font-size: 120px; }
+
+    .references { width: 90%; }
+    .references h2 { margin-bottom: 60px; }
+    .references .refer_box { margin-left: 85px; }
+    .references .refer_box:nth-child(1) { margin-left: 0; }
+    .references .refer_box h3 { font-size: 16px; }
+
+    .effects .effect_frame iframe { width: 100%; }
+    .effects .effect_frame img { width: 100%; }
+
+    .animas .anima_show .show_bt > div:nth-child(1) { left: -10%; }
+    .animas .anima_show .show_bt > div:nth-child(2) { left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(3) { left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(4) { left: -10%; }
+    .animas .anima_show .show_bt > div:nth-child(5) { right: -10%; }
+    .animas .anima_show .show_bt > div:nth-child(6) { right: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(7) { right: -20%;}
+    .animas .anima_show .show_bt > div:nth-child(8) { right: -10%; }
+
+    .footer_bg p { font-size: 50px; }
+
+}
+
+@media (max-width: 768px){
+    .title h2 { font-size: 90px; line-height: 100px; }
+    .title img { width: 500px; }
+    .sb_button { width: 80px; height: 80px; }
+    .sb_button:hover { width: 100px; height: 100px; }
+    .sb_button .sb_cont { font-size: 16px; }
+    .sb_button .sb_cont img { width: 15px; }
+
+    .about_txt p { font-size: 40px; }
+
+    .my_career .work ul { width: 600px; left: 30px; }
+    .my_career .work input[type=range] { width: 500px; }
+    .my_career .career ul li { padding: 20px; }
+
+    .about_story .story_text { width: 98%; margin: 0 auto; padding-top: 32%; }
+    .about_story .story_text span { font-size: 14px; }
+
+    .skill_box .skill_js img { left: 85%; top: -35%; width: 80%; }
+    .skill_box .skill_html img { left: -34%; top: -45%; width: 45%; }
+    .skill_box .skill_poto img { left: 85%; top: 90%; width: 65%; }
+
+    .projects { height: 800px; }
+    .projects p { font-size: 20px; }
+    .projects span { font-size: 16px; }
+    .project_frame .site_box.left { top: 30%; }
+    .project_frame .site_box.right { top: 30%; }
+    
+    .effects .effect_frame { height: 700vh; }
+    .effects .effect_box h2 { padding-top: 40%; font-size: 130px; }
+    .effects .effect_frame iframe { height: 120vh; }
+
+    .animas .anima_box { height: 80vh; }
+    .animas .anima_box h2 { font-size: 100px; }
+    .animas .anima_frame p { font-size: 20px; }
+    .anima_show .anima_img > div { width: 400px; height: 400px; }
+    .animas .anima_show .show_bt { top: -50px; }
+
+    .references h2 { font-size: 100px; margin-bottom: 40px; }
+    .references .refer_box { margin-left: 30px; }
+    .references .refer_box:nth-child(1) { margin-left: 0; }
+
+    .footer_img { padding-left: 50px; }
+    
+}
+
+@media (max-width: 600px) {
+    .title h2 { font-size: 70px; line-height: 80px; }
+    .title img { width: 350px; }
+    .sb_text p { font-size: 14px; }
+
+    .about_txt p { font-size: 28px; line-height: 40px; }
+
+    .my_career .career p { font-size: 24px; margin-bottom: 40px; }
+    .my_career .work ul { width: 500px; left: 30px; }
+    .my_career .work input[type=range] { width: 400px; }
+    .my_career .career ul li {padding: 10px 40px; display: flex; text-align: center; align-items: center; float: none; }
+    .my_career .career ul li span { margin-left: 20px; }
+    
+    .about_story .story_text p { display: none; }
+    .about_story .story_text span { display: none; }
+    
+    .projects p { font-size: 16px; }
+    .projects span { font-size: 14px; }
+
+    .projects { height: 500px; }
+    .project_frame { width: 100%; }
+    .project_frame img { width: 100%; }
+    .code_box { width: 100%; }
+    .project_frame .site_box.left { width: 100%; top: 40%; }
+    .project_frame .site_box.right { width: 100%; top: 40%; }
+    .project_frame .site_box h2 { font-size: 40px;}
+
+    .effects .effect_box { background-size: 100%; height: 400px;}
+    .effects .effect_box h2 { font-size: 100px; padding-top: 20%; }
+    .effects .effect_box p { font-size: 16px; }
+    .effects .effect_box span { font-size: 12px; }
+
+    .effects .effect_frame p { font-size: 16px; text-align: center; }
+
+    .animas .anima_box { height: 60vh; }
+    .animas .anima_box h2 { font-size: 70px; }
+    .animas .anima_frame p { font-size: 16px; }
+    .anima_show .anima_img > div { width: 300px; height: 300px; }
+    .animas .anima_show .show_bt { top: -120px; }
+    .animas .anima_show .show_bt>div {width: 40px; height: 40px;}
+
+        .animas .anima_show .show_bt > div:nth-child(1) { left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(2) { left: -35%; }
+    .animas .anima_show .show_bt > div:nth-child(3) { left: -35%; }
+    .animas .anima_show .show_bt > div:nth-child(4) { left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(5) { right: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(6) { right: -35%; }
+    .animas .anima_show .show_bt > div:nth-child(7) { right: -35%;}
+    .animas .anima_show .show_bt > div:nth-child(8) { right: -20%; }
+
+    .references .refer_box { margin-left: 30px; }
+    .references .refer_box:nth-child(1) { margin-left: 0; }
+    .references .container { display: flex; flex-direction: row; justify-content: center; align-content: center; }
+
+    .footer_bg span { margin-bottom: 80px; }
+    .footer_bg p { font-size: 30px; }
+    .footer_bg a { font-size: 16px; }
 
 }

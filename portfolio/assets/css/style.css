@@ -998,7 +998,10 @@ header .hem_menu {
 }
 .references .refer_box {
     float: left;
-    margin-left: 100px;
+    margin-left: 70px;
+}
+.references .refer_box:nth-child(1) {
+    margin-left: 0;
 }
 
 .references .refer_box ul {
@@ -1157,8 +1160,8 @@ header .hem_menu {
     .my_career .career p { font-size: 24px; margin-bottom: 40px; }
     .my_career .work ul { width: 500px; left: 30px; }
     .my_career .work input[type=range] { width: 400px; }
-    .my_career .career ul li {padding: 10px 40px; display: flex; text-align: center; align-items: center; float: none; }
-    .my_career .career ul li span { margin-left: 20px; }
+    .my_career .career ul li {padding: 10px 40px; text-align: center; align-items: center; float: none; }
+
     
     .about_story .story_text p { display: none; }
     .about_story .story_text span { display: none; }
@@ -1174,7 +1177,7 @@ header .hem_menu {
     .project_frame .site_box.right { width: 100%; top: 40%; }
     .project_frame .site_box h2 { font-size: 40px;}
 
-    .effects .effect_box { background-size: 100%; height: 400px;}
+    .effects .effect_box { background-size: 100%; background-position: top; height: 100vh; background-color: #1B262A; }
     .effects .effect_box h2 { font-size: 100px; padding-top: 20%; }
     .effects .effect_box p { font-size: 16px; }
     .effects .effect_box span { font-size: 12px; }
@@ -1188,7 +1191,7 @@ header .hem_menu {
     .animas .anima_show .show_bt { top: -120px; }
     .animas .anima_show .show_bt>div {width: 40px; height: 40px;}
 
-        .animas .anima_show .show_bt > div:nth-child(1) { left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(1) { left: -20%; }
     .animas .anima_show .show_bt > div:nth-child(2) { left: -35%; }
     .animas .anima_show .show_bt > div:nth-child(3) { left: -35%; }
     .animas .anima_show .show_bt > div:nth-child(4) { left: -20%; }
@@ -1197,6 +1200,8 @@ header .hem_menu {
     .animas .anima_show .show_bt > div:nth-child(7) { right: -35%;}
     .animas .anima_show .show_bt > div:nth-child(8) { right: -20%; }
 
+    .references { overflow:inherit; }
+    .references h2 { font-size: 80px; }
     .references .refer_box { margin-left: 30px; }
     .references .refer_box:nth-child(1) { margin-left: 0; }
     .references .container { display: flex; flex-direction: row; justify-content: center; align-content: center; }

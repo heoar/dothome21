@@ -1151,6 +1151,7 @@ header .hem_menu {
 }
 
 @media (max-width: 600px) {
+    .cursor { display: none; }
     .title h2 { font-size: 70px; line-height: 80px; }
     .title img { width: 350px; }
     .sb_text p { font-size: 14px; }
@@ -1210,4 +1211,93 @@ header .hem_menu {
     .footer_bg p { font-size: 30px; }
     .footer_bg a { font-size: 16px; }
 
+}
+@media (max-width: 380px) {
+    .cursor {display: none;}
+    .scroll {display: none;}
+
+    .title h2 { font-size: 40px; line-height: 45px; }
+    .title img { width: 200px; top: 5%; }
+    .sb_text p { font-size: 12px; }
+    .sb_button { display: none; }
+
+    .about_txt p { font-size: 20px; margin-bottom: 50px; }
+
+    .swiper-slide { display: none; }
+
+    .my_career .work ul { width: 300px; left: 30px; }
+    .my_career .work input[type=range] { width: 200px; }
+    .my_career .career ul li {padding: 10px 40px; text-align: center; align-items: center; float: none; }
+
+    .about_story { height: 200px; }
+    .personalitys { display: none; }
+
+    .skill_box .sk_img { min-width: 200px;}
+    .skill_box .skill_js { top: 420px; text-align: center; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_js h3 { font-size: 26px; }
+    .skill_box .skill_js p { font-size: 18px; }
+    .skill_box .skill_js img { display: none; }
+    .skill_box .skill_html { top: 520px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_html h3 { font-size: 26px; }
+    .skill_box .skill_html p { font-size: 18px; }
+    .skill_box .skill_html img { display: none; }
+    .skill_box .skill_poto { top: 650px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_poto h3 { font-size: 26px; }
+    .skill_box .skill_poto p { font-size: 18px; }
+    .skill_box .skill_poto img { display: none; }
+    
+    .projects p { font-size: 16px; line-height: 20px; }
+    .projects span {display: none;}
+
+    .project_frame .site_box.left { top: 25%; padding: 20px; height: 350px; }
+    .project_frame .site_box.right { top: 25%; padding: 20px; height: 350px; }
+    .project_frame .site_box h2 { font-size: 30px; line-height: 35px; }
+    .project_frame .site_box p { font-size: 16px; width: 300px;}
+    .project_frame .site_box.right p { font-size: 16px; width: 300px; float: right; }
+    .project_frame .site_box p br { display: none; }
+    .project_frame .site_box { padding-bottom: 100px; }
+    .code_box { height: 400px; }
+
+    .effects .effect_frame { height: 650vh; }
+    .effects .effect_box h2 { font-size: 60px; }
+    .effects .effect_box p { font-size: 20px; padding: 0 10px; margin-bottom: 30px; }
+    .effects .effect_box span { font-size: 16px; margin: 0 20px; }
+
+    .animas .anima_box { height: 30vh; }
+    .animas .anima_box h2 { font-size: 50px; top: 10%;}
+    .animas .anima_frame p { font-size: 18px; }
+
+    .animas .anima_show .show_bt > div:nth-child(1) { top: 100%; left: -80%; }
+    .animas .anima_show .show_bt > div:nth-child(2) { top: 100%; left: -20%; }
+    .animas .anima_show .show_bt > div:nth-child(3) { top: 100%; left: 40%; }
+    .animas .anima_show .show_bt > div:nth-child(4) { top: 100%; left: 100%; }
+    .animas .anima_show .show_bt > div:nth-child(5) { top: 115%; right: 98%; }
+    .animas .anima_show .show_bt > div:nth-child(6) { top: 115%; right: 38%; }
+    .animas .anima_show .show_bt > div:nth-child(7) { top: 115%; right: -22%; }
+    .animas .anima_show .show_bt > div:nth-child(8) { top: 115%; right: -83%; }
+
+    .references h2 { font-size: 40px; background-size: 90%; background-position: bottom; }
+    .references .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .references .container > div { margin-bottom: 20px; }
+    .references .refer_box h3 { margin: 0; }
+    .references .refer_box { margin: 10px 0; }
+    .references .refer_box ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .references .refer_box ul li {
+        margin: 10px 10px;
+    }
+
+    .footer_bg span { margin: 50px 0;}
+    .footer_img { padding-left: 20px; }
+    .footer_bg p { font-size: 25px; }
 }

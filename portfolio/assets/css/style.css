@@ -1213,6 +1213,12 @@ header .hem_menu {
 
 }
 @media (max-width: 380px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
     .cursor {display: none;}
     .scroll {display: none;}
 

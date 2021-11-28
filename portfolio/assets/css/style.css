@@ -1215,7 +1215,7 @@ header .hem_menu {
 @media (max-width: 380px) {
     html,
     body {
-        overflow-x: hidden;
+        width: 100%;
     }
 
     .cursor {display: none;}

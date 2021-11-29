@@ -15,14 +15,14 @@ body {
     margin: 0;
     padding: 0;
 }
-html {
+/* html {
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 html::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
 /* 레이아웃 */
@@ -1247,7 +1247,7 @@ footer {}
 
     .footer_bg span { margin-bottom: 80px; }
     .footer_bg p { font-size: 30px; }
-    .footer_bg a { font-size: 16px; }
+    .footer_bg a { font-size: 12px; }
 
 }
 @media (max-width: 480px) {

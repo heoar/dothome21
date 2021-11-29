@@ -558,6 +558,7 @@ header .hem_menu {
 }
 .skill_box .sk_img {
     width: 35%;
+    height: 100%;
     max-width: 800px;
     min-width: 300px;
     position: absolute;
@@ -579,25 +580,25 @@ header .hem_menu {
     text-align: right;
     position: absolute;
     left: 5%;
-    top: 40%;
+    top: 60%;
 }
 .skill_box .skill_js img {
     width: 150px;
     position: absolute;
     top: 30%;
-    left: 130%;
+    left: 105%;
 }
 .skill_box .skill_html img {
     width: 130px;
     position: absolute;
     top: 40%;
-    left: -20%;
+    left: -40%;
 }
 .skill_box .skill_poto img {
     width: 150px;
     position: absolute;
     top: 20%;
-    left: 125%;
+    left: 105%;
 }
 
 
@@ -1093,9 +1094,11 @@ footer {}
     .about_story .personalitys { width: 100%; margin: 0 auto; }
     .personalitys .txt h2 { font-size: 80px; }
     
+    .skill_box .skill_js { top: 10%; }
     .skill_box .skill_js h3 { font-size: 4vw; }
     .skill_box .skill_js p { font-size: 2vw; }
     .skill_box .skill_js img { left: 110%; width: 60%; }
+    .skill_box .skill_html { top: 5%; right: -15px; }
     .skill_box .skill_html h3 { font-size: 4vw; }
     .skill_box .skill_html p { font-size: 2vw; }
     .skill_box .skill_html img { left: -40%; width: 35%; }
@@ -1150,7 +1153,11 @@ footer {}
     .about_story .story_text { width: 98%; margin: 0 auto; padding-top: 32%; }
     .about_story .story_text span { font-size: 14px; }
 
-    .skill_box .skill_js img { left: 85%; top: -35%; width: 80%; }
+    
+    .skill_box .skill_js { top: 15%; }
+    .skill_box .skill_html{ top: 10%; }
+    .skill_box .skill_poto{  }
+    .skill_box .skill_js img { left: 85%; top: -45%; width: 80%; }
     .skill_box .skill_html img { left: -34%; top: -45%; width: 45%; }
     .skill_box .skill_poto img { left: 85%; top: 90%; width: 65%; }
 
@@ -1270,16 +1277,17 @@ footer {}
     .about_story { height: 200px; }
     .personalitys { display: none; }
 
+    .skill_box {margin-bottom: 150px;}
     .skill_box .sk_img { min-width: 200px;}
-    .skill_box .skill_js { top: 420px; text-align: center; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_js { top: 620px; text-align: center; left: 50%; transform: translateX(-50%); }
     .skill_box .skill_js h3 { font-size: 26px; }
     .skill_box .skill_js p { font-size: 18px; }
     .skill_box .skill_js img { display: none; }
-    .skill_box .skill_html { top: 520px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_html { top: 720px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
     .skill_box .skill_html h3 { font-size: 26px; }
     .skill_box .skill_html p { font-size: 18px; }
     .skill_box .skill_html img { display: none; }
-    .skill_box .skill_poto { top: 650px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
+    .skill_box .skill_poto { top: 850px; text-align: center; width: 200px; left: 50%; transform: translateX(-50%); }
     .skill_box .skill_poto h3 { font-size: 26px; }
     .skill_box .skill_poto p { font-size: 18px; }
     .skill_box .skill_poto img { display: none; }
@@ -1287,8 +1295,8 @@ footer {}
     .projects p { font-size: 16px; line-height: 20px; }
     .projects span {display: none;}
 
-    .project_frame .site_box.left { top: 25%; padding: 20px; height: 350px; }
-    .project_frame .site_box.right { top: 25%; padding: 20px; height: 350px; }
+    .project_frame .site_box.left { top: 30%; padding: 20px; height: 350px; }
+    .project_frame .site_box.right { top: 30%; padding: 20px; height: 350px; }
     .project_frame .site_box h2 { font-size: 30px; line-height: 35px; }
     .project_frame .site_box p { font-size: 16px; width: 300px;}
     .project_frame .site_box.right p { font-size: 16px; width: 300px; float: right; }

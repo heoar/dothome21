@@ -17,8 +17,8 @@ body {
 }
 html {
     scroll-behavior: smooth;
-     scrollbar-width: none;
-     -ms-overflow-style: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 html::-webkit-scrollbar {
     display: none;
@@ -365,7 +365,7 @@ header .hem_menu {
 }
 .my_career #career_img {
     margin-top: 50px;
-    padding: 200px;
+    padding: 200px 0;
     position: relative;
 }
 .my_career #career_img img {
@@ -374,6 +374,7 @@ header .hem_menu {
     transform: translate(-50%,-50%);
     width: 250px;
     opacity: 1;
+    transition: opacity .5s;
 }
 .my_career #career_img img:nth-child(4) {
     width: 280px;
@@ -381,15 +382,18 @@ header .hem_menu {
 
 .my_career #career_img.active1 img:nth-child(4) {
     opacity: 0;
+    transition: opacity .5s;
 }
 .my_career #career_img.active2 img:nth-child(4),
 .my_career #career_img.active2 img:nth-child(3){
     opacity: 0;
+    transition: opacity .5s;
 }
 .my_career #career_img.active3 img:nth-child(4),
 .my_career #career_img.active3 img:nth-child(3),
 .my_career #career_img.active3 img:nth-child(2) {
     opacity: 0;
+    transition: opacity .5s;
 }
 
 .my_career .work {
@@ -1004,7 +1008,8 @@ header .hem_menu {
 
 
 /* 풋터 레퍼런스 */
-.references { margin-bottom: 300px; overflow: hidden; width: 1200px; margin: 0 auto; }
+footer {}
+.references { margin-bottom: 300px; overflow: hidden; width: 100%; margin: 0 auto; }
 .references h2 {
     text-align: center;
     font-size: 120px;
@@ -1174,17 +1179,27 @@ header .hem_menu {
 }
 
 @media (max-width: 600px) {
+
     .cursor { display: none; }
     .title h2 { font-size: 70px; line-height: 80px; }
     .title img { width: 350px; }
     .sb_text p { font-size: 14px; }
 
+    /* 가로  */
+    .cloud {display: none;}
+    .about .glasses_bg { width: 100%; }
+    .animas .anima_frame { height: 900px; }
+    .references { display: none; }
+
     .about_txt p { font-size: 28px; line-height: 40px; }
 
+    .my_career { width: 100%; }
+    /* #career_img { width: 100%; margin: 0 auto; } */
     .my_career .career p { font-size: 24px; margin-bottom: 40px; }
-    .my_career .work ul { width: 500px; left: 30px; }
-    .my_career .work input[type=range] { width: 400px; }
-    .my_career .career ul li {padding: 10px 40px; text-align: center; align-items: center; float: none; }
+    .my_career .work { width: 100%; }
+    .my_career .work ul { width: 90%; left: 30px; }
+    .my_career .work input[type=range] { width: 80%; }
+    .my_career .career ul li { padding: 10px 40px; text-align: center; align-items: center; float: none; }
 
     
     .about_story .story_text p { display: none; }
@@ -1193,12 +1208,12 @@ header .hem_menu {
     .projects p { font-size: 16px; }
     .projects span { font-size: 14px; }
 
-    .projects { height: 500px; }
+    .projects { width: 100%; height: 500px; }
     .project_frame { width: 100%; }
     .project_frame img { width: 100%; }
     .code_box { width: 100%; }
-    .project_frame .site_box.left { width: 100%; top: 40%; }
-    .project_frame .site_box.right { width: 100%; top: 40%; }
+    .project_frame .site_box.left { width: 90%; top: 40%; }
+    .project_frame .site_box.right { width: 90%; top: 40%; }
     .project_frame .site_box h2 { font-size: 40px;}
 
     .effects .effect_box { background-size: 100%; background-position: top; height: 100vh; background-color: #1B262A; }
@@ -1294,10 +1309,10 @@ header .hem_menu {
     .animas .anima_show .show_bt > div:nth-child(2) { top: 100%; left: -20%; }
     .animas .anima_show .show_bt > div:nth-child(3) { top: 100%; left: 40%; }
     .animas .anima_show .show_bt > div:nth-child(4) { top: 100%; left: 100%; }
-    .animas .anima_show .show_bt > div:nth-child(5) { top: 115%; right: 98%; }
-    .animas .anima_show .show_bt > div:nth-child(6) { top: 115%; right: 38%; }
-    .animas .anima_show .show_bt > div:nth-child(7) { top: 115%; right: -22%; }
-    .animas .anima_show .show_bt > div:nth-child(8) { top: 115%; right: -83%; }
+    .animas .anima_show .show_bt > div:nth-child(5) { top: 115%; left: -80%;}
+    .animas .anima_show .show_bt > div:nth-child(6) { top: 115%; left: -20%;}
+    .animas .anima_show .show_bt > div:nth-child(7) { top: 115%; left: 40%; }
+    .animas .anima_show .show_bt > div:nth-child(8) { top: 115%; left: 100%; }
 
     .references h2 { font-size: 40px; background-size: 90%; background-position: bottom; }
     .references .container {

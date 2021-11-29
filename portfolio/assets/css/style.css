@@ -363,17 +363,35 @@ header .hem_menu {
     font-weight: 700;
     font-size: 20px;
 }
-.my_career .career_img {
+.my_career #career_img {
     margin-top: 50px;
     padding: 200px;
     position: relative;
 }
-.my_career .career_img img {
+.my_career #career_img img {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%,-50%);
     width: 250px;
+    opacity: 1;
 }
+.my_career #career_img img:nth-child(4) {
+    width: 280px;
+}
+
+.my_career #career_img.active1 img:nth-child(4) {
+    opacity: 0;
+}
+.my_career #career_img.active2 img:nth-child(4),
+.my_career #career_img.active2 img:nth-child(3){
+    opacity: 0;
+}
+.my_career #career_img.active3 img:nth-child(4),
+.my_career #career_img.active3 img:nth-child(3),
+.my_career #career_img.active3 img:nth-child(2) {
+    opacity: 0;
+}
+
 .my_career .work {
     width: 650px;
     margin: 0 auto;
@@ -1217,7 +1235,7 @@ header .hem_menu {
     .footer_bg a { font-size: 16px; }
 
 }
-@media (max-width: 380px) {
+@media (max-width: 480px) {
     .cursor {display: none;}
     .scroll {display: none;}
 

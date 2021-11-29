@@ -131,16 +131,17 @@
                 <div class="container">
                     <h3>Hello, do you want to know me?</h3>
                     <p>I used to be a designer and now I'm going to be a web publisher</p>
-                <div class="career_img">
+                <div id="career_img">
                     <img src="assets/img/my_career01.png" alt="이미지01">
                     <img src="assets/img/my_career02.png" alt="이미지02">
-                    <img src="assets/img/my_career03.png" alt="이미지03">
+                    <img src="assets/img/my_career04.png" alt="이미지03">
+                    <img src="assets/img/my_career03.png" alt="이미지04">
                 </div>
                 <div class="work">
                     <ul>
                         <li>23</li>
-                        <label for="">
-                            <input type="range" name="career" value="23" min="23" max="30" id="range-input">
+                        <label for="rate">
+                            <input type="range" name="career" value="0" min="0" max="40" step="1" id="range-input" oninput="update(this,value)">
                         </label>
                         <li>30</li>
                     </ul>
@@ -5336,6 +5337,24 @@ function searchBtnCheck(){
             let y = e.clientY - 15 + "px";
             document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
         });
+
+        function update(obj,value) {
+            var num = parseFloat(value).toFixed(1)
+            $("#data").text(num);
+
+                if(  10 > num && num >= 0 ) {
+                        $("#career_img").removeClass();
+                    }
+                if(  20 > num && num >= 11 ) {
+                    $("#career_img").removeClass().addClass("active1");
+                }
+                if(  30 > num && num >= 21) {
+                    $("#career_img").removeClass().addClass("active2");
+                }
+                if(  40 > num && num >= 31) {
+                    $("#career_img").removeClass().addClass("active3");
+            }
+        };
     </script>
 </body>
 </html>

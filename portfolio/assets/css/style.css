@@ -947,7 +947,7 @@ header .hem_menu {
 .animas .anima_show .show_bt>div:nth-child(8) {
     right: 8%;
     top: 70%;
-    background: #fcca43;
+    background: #FFCDCA;
 }
 
 .show_center.anima2 {
@@ -978,7 +978,7 @@ header .hem_menu {
 .anima_show .anima_img > div:nth-child(5) { opacity: 0; transition: opacity 1s; z-index: 4; background-image: url(../img/anima05.jpg); background-size: cover; }
 .anima_show .anima_img > div:nth-child(6) { opacity: 0; transition: opacity 1s; z-index: 3; background-image: url(../img/anima06.jpg); background-size: cover; }
 .anima_show .anima_img > div:nth-child(7) { opacity: 0; transition: opacity 1s; z-index: 2; background-image: url(../img/anima07.jpg); background-size: cover; }
-.anima_show .anima_img > div:nth-child(8) { opacity: 0; transition: opacity 1s; z-index: 1;}
+.anima_show .anima_img > div:nth-child(8) { opacity: 0; transition: opacity 1s; z-index: 1; background-image: url(../img/anima08.jpg); background-size: cover;}
 
 .anima_show .anima_img > div span {
     position: absolute;

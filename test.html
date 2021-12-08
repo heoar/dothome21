@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드연습</title>
+    <style>
+        .sdw {
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            width: 400px;
+            position: absolute;
+        }
+        .sdw .sd {
+            width: 1600px;
+            position: relative;
+        }
+        .sdw .sd .sd_img { width: 400px; height: 500px; float: left;}
+        .sdw .sd .sd_img img {width: 100%;}
+        .sdw .sd_img span {
+     
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sdw">
+        <div class="sd">
+            <div class="sd_img"><img src="assets/img/box.jpg" alt="이미지1"><span>1</span></div>
+            <div class="sd_img"><img src="assets/img/box.jpg" alt="이미지2"><span>2</span></div>
+            <div class="sd_img"><img src="assets/img/box.jpg" alt="이미지3"><span>3</span></div>
+            <div class="sd_img"><img src="assets/img/box.jpg" alt="이미지4"><span>4</span></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        const sliderInner = $(".sd");
+        const sliderImg = $(".sd_img");
+
+        let sliderIndex = 0;
+        let sliderWidth = sliderImg.width();
+
+        setInterval(function(){
+            sliderIndex < 3 ? sliderIndex++ : sliderIndex = 0;
+
+            let sliderSd = sliderIndex * -sliderWidth;
+
+            sliderInner.animate({ left : sliderSd },600)
+        },2000)
+
+    </script>
+</body>
+</html>
